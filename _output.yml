@@ -3,10 +3,10 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">2026-ADS- Disciplina de Banco de Dados - Anotações de Aula</a></li>
+        <li><a href="./">2026- GTI - Disciplina de Gestão e Análise de Dados</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
-    edit: https://github.com/miguel7penteado/2025-2sem-GTI-BancoDeDados/edit/main/%s
+    edit: https://github.com/miguel7penteado/2026-2-gestao-e-analise-de-dados/edit/main/%s
     download: ["pdf", "epub", "word", "html"]
 bookdown::pdf_book:
   includes:

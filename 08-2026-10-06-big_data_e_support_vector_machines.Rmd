@@ -7,10 +7,10 @@ output:
 ---
 # - Big Data e Support Vector Machines
 
-```{r 07-2026-09-29-business_intelligence_random_forest_e_ensemble_learning-exercicios, eval=FALSE, include=FALSE}
-rmarkdown::render("07-2026-09-29-business_intelligence_random_forest_e_ensemble_learning-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```{r 08-2026-10-06-big_data_e_support_vector_machines, eval=FALSE, include=FALSE}
+rmarkdown::render("08-2026-10-06-big_data_e_support_vector_machines.Rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
 ```
 
-```{r 07-2026-09-29-business_intelligence_random_forest_e_ensemble_learning-exercicios-doc, eval=FALSE, include=FALSE}
-rmarkdown::render("07-2026-09-29-business_intelligence_random_forest_e_ensemble_learning-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```{r 08-2026-10-06-big_data_e_support_vector_machines-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("08-2026-10-06-big_data_e_support_vector_machines.Rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
 ```
