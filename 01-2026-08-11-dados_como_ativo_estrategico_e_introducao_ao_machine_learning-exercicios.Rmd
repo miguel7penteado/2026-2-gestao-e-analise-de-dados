@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+## - Exercícios - Dados com Atvo Estratégico: Introdução ao Machine Learning
+
+```{r 01-2026-08-11-dados_como_ativo_estrategico_e_introducao_ao_machine_learning-exercicios, eval=FALSE, include=FALSE}
+rmarkdown::render("01-2026-08-11-dados_como_ativo_estrategico_e_introducao_ao_machine_learning-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 01-2026-08-11-dados_como_ativo_estrategico_e_introducao_ao_machine_learning-exercicios-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("01-2026-08-11-dados_como_ativo_estrategico_e_introducao_ao_machine_learning-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

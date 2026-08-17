@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+# - Data Driven Decision Making e Redução de Dimensionalidade
+
+```{r 09-2026-10-13-data-driven_decision_making_e_reducao_de_dimensionalidade, eval=FALSE, include=FALSE}
+rmarkdown::render("09-2026-10-13-data-driven_decision_making_e_reducao_de_dimensionalidade.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 09-2026-10-13-data-driven_decision_making_e_reducao_de_dimensionalidade-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("09-2026-10-13-data-driven_decision_making_e_reducao_de_dimensionalidade.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

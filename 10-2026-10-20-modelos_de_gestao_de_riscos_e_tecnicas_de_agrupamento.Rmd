@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+# - Modelos de Gestão de Risco e Técnicas de Agrupamento
+
+```{r 10-2026-10-20-modelos_de_gestao_de_riscos_e_tecnicas_de_agrupamento, eval=FALSE, include=FALSE}
+rmarkdown::render("10-2026-10-20-modelos_de_gestao_de_riscos_e_tecnicas_de_agrupamento.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 10-2026-10-20-modelos_de_gestao_de_riscos_e_tecnicas_de_agrupamento-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("10-2026-10-20-modelos_de_gestao_de_riscos_e_tecnicas_de_agrupamento.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

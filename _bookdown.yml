@@ -1,0 +1,36 @@
+output_dir: "docs"
+book_filename: "2026-AprendizadoProfundo"
+delete_merged_file: true
+rmd_files: [
+        "index.Rmd",
+        "00-2026-08-04-apresentacao_do_plano_de_ensino.Rmd",
+        "01-2026-08-11-dados_como_ativo_estrategico_e_introducao_ao_machine_learning-exercicios.Rmd",
+        "01-2026-08-11-dados_como_ativo_estrategico_e_introducao_ao_machine_learning.Rmd",
+        "02-2026-08-18-governanca_de_dados_e_ciclo_de_vida_de_machine_learning-exercicios.Rmd",
+        "02-2026-08-18-governanca_de_dados_e_ciclo_de_vida_de_machine_learning.Rmd",
+        "03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios.Rmd",
+        "03-2026-08-25-coleta_de_dados_e_regressao_linear.Rmd",
+        "04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn-exercicios.Rmd",
+        "04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn.Rmd",
+        "05-2026-09-08-analise_de_dados_dilema_vies-variancia_e_metricas_de_avaliacao-exercicios.Rmd",
+        "05-2026-09-08-analise_de_dados_dilema_vies-variancia_e_metricas_de_avaliacao.Rmd",
+        "06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao-exercicios.Rmd",
+        "06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao.Rmd",
+        "07-2026-09-29-business_intelligence_random_forest_e_ensemble_learning-exercicios.Rmd",
+        "07-2026-09-29-business_intelligence_random_forest_e_ensemble_learning.Rmd",
+        "08-2026-10-06-big_data_e_support_vector_machines-exercicios.Rmd",
+        "08-2026-10-06-big_data_e_support_vector_machines.Rmd",
+        "09-2026-10-13-data-driven_decision_making_e_reducao_de_dimensionalidade-exercicios.Rmd",
+        "09-2026-10-13-data-driven_decision_making_e_reducao_de_dimensionalidade.Rmd",
+        "10-2026-10-20-modelos_de_gestao_de_riscos_e_tecnicas_de_agrupamento-exercicios.Rmd",
+        "10-2026-10-20-modelos_de_gestao_de_riscos_e_tecnicas_de_agrupamento.Rmd",
+        "11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas-exercicios.Rmd",
+        "11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas.Rmd",
+        "12-2026-11-03-monitoramento_continuo_melhoria_de_processos_e_ciclo_de_vida_de_modelos_de_machine_learning-exercicios.Rmd",
+        "12-2026-11-03-monitoramento_continuo_melhoria_de_processos_e_ciclo_de_vida_de_modelos_de_machine_learning.Rmd"
+]
+
+language:
+  ui:
+    chapter_name: "Slide "
+

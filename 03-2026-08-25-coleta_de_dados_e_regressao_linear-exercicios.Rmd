@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+## - Exercícios - Coleta de Dados e Regressão Linear
+
+```{r 03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios, eval=FALSE, include=FALSE}
+rmarkdown::render("03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

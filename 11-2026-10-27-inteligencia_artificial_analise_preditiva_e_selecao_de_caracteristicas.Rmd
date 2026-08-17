@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+# - Inteligência Artificial, Análise Preditiva e Seleção de Características
+
+```{r 11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas, eval=FALSE, include=FALSE}
+rmarkdown::render("11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+## - Exercícios - Big Data e Support Vector Machines
+
+```{r 08-2026-10-06-big_data_e_support_vector_machines-exercicios, eval=FALSE, include=FALSE}
+rmarkdown::render("08-2026-10-06-big_data_e_support_vector_machines-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 08-2026-10-06-big_data_e_support_vector_machines-exercicios-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("08-2026-10-06-big_data_e_support_vector_machines-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

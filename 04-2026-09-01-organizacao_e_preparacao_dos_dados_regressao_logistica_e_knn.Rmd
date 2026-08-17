@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+# - Organização e Preparação dos Dados, Regressão Logística e KNN
+
+```{r 04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn, eval=FALSE, include=FALSE}
+rmarkdown::render("04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

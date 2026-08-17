@@ -1,0 +1,12 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+# - Apresentação da Disciplina
+
+```{r 00-2026-08-04-apresentacao_do_plano_de_ensino, eval=FALSE, include=FALSE}
+rmarkdown::render("00-2026-08-04-apresentacao_do_plano_de_ensino.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```

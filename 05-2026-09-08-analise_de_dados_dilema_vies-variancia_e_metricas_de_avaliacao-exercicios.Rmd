@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+## - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação
+
+```{r 05-2026-09-08-analise_de_dados_dilema_vies-variancia_e_metricas_de_avaliacao-exercicios, eval=FALSE, include=FALSE}
+rmarkdown::render("05-2026-09-08-analise_de_dados_dilema_vies-variancia_e_metricas_de_avaliacao-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 05-2026-09-08-analise_de_dados_dilema_vies-variancia_e_metricas_de_avaliacao-exercicios-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("05-2026-09-08-analise_de_dados_dilema_vies-variancia_e_metricas_de_avaliacao-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

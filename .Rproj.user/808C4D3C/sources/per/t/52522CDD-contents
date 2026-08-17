@@ -1,0 +1,112 @@
+---
+title: "GTI - Gestão e Análise de Dados"
+author: "Professor Miguél Suares"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+url: your book url like https://bookdown.org/yihui/bookdown
+cover-image: images/cover.jpg
+description: |
+  Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da  disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas.
+link-citations: yes
+github-repo: miguel7penteado/2025-2sem-GTI-BancoDeDados
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(plantuml)
+
+
+# Detectar o sistema operacional
+so <- Sys.info()[["sysname"]]
+
+if (so == "Linux")
+{
+  plantumlOptions(jar_path = "/usr/share/java/plantuml.jar")  
+}else 
+  if (so == "Windows") 
+  {
+    plantumlOptions(jar_path = "C:/PROGRA~1/COMMON~1/Oracle/Java/libs/plantuml-1.2025.4.jar")
+  }else
+  {
+    print(paste("Sistema não reconhecido:", so))
+  }
+
+
+knitr::knit_engines$set(plantuml = function(options)
+{
+    code <- paste(options$code, collapse = "\n")
+  
+  if (is.null(options$plantuml.path)) 
+  {
+    path <-  "."
+  } else
+    {
+      path <- options$plantuml.path
+    }
+  
+  dir.create(path, showWarnings = FALSE, recursive = TRUE)
+  fig <- paste0(options$label, ".", "svg")
+  fig <- file.path(path, fig)
+  if (options$eval) plot(x = plantuml(code), vector=FALSE, file=fig)
+  knitr::engine_output(options, out = list(knitr::include_graphics(fig)))
+})
+```
+
+# Sobre estas anotações {.unnumbered}
+
+—————————————————————————————————————————————
+
+
+
+
+
+## Calendário das aulas
+
+—————————————————————————————————————————————
+
+
+##### AGOSTO DE 2026
+
+| Data       | Dia da Semana | Aulas                      | Conteúdo                                                                                        |
+| ---------- | ------------- | -------------------------- | ----------------------------------------------------------------------------------------------- |
+| 04/08/2026 | Terça-Feira   | Apresentação da disciplina | Apresentação do plano de ensino, objetivos, metodologia, avaliações e visão geral da disciplina |
+| 11/08/2026 | Terça-Feira   | Aula 01                    | Dados como ativo estratégico e Introdução ao Machine Learning                                   |
+| 18/08/2026 | Terça-Feira   | Aula 02                    | Governança de Dados e ciclo de vida de Machine Learning                                         |
+| 25/08/2026 | Terça-Feira   | Aula 03                    | Coleta de dados e Regressão Linear                                                              |
+
+##### SETEMBRO DE 2026
+
+| Data       | Dia da Semana | Aulas   | Conteúdo                                                        |
+| ---------- | ------------- | ------- | --------------------------------------------------------------- |
+| 01/09/2026 | Terça-Feira   | Aula 04 | Organização e preparação dos dados, Regressão Logística e KNN   |
+| 08/09/2026 | Terça-Feira   | Aula 05 | Análise de dados, dilema Viés-Variância e Métricas de Avaliação |
+| 15/09/2026 | Terça-Feira   | Aula 06 | Relatórios, KPIs, avaliação de modelos e Árvores de Decisão     |
+| 22/09/2026 | Terça-Feira   | NP1     | PROVA                                                           |
+| 29/09/2026 | Terça-Feira   | Aula 07 | Business Intelligence, Random Forest e Ensemble Learning        |
+
+##### OUTUBRO DE 2026
+
+| Data       | Dia da Semana | Aulas   | Conteúdo                                                                |
+| ---------- | ------------- | ------- | ----------------------------------------------------------------------- |
+| 06/10/2026 | Terça-Feira   | Aula 08 | Big Data e Support Vector Machines                                      |
+| 13/10/2026 | Terça-Feira   | Aula 09 | Data-Driven Decision Making e Redução de Dimensionalidade               |
+| 20/10/2026 | Terça-Feira   | Aula 10 | Modelos de gestão de riscos e técnicas de Agrupamento                   |
+| 27/10/2026 | Terça-Feira   | Aula 11 | Inteligência Artificial, análise preditiva e Seleção de Características |
+
+##### NOVEMBRO DE 2026
+
+| Data       | Dia da Semana | Aulas   | Conteúdo                                                                                     |
+| ---------- | ------------- | ------- | -------------------------------------------------------------------------------------------- |
+| 03/11/2026 | Terça-Feira   | Aula 12 | Monitoramento contínuo, melhoria de processos e ciclo de vida de modelos de Machine Learning |
+| 10/11/2026 | Terça-Feira   | NP2     | PROVA                                                                                        |
+| 17/11/2026 | Terça-Feira   | SUB     | PROVA SUBSTITUTIVA                                                                           |
+| 24/11/2026 | Terça-Feira   |         | N/A                                                                                          |
+
+##### DEZEMBRO DE 2026
+
+| Data       | Dia da Semana | Aulas | Conteúdo |
+| ---------- | ------------- | ----- | -------- |
+| 01/12/2026 | Terça-Feira   |       | N/A      |
+| 08/12/2026 | Terça-Feira   | EXAME | PROVA    |

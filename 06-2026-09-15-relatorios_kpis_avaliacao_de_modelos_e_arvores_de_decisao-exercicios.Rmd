@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+## - Exercícios - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão
+
+```{r 06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao-exercicios, eval=FALSE, include=FALSE}
+rmarkdown::render("06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao-exercicios-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```

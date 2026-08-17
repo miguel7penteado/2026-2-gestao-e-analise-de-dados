@@ -1,0 +1,16 @@
+---
+output: 
+  html_document: 
+    highlight: tango
+    theme: cerulean
+    df_print: kable
+---
+## - Exercícios - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning
+
+```{r 12-2026-11-03-monitoramento_continuo_melhoria_de_processos_e_ciclo_de_vida_de_modelos_de_machine_learning-exercicios, eval=FALSE, include=FALSE}
+rmarkdown::render("12-2026-11-03-monitoramento_continuo_melhoria_de_processos_e_ciclo_de_vida_de_modelos_de_machine_learning-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
+```
+
+```{r 12-2026-11-03-monitoramento_continuo_melhoria_de_processos_e_ciclo_de_vida_de_modelos_de_machine_learning-exercicios-doc, eval=FALSE, include=FALSE}
+rmarkdown::render("12-2026-11-03-monitoramento_continuo_melhoria_de_processos_e_ciclo_de_vida_de_modelos_de_machine_learning-exercicios.rmd", output_dir="docs", output_file ="temporario.docx" , output_format = "word_document") ; utils::browseURL("docs/temporario.docx")
+```
