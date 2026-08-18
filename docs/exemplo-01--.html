@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Capítulo 4 Exemplo 01 - | GTI - Gestão e Análise de Dados</title>
+  <meta name="description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Capítulo 4 Exemplo 01 - | GTI - Gestão e Análise de Dados" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+  <meta property="og:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="github-repo" content="miguel7penteado/2025-2sem-GTI-BancoDeDados" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Capítulo 4 Exemplo 01 - | GTI - Gestão e Análise de Dados" />
+  
+  <meta name="twitter:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
+  <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
+
+<meta name="author" content="Professor Miguél Suares" />
+
+
+<meta name="date" content="2026-08-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"/>
+<link rel="next" href="coleta-de-dados-e-regressão-linear.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">2026- GTI - Disciplina de Gestão e Análise de Dados</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre estas anotações</a>
+<ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#calend%C3%A1rio-das-aulas"><i class="fa fa-check"></i><b>0.1</b> Calendário das aulas</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="apresentação-da-disciplina.html"><a href="apresentação-da-disciplina.html"><i class="fa fa-check"></i><b>1</b> - Apresentação da Disciplina</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="apresentação-da-disciplina.html"><a href="apresentação-da-disciplina.html#exerc%C3%ADcios---dados-com-atvo-estrat%C3%A9gico-introdu%C3%A7%C3%A3o-ao-machine-learning"><i class="fa fa-check"></i><b>1.1</b> - Exercícios - Dados com Atvo Estratégico: Introdução ao Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="dados-com-atvo-estratégico-introdução-ao-machine-learning.html"><a href="dados-com-atvo-estratégico-introdução-ao-machine-learning.html"><i class="fa fa-check"></i><b>2</b> - Dados com Atvo Estratégico: Introdução ao Machine Learning</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="dados-com-atvo-estratégico-introdução-ao-machine-learning.html"><a href="dados-com-atvo-estratégico-introdução-ao-machine-learning.html#governan%C3%A7a-de-dados-e-ciclo-de-vida-de-machine-learning"><i class="fa fa-check"></i><b>2.1</b> - Governança de Dados e Ciclo de Vida de Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><i class="fa fa-check"></i><b>3</b> - Governança de Dados e Ciclo de Vida de Machine Learning</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html#exerc%C3%ADcios---coleta-de-dados-e-regress%C3%A3o-linear"><i class="fa fa-check"></i><b>3.1</b> - Exercícios - Coleta de Dados e Regressão Linear</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="exemplo-01--.html"><a href="exemplo-01--.html"><i class="fa fa-check"></i><b>4</b> Exemplo 01 -</a></li>
+<li class="chapter" data-level="5" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html"><i class="fa fa-check"></i><b>5</b> - Coleta de Dados e Regressão Linear</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn"><i class="fa fa-check"></i><b>5.1</b> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><i class="fa fa-check"></i><b>6</b> - Organização e Preparação dos Dados, Regressão Logística e KNN</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#exerc%C3%ADcios---an%C3%A1lise-de-dados-dilema-vi%C3%A9s-vari%C3%A2ncia-e-m%C3%A9tricas-de-avalia%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>6.1</b> - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><i class="fa fa-check"></i><b>7</b> - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios---relat%C3%B3rios-k.p.i.---avalia%C3%A7%C3%A3o-de-modelos-e-%C3%A1rvores-de-decis%C3%A3o"><i class="fa fa-check"></i><b>7.1</b> - Exercícios - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><i class="fa fa-check"></i><b>8</b> - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html#exerc%C3%ADcios---business-intelligence-random-forest-e-ensemble-learning"><i class="fa fa-check"></i><b>8.1</b> - Exercícios - Business Intelligence: Random Forest e Ensemble Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="business-intelligence-random-forest-e-ensemble-learning.html"><a href="business-intelligence-random-forest-e-ensemble-learning.html"><i class="fa fa-check"></i><b>9</b> - Business Intelligence: Random Forest e Ensemble Learning</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="business-intelligence-random-forest-e-ensemble-learning.html"><a href="business-intelligence-random-forest-e-ensemble-learning.html#exerc%C3%ADcios---big-data-e-support-vector-machines"><i class="fa fa-check"></i><b>9.1</b> - Exercícios - Big Data e Support Vector Machines</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="big-data-e-support-vector-machines.html"><a href="big-data-e-support-vector-machines.html"><i class="fa fa-check"></i><b>10</b> - Big Data e Support Vector Machines</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="big-data-e-support-vector-machines.html"><a href="big-data-e-support-vector-machines.html#exerc%C3%ADcios---data-driven-decision-making-e-redu%C3%A7%C3%A3o-de-dimensionalidade"><i class="fa fa-check"></i><b>10.1</b> - Exercícios - Data Driven Decision Making e Redução de Dimensionalidade</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data-driven-decision-making-e-redução-de-dimensionalidade.html"><a href="data-driven-decision-making-e-redução-de-dimensionalidade.html"><i class="fa fa-check"></i><b>11</b> - Data Driven Decision Making e Redução de Dimensionalidade</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="data-driven-decision-making-e-redução-de-dimensionalidade.html"><a href="data-driven-decision-making-e-redução-de-dimensionalidade.html#exerc%C3%ADcios---modelos-de-gest%C3%A3o-de-risco-e-t%C3%A9cnicas-de-agrupamento"><i class="fa fa-check"></i><b>11.1</b> - Exercícios - Modelos de Gestão de Risco e Técnicas de Agrupamento</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><a href="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><i class="fa fa-check"></i><b>12</b> - Modelos de Gestão de Risco e Técnicas de Agrupamento</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><a href="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html#exerc%C3%ADcios---intelig%C3%AAncia-artificial-an%C3%A1lise-preditiva-e-sele%C3%A7%C3%A3o-de-caracter%C3%ADsticas"><i class="fa fa-check"></i><b>12.1</b> - Exercícios - Inteligência Artificial, Análise Preditiva e Seleção de Características</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><a href="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><i class="fa fa-check"></i><b>13</b> - Inteligência Artificial, Análise Preditiva e Seleção de Características</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><a href="inteligência-artificial-análise-preditiva-e-seleção-de-características.html#exerc%C3%ADcios---monitoramento-cont%C3%ADnuo-e-ciclo-de-vida-de-modelos-de-machine-learning"><i class="fa fa-check"></i><b>13.1</b> - Exercícios - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><a href="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><i class="fa fa-check"></i><b>14</b> - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GTI - Gestão e Análise de Dados</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="exemplo-01--" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Capítulo 4</span> Exemplo 01 -<a href="exemplo-01--.html#exemplo-01--" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Uma pesquisa foi realizada com o objetivo de verificar se existe
+associação entre a falta de sono e a capacidade de as pessoas resolverem
+problemas simples. Foram testadas 10 pessoas, mantendo-se sem dormir por
+um determinado número de horas. Após cada um destes períodos, cada
+pessoa teve de resolver um teste com adições simples, anotando-se então
+os erros cometidos. Os dados resultantes são os seguintes:</p>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="41%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Pessoa Observada (i)</th>
+<th align="center"><strong>Número de Horas sem Dormir ( X )</strong></th>
+<th align="center"><strong>Número de Erros ( Y )</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">8</td>
+<td align="center">6</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">8</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">12</td>
+<td align="center">6</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">12</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">16</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">16</td>
+<td align="center">14</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">20</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">20</td>
+<td align="center">14</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">24</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">24</td>
+<td align="center">16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Calcule o <strong>coeficiente de correlação linear</strong> de Pearson,
+interprete e teste sua significância a <strong>5%</strong>.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Ajuste, <strong>teste e interprete o modelo de regressão linear</strong>
+simples.</li>
+</ol></li>
+</ul>
+<p>No python Comece importando os cabeçalhos: - importe a biblioteca
+<strong>numpy</strong> para criar vetores de valores - importe a biblioteca <strong>stats</strong>
+para usar as funções para <code>linregress</code> para calcular a regressão
+linear - importe a biblioteca <strong>stats</strong> para usar as funções para
+<code>pearsonr</code> para calcular o coeficiente de correlação <code>r</code></p>
+<pre><code>## C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py:120: UserWarning: A NumPy version &gt;=1.22.4 and &lt;2.3.0 is required for this version of SciPy (detected version 2.5.1)
+##   return _find_and_load(name, import_)</code></pre>
+<p>Agora precisamos criar uma função para calcular a <strong>regressão linear</strong></p>
+<p>Agora precisamos criar uma função para calcular o <strong>coeficiente de
+correlação</strong> <code>r</code></p>
+<p>Agora vamos definir a ordem de execução das funções:</p>
+<p>Finalmente, vamos iniciar o <strong>fluxo principal</strong> do programa, chamado a
+<strong>funcao_principal()</strong> que chamará todas as outras na ordem</p>
+<pre><code>## --- a) Coeficiente de Correlação de Pearson e Teste ---
+## Coeficiente de Correlação (r): 0.8015
+## P-valor da correlação: 0.00531
+## Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5%.
+## 
+## --- b) Modelo de Regressão Linear Simples ---
+## Coeficiente Angular ( m ): 0.4750
+## Intercepto ( n ): 3.0000
+## Equação ajustada: Y_hat = 3.0000 + 0.4750 * X
+## P-valor do coeficiente angular (teste do modelo): 0.00531
+## Conclusão: O modelo de regressão linear é estatisticamente significativo a 5%.</code></pre>
+<p>Como ficou a equação descoberta pela <strong>regressão linear simples</strong> ?</p>
+<p>Uma equação de reta segue o formato <span class="math inline">\(y = mx + n\)</span>.</p>
+<p><span class="math display">\[
+y = \underbrace{m}*{*\text{coeficiente angular}} x + \underbrace{n}{\text{coeficiente linear}}
+\]</span></p>
+<p>No exercício: - o valor de <code>m</code> é dado pelo valor do
+<code>coeficiente angular</code> ; - o valor de <code>n</code> é dado pelo valor do
+<code>intercepto</code> ;</p>
+<p>Então a equação ficou:</p>
+<p><span class="math display">\[
+y = 0,4750(x) + 3
+\]</span></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="coleta-de-dados-e-regressão-linear.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/miguel7penteado/2026-2-gestao-e-analise-de-dados/edit/main/03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["2026-AprendizadoProfundo.pdf", "2026-AprendizadoProfundo.epub", "2026-AprendizadoProfundo.word", "2026-AprendizadoProfundo.html"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

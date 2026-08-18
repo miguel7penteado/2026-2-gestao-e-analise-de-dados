@@ -10,6 +10,8 @@ dados-com-atvo-estratégico-introdução-ao-machine-learning
 governança-de-dados-e-ciclo-de-vida-de-machine-learning
 governança-de-dados-e-ciclo-de-vida-de-machine-learning-1
 exercícios---coleta-de-dados-e-regressão-linear
+exemplo-01--
+gráfico-do-exemplo-00
 coleta-de-dados-e-regressão-linear
 exercícios---organização-e-preparação-dos-dados-regressão-logística-e-knn
 organização-e-preparação-dos-dados-regressão-logística-e-knn

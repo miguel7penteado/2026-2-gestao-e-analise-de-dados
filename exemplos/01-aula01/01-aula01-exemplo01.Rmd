@@ -1,0 +1,212 @@
+<div id="2661388fcaafd724" class="cell markdown">
+<h1 id="exemplo-01--">Exemplo 01 -</h1>
+<p>Uma pesquisa foi realizada com o objetivo de verificar se existe
+associação entre a falta de sono e a capacidade de as pessoas resolverem
+problemas simples. Foram testadas 10 pessoas, mantendo-se sem dormir por
+um determinado número de horas. Após cada um destes períodos, cada
+pessoa teve de resolver um teste com adições simples, anotando-se então
+os erros cometidos. Os dados resultantes são os seguintes:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 43%" />
+<col style="width: 31%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: center;">Pessoa Observada (i)</th>
+<th style="text-align: center;"><strong>Número de Horas sem Dormir ( X
+)</strong></th>
+<th style="text-align: center;"><strong>Número de Erros ( Y
+)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">8</td>
+</tr>
+<tr>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>a) Calcule o <strong>coeficiente de correlação linear</strong> de
+Pearson, interprete e teste sua significância a
+<strong>5%</strong>.</li>
+<li>b) Ajuste, <strong>teste e interprete o modelo de regressão
+linear</strong> simples.</li>
+</ul>
+</div>
+<div id="3f58f18381281ce0" class="cell markdown"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2026-08-17T15:09:49.655071Z&quot;,&quot;start_time&quot;:&quot;2026-08-17T15:09:49.541456800Z&quot;}">
+<p>No python Comece importando os cabeçalhos:</p>
+<ul>
+<li>importe a biblioteca <strong>numpy</strong> para criar vetores de
+valores</li>
+<li>importe a biblioteca <strong>stats</strong> para usar as funções
+para <code>linregress</code> para calcular a regressão linear</li>
+<li>importe a biblioteca <strong>stats</strong> para usar as funções
+para <code>pearsonr</code> para calcular o coeficiente de correlação
+<code>r</code></li>
+</ul>
+</div>
+<div id="d04a5b36008eb70" class="cell code" data-execution_count="2"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2026-08-18T04:56:03.609354800Z&quot;,&quot;start_time&quot;:&quot;2026-08-18T04:56:03.591827700Z&quot;}">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> yt_dlp.extractor <span class="im">import</span> agora</span></code></pre></div>
+</div>
+<div id="b9625c245063711c" class="cell markdown">
+<p>Agora precisamos criar uma função para calcular a <strong>regressão
+linear</strong></p>
+</div>
+<div id="7cb11f2d02907da" class="cell code" data-execution_count="3"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2026-08-18T04:56:08.134179700Z&quot;,&quot;start_time&quot;:&quot;2026-08-18T04:56:08.120199600Z&quot;}">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calcular_regressao_linear(x: np.ndarray, y: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>, <span class="bu">float</span>]:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calcula os parâmetros e o teste de significância da regressão linear simples.&quot;&quot;&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;--- b) Modelo de Regressão Linear Simples ---&quot;</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ajustando a reta de regressão e obtendo estatísticas completas</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    inclinacao_reta, interceptacao, correlacao_r, valor_p, erro_padrao <span class="op">=</span> stats.linregress(x, y)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Coeficiente Angular ( m ): </span><span class="sc">{</span>inclinacao_reta<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Intercepto ( n ): </span><span class="sc">{</span>interceptacao<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Equação ajustada: Y_hat = </span><span class="sc">{</span>interceptacao<span class="sc">:.4f}</span><span class="ss"> + </span><span class="sc">{</span>inclinacao_reta<span class="sc">:.4f}</span><span class="ss"> * X&quot;</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;P-valor do coeficiente angular (teste do modelo): </span><span class="sc">{</span>valor_p<span class="sc">:.5f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ( valor_p <span class="op">&lt;</span> <span class="fl">0.05</span>):</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: O modelo de regressão linear é estatisticamente significativo a 5%.&quot;</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: O modelo não é estatisticamente significativo.&quot;</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> interceptacao, inclinacao_reta, valor_p</span></code></pre></div>
+</div>
+<div id="669d6b4ce64da706" class="cell markdown">
+<p>Agora precisamos criar uma função para calcular o <strong>coeficiente
+de correlação</strong> <code>r</code></p>
+</div>
+<div id="89254c098d2b39" class="cell code" data-execution_count="4"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2026-08-18T04:56:11.007958900Z&quot;,&quot;start_time&quot;:&quot;2026-08-18T04:56:10.993310Z&quot;}">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calcular_correlacao_pearson(v_independentes_x: np.ndarray, v_dependentes_y: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calcula o coeficiente de correlação de Pearson e o p-valor correspondente.&quot;&quot;&quot;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;--- a) Coeficiente de Correlação de Pearson e Teste ---&quot;</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    coeficiente_de_correlacao_r, valor_de_p <span class="op">=</span> stats.pearsonr(v_independentes_x, v_dependentes_y)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Coeficiente de Correlação (r): </span><span class="sc">{</span>coeficiente_de_correlacao_r<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;P-valor da correlação: </span><span class="sc">{</span>valor_de_p<span class="sc">:.5f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ( valor_de_p <span class="op">&lt;</span> <span class="fl">0.05</span>):</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5%.</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: Não rejeitamos a Hipótese.</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> coeficiente_de_correlacao_r, valor_de_p</span></code></pre></div>
+</div>
+<div id="e38b4431eb4331a1" class="cell markdown">
+<p>Agora vamos definir a ordem de execução das funções:</p>
+</div>
+<div id="32e34d9f7bc95ed9" class="cell code" data-execution_count="5"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2026-08-18T04:56:12.922611800Z&quot;,&quot;start_time&quot;:&quot;2026-08-18T04:56:12.913109900Z&quot;}">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> funcao_principal() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Carregar os valores de X (que é a variável independente) no vetor variaveis_independentes_x</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># X: Número de horas sem dormir</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    variaveis_independentes_x <span class="op">=</span> np.array([<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">24</span>, <span class="dv">24</span>])</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># # Carregar os valores de Y (que é a variável independente) no vetor variaveis_dependentes_y</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Y: Número de erros</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    variaveis_dependentes_y <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">16</span>])</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Executando a correlação</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    calcular_correlacao_pearson(variaveis_independentes_x, variaveis_dependentes_y)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Executando a regressão linear</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    calcular_regressao_linear(variaveis_independentes_x, variaveis_dependentes_y)</span></code></pre></div>
+</div>
+<div id="d269689338204659" class="cell markdown">
+<p>Finalmente, vamos iniciar o <strong>fluxo principal</strong> do
+programa, chamado a <strong>funcao_principal()</strong> que chamará
+todas as outras na ordem</p>
+</div>
+<div id="a7f493c8eaf0dde1" class="cell code" data-execution_count="6"
+data-ExecuteTime="{&quot;end_time&quot;:&quot;2026-08-18T04:56:16.053802900Z&quot;,&quot;start_time&quot;:&quot;2026-08-18T04:56:16.012789900Z&quot;}">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&#39;__main__&#39;</span>:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    funcao_principal()</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>--- a) Coeficiente de Correlação de Pearson e Teste ---
+Coeficiente de Correlação (r): 0.8015
+P-valor da correlação: 0.00531
+Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5%.
+
+--- b) Modelo de Regressão Linear Simples ---
+Coeficiente Angular ( m ): 0.4750
+Intercepto ( n ): 3.0000
+Equação ajustada: Y_hat = 3.0000 + 0.4750 * X
+P-valor do coeficiente angular (teste do modelo): 0.00531
+Conclusão: O modelo de regressão linear é estatisticamente significativo a 5%.
+</code></pre>
+</div>
+</div>
+<div id="e49e0e06493ca2d" class="cell markdown">
+<p>Como ficou a equação descoberta pela <strong>regressão linear
+simples</strong> ?</p>
+<p>Uma equação de reta segue o formato <span
+class="math inline"><em>y</em> = <em>m</em><em>x</em> + <em>n</em></span>.</p>
+<p>$ y = \underbrace{m}<em>{\text{coeficiente angular}} x +
+\underbrace{n}</em>{\text{coeficiente linear}} $</p>
+<p>No exercício:</p>
+<ul>
+<li>o valor de <code>m</code> é dado pelo valor do
+<code>coeficiente angular</code> ;</li>
+<li>o valor de <code>n</code> é dado pelo valor do
+<code>intercepto</code> ;</li>
+</ul>
+<p>Então a equação ficou: <span
+class="math display"><em>y</em> = 0, 4750(<em>x</em>) + 3</span></p>
+</div>
