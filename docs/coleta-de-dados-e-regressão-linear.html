@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 4 - Coleta de Dados e Regressão Linear | GTI - Gestão e Análise de Dados</title>
+  <title>Capítulo 3 Coleta de Dados e Regressão Linear | GTI - Gestão e Análise de Dados</title>
   <meta name="description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 4 - Coleta de Dados e Regressão Linear | GTI - Gestão e Análise de Dados" />
+  <meta property="og:title" content="Capítulo 3 Coleta de Dados e Regressão Linear | GTI - Gestão e Análise de Dados" />
   <meta property="og:type" content="book" />
   <meta property="og:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
   <meta property="og:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
   <meta name="github-repo" content="miguel7penteado/2025-2sem-GTI-BancoDeDados" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 4 - Coleta de Dados e Regressão Linear | GTI - Gestão e Análise de Dados" />
+  <meta name="twitter:title" content="Capítulo 3 Coleta de Dados e Regressão Linear | GTI - Gestão e Análise de Dados" />
   
   <meta name="twitter:description" content="Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas." />
   <meta name="twitter:image" content="your book url like https://bookdown.org/yihui/bookdown/images/cover.jpg" />
@@ -23,14 +23,14 @@
 <meta name="author" content="Professor Miguél Suares" />
 
 
-<meta name="date" content="2026-08-18" />
+<meta name="date" content="2026-08-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"/>
+<link rel="prev" href="governança-de-dados-e-ciclo-de-vida-de-machine-learning.html"/>
 <link rel="next" href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -143,60 +143,60 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Sobre estas anotações</a>
 <ul>
-<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#calend%C3%A1rio-das-aulas"><i class="fa fa-check"></i><b>0.1</b> Calendário das aulas</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#calend%C3%A1rio-das-aulas"><i class="fa fa-check"></i>Calendário das aulas</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="apresentação-da-disciplina.html"><a href="apresentação-da-disciplina.html"><i class="fa fa-check"></i><b>1</b> - Apresentação da Disciplina</a>
+<li class="chapter" data-level="" data-path="apresentação-da-disciplina.html"><a href="apresentação-da-disciplina.html"><i class="fa fa-check"></i>Apresentação da Disciplina</a></li>
+<li class="chapter" data-level="1" data-path="dados-com-ativo-estratégico-introdução-ao-machine-learning.html"><a href="dados-com-ativo-estratégico-introdução-ao-machine-learning.html"><i class="fa fa-check"></i><b>1</b> - Dados com Ativo Estratégico: Introdução ao Machine Learning</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="apresentação-da-disciplina.html"><a href="apresentação-da-disciplina.html#exerc%C3%ADcios---dados-com-atvo-estrat%C3%A9gico-introdu%C3%A7%C3%A3o-ao-machine-learning"><i class="fa fa-check"></i><b>1.1</b> - Exercícios - Dados com Atvo Estratégico: Introdução ao Machine Learning</a></li>
+<li class="chapter" data-level="1.1" data-path="dados-com-ativo-estratégico-introdução-ao-machine-learning.html"><a href="dados-com-ativo-estratégico-introdução-ao-machine-learning.html#exerc%C3%ADcios---dados-com-atvo-estrat%C3%A9gico-introdu%C3%A7%C3%A3o-ao-machine-learning"><i class="fa fa-check"></i><b>1.1</b> - Exercícios - Dados com Atvo Estratégico: Introdução ao Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="dados-com-atvo-estratégico-introdução-ao-machine-learning.html"><a href="dados-com-atvo-estratégico-introdução-ao-machine-learning.html"><i class="fa fa-check"></i><b>2</b> - Dados com Atvo Estratégico: Introdução ao Machine Learning</a>
+<li class="chapter" data-level="2" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning.html"><i class="fa fa-check"></i><b>2</b> - Governança de Dados e Ciclo de Vida de Machine Learning</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="dados-com-atvo-estratégico-introdução-ao-machine-learning.html"><a href="dados-com-atvo-estratégico-introdução-ao-machine-learning.html#governan%C3%A7a-de-dados-e-ciclo-de-vida-de-machine-learning"><i class="fa fa-check"></i><b>2.1</b> - Governança de Dados e Ciclo de Vida de Machine Learning</a></li>
+<li class="chapter" data-level="2.1" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning.html#governan%C3%A7a-de-dados-e-ciclo-de-vida-de-machine-learning-1"><i class="fa fa-check"></i><b>2.1</b> - Governança de Dados e Ciclo de Vida de Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><i class="fa fa-check"></i><b>3</b> - Governança de Dados e Ciclo de Vida de Machine Learning</a>
+<li class="chapter" data-level="3" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html"><i class="fa fa-check"></i><b>3</b> Coleta de Dados e Regressão Linear</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html#exerc%C3%ADcios---coleta-de-dados-e-regress%C3%A3o-linear"><i class="fa fa-check"></i><b>3.1</b> - Exercícios - Coleta de Dados e Regressão Linear</a>
+<li class="chapter" data-level="3.1" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html#exerc%C3%ADcios---coleta-de-dados-e-regress%C3%A3o-linear"><i class="fa fa-check"></i><b>3.1</b> - Exercícios - Coleta de Dados e Regressão Linear</a>
 <ul>
-<li class="chapter" data-level="3.1.1" data-path="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html"><a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html#exemplo-01--"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo 01 -</a></li>
+<li class="chapter" data-level="3.1.1" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html#exemplo-01--"><i class="fa fa-check"></i><b>3.1.1</b> Exemplo 01 -</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html"><i class="fa fa-check"></i><b>4</b> - Coleta de Dados e Regressão Linear</a>
+<li class="chapter" data-level="4" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><i class="fa fa-check"></i><b>4</b> - Organização e Preparação dos Dados, Regressão Logística e KNN</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="coleta-de-dados-e-regressão-linear.html"><a href="coleta-de-dados-e-regressão-linear.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn"><i class="fa fa-check"></i><b>4.1</b> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN</a></li>
+<li class="chapter" data-level="4.1" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn"><i class="fa fa-check"></i><b>4.1</b> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><i class="fa fa-check"></i><b>5</b> - Organização e Preparação dos Dados, Regressão Logística e KNN</a>
+<li class="chapter" data-level="5" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><i class="fa fa-check"></i><b>5</b> - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#exerc%C3%ADcios---an%C3%A1lise-de-dados-dilema-vi%C3%A9s-vari%C3%A2ncia-e-m%C3%A9tricas-de-avalia%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>5.1</b> - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a></li>
+<li class="chapter" data-level="5.1" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios---an%C3%A1lise-de-dados-dilema-vi%C3%A9s-vari%C3%A2ncia-e-m%C3%A9tricas-de-avalia%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>5.1</b> - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><i class="fa fa-check"></i><b>6</b> - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a>
+<li class="chapter" data-level="6" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><i class="fa fa-check"></i><b>6</b> - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios---relat%C3%B3rios-k.p.i.---avalia%C3%A7%C3%A3o-de-modelos-e-%C3%A1rvores-de-decis%C3%A3o"><i class="fa fa-check"></i><b>6.1</b> - Exercícios - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a></li>
+<li class="chapter" data-level="6.1" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html#exerc%C3%ADcios---relat%C3%B3rios-k.p.i.---avalia%C3%A7%C3%A3o-de-modelos-e-%C3%A1rvores-de-decis%C3%A3o"><i class="fa fa-check"></i><b>6.1</b> - Exercícios - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><i class="fa fa-check"></i><b>7</b> - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a>
+<li class="chapter" data-level="7" data-path="business-intelligence-random-forest-e-ensemble-learning.html"><a href="business-intelligence-random-forest-e-ensemble-learning.html"><i class="fa fa-check"></i><b>7</b> - Business Intelligence: Random Forest e Ensemble Learning</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html#exerc%C3%ADcios---business-intelligence-random-forest-e-ensemble-learning"><i class="fa fa-check"></i><b>7.1</b> - Exercícios - Business Intelligence: Random Forest e Ensemble Learning</a></li>
+<li class="chapter" data-level="7.1" data-path="business-intelligence-random-forest-e-ensemble-learning.html"><a href="business-intelligence-random-forest-e-ensemble-learning.html#exerc%C3%ADcios---business-intelligence-random-forest-e-ensemble-learning"><i class="fa fa-check"></i><b>7.1</b> - Exercícios - Business Intelligence: Random Forest e Ensemble Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="business-intelligence-random-forest-e-ensemble-learning.html"><a href="business-intelligence-random-forest-e-ensemble-learning.html"><i class="fa fa-check"></i><b>8</b> - Business Intelligence: Random Forest e Ensemble Learning</a>
+<li class="chapter" data-level="8" data-path="big-data-e-support-vector-machines.html"><a href="big-data-e-support-vector-machines.html"><i class="fa fa-check"></i><b>8</b> - Big Data e Support Vector Machines</a>
 <ul>
-<li class="chapter" data-level="8.1" data-path="business-intelligence-random-forest-e-ensemble-learning.html"><a href="business-intelligence-random-forest-e-ensemble-learning.html#exerc%C3%ADcios---big-data-e-support-vector-machines"><i class="fa fa-check"></i><b>8.1</b> - Exercícios - Big Data e Support Vector Machines</a></li>
+<li class="chapter" data-level="8.1" data-path="big-data-e-support-vector-machines.html"><a href="big-data-e-support-vector-machines.html#exerc%C3%ADcios---big-data-e-support-vector-machines"><i class="fa fa-check"></i><b>8.1</b> - Exercícios - Big Data e Support Vector Machines</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="big-data-e-support-vector-machines.html"><a href="big-data-e-support-vector-machines.html"><i class="fa fa-check"></i><b>9</b> - Big Data e Support Vector Machines</a>
+<li class="chapter" data-level="9" data-path="data-driven-decision-making-e-redução-de-dimensionalidade.html"><a href="data-driven-decision-making-e-redução-de-dimensionalidade.html"><i class="fa fa-check"></i><b>9</b> - Data Driven Decision Making e Redução de Dimensionalidade</a>
 <ul>
-<li class="chapter" data-level="9.1" data-path="big-data-e-support-vector-machines.html"><a href="big-data-e-support-vector-machines.html#exerc%C3%ADcios---data-driven-decision-making-e-redu%C3%A7%C3%A3o-de-dimensionalidade"><i class="fa fa-check"></i><b>9.1</b> - Exercícios - Data Driven Decision Making e Redução de Dimensionalidade</a></li>
+<li class="chapter" data-level="9.1" data-path="data-driven-decision-making-e-redução-de-dimensionalidade.html"><a href="data-driven-decision-making-e-redução-de-dimensionalidade.html#exerc%C3%ADcios---data-driven-decision-making-e-redu%C3%A7%C3%A3o-de-dimensionalidade"><i class="fa fa-check"></i><b>9.1</b> - Exercícios - Data Driven Decision Making e Redução de Dimensionalidade</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="data-driven-decision-making-e-redução-de-dimensionalidade.html"><a href="data-driven-decision-making-e-redução-de-dimensionalidade.html"><i class="fa fa-check"></i><b>10</b> - Data Driven Decision Making e Redução de Dimensionalidade</a>
+<li class="chapter" data-level="10" data-path="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><a href="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><i class="fa fa-check"></i><b>10</b> - Modelos de Gestão de Risco e Técnicas de Agrupamento</a>
 <ul>
-<li class="chapter" data-level="10.1" data-path="data-driven-decision-making-e-redução-de-dimensionalidade.html"><a href="data-driven-decision-making-e-redução-de-dimensionalidade.html#exerc%C3%ADcios---modelos-de-gest%C3%A3o-de-risco-e-t%C3%A9cnicas-de-agrupamento"><i class="fa fa-check"></i><b>10.1</b> - Exercícios - Modelos de Gestão de Risco e Técnicas de Agrupamento</a></li>
+<li class="chapter" data-level="10.1" data-path="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><a href="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html#exerc%C3%ADcios---modelos-de-gest%C3%A3o-de-risco-e-t%C3%A9cnicas-de-agrupamento"><i class="fa fa-check"></i><b>10.1</b> - Exercícios - Modelos de Gestão de Risco e Técnicas de Agrupamento</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><a href="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><i class="fa fa-check"></i><b>11</b> - Modelos de Gestão de Risco e Técnicas de Agrupamento</a>
+<li class="chapter" data-level="11" data-path="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><a href="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><i class="fa fa-check"></i><b>11</b> - Inteligência Artificial, Análise Preditiva e Seleção de Características</a>
 <ul>
-<li class="chapter" data-level="11.1" data-path="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html"><a href="modelos-de-gestão-de-risco-e-técnicas-de-agrupamento.html#exerc%C3%ADcios---intelig%C3%AAncia-artificial-an%C3%A1lise-preditiva-e-sele%C3%A7%C3%A3o-de-caracter%C3%ADsticas"><i class="fa fa-check"></i><b>11.1</b> - Exercícios - Inteligência Artificial, Análise Preditiva e Seleção de Características</a></li>
+<li class="chapter" data-level="11.1" data-path="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><a href="inteligência-artificial-análise-preditiva-e-seleção-de-características.html#exerc%C3%ADcios---intelig%C3%AAncia-artificial-an%C3%A1lise-preditiva-e-sele%C3%A7%C3%A3o-de-caracter%C3%ADsticas"><i class="fa fa-check"></i><b>11.1</b> - Exercícios - Inteligência Artificial, Análise Preditiva e Seleção de Características</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><a href="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><i class="fa fa-check"></i><b>12</b> - Inteligência Artificial, Análise Preditiva e Seleção de Características</a>
+<li class="chapter" data-level="12" data-path="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><a href="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><i class="fa fa-check"></i><b>12</b> - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning</a>
 <ul>
-<li class="chapter" data-level="12.1" data-path="inteligência-artificial-análise-preditiva-e-seleção-de-características.html"><a href="inteligência-artificial-análise-preditiva-e-seleção-de-características.html#exerc%C3%ADcios---monitoramento-cont%C3%ADnuo-e-ciclo-de-vida-de-modelos-de-machine-learning"><i class="fa fa-check"></i><b>12.1</b> - Exercícios - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning</a></li>
+<li class="chapter" data-level="12.1" data-path="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><a href="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html#exerc%C3%ADcios---monitoramento-cont%C3%ADnuo-e-ciclo-de-vida-de-modelos-de-machine-learning"><i class="fa fa-check"></i><b>12.1</b> - Exercícios - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><a href="monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning.html"><i class="fa fa-check"></i><b>13</b> - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado com Biblioteca R bookdown</a></li>
 
@@ -217,12 +217,1734 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="coleta-de-dados-e-regressão-linear" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Capítulo 4</span> - Coleta de Dados e Regressão Linear<a href="coleta-de-dados-e-regressão-linear.html#coleta-de-dados-e-regress%C3%A3o-linear" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="coleta-de-dados-e-regressão-linear" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Capítulo 3</span> Coleta de Dados e Regressão Linear<a href="coleta-de-dados-e-regressão-linear.html#coleta-de-dados-e-regress%C3%A3o-linear" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide1.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide2.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide3.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide4.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide5.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide6.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide7.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide8.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide9.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide10.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide11.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide12.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide13.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide14.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide15.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide16.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide17.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide18.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide19.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide20.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide21.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide22.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide23.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide24.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="coleta-de-dados-e-regressão-linear.html#cb1-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="coleta-de-dados-e-regressão-linear.html#cb1-2" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code></pre></div>
+<pre><code>## C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py:120: UserWarning: A NumPy version &gt;=1.22.4 and &lt;2.3.0 is required for this version of SciPy (detected version 2.5.1)
+##   return _find_and_load(name, import_)
+## 
+## A module that was compiled using NumPy 1.x cannot be run in
+## NumPy 2.5.1 as it may crash. To support both 1.x and 2.x
+## versions of NumPy, modules must be compiled with NumPy 2.0.
+## Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+## 
+## If you are a user of the module, the easiest solution will be to
+## downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+## We expect that some modules will need time to support NumPy 2.
+## 
+## Traceback (most recent call last):  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\__init__.py&quot;, line 70, in &lt;module&gt;
+##     from sklearn.base import clone  # noqa: E402
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\base.py&quot;, line 20, in &lt;module&gt;
+##     from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\__init__.py&quot;, line 9, in &lt;module&gt;
+##     from sklearn.utils._chunking import gen_batches, gen_even_slices
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\_chunking.py&quot;, line 11, in &lt;module&gt;
+##     from sklearn.utils._param_validation import Interval, validate_params
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\_param_validation.py&quot;, line 17, in &lt;module&gt;
+##     from sklearn.utils.validation import _is_arraylike_not_scalar
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\validation.py&quot;, line 24, in &lt;module&gt;
+##     from sklearn.utils._array_api import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\_array_api.py&quot;, line 23, in &lt;module&gt;
+##     from sklearn.utils.fixes import parse_version
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\fixes.py&quot;, line 19, in &lt;module&gt;
+##     import pandas as pd
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pandas\__init__.py&quot;, line 26, in &lt;module&gt;
+##     from pandas.compat import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pandas\compat\__init__.py&quot;, line 27, in &lt;module&gt;
+##     from pandas.compat.pyarrow import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pandas\compat\pyarrow.py&quot;, line 8, in &lt;module&gt;
+##     import pyarrow as pa
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
+##     import pyarrow.lib as _lib
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+## Traceback (most recent call last):
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\numpy\core\_multiarray_umath.py&quot;, line 46, in __getattr__
+##     raise ImportError(msg)
+## ImportError: 
+## A module that was compiled using NumPy 1.x cannot be run in
+## NumPy 2.5.1 as it may crash. To support both 1.x and 2.x
+## versions of NumPy, modules must be compiled with NumPy 2.0.
+## Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+## 
+## If you are a user of the module, the easiest solution will be to
+## downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+## We expect that some modules will need time to support NumPy 2.
+## 
+## 
+## 
+## A module that was compiled using NumPy 1.x cannot be run in
+## NumPy 2.5.1 as it may crash. To support both 1.x and 2.x
+## versions of NumPy, modules must be compiled with NumPy 2.0.
+## Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+## 
+## If you are a user of the module, the easiest solution will be to
+## downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+## We expect that some modules will need time to support NumPy 2.
+## 
+## Traceback (most recent call last):  File &quot;&lt;string&gt;&quot;, line 1, in &lt;module&gt;
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\__init__.py&quot;, line 70, in &lt;module&gt;
+##     from sklearn.base import clone  # noqa: E402
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\base.py&quot;, line 20, in &lt;module&gt;
+##     from sklearn.utils._metadata_requests import _MetadataRequester, _routing_enabled
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\__init__.py&quot;, line 9, in &lt;module&gt;
+##     from sklearn.utils._chunking import gen_batches, gen_even_slices
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\_chunking.py&quot;, line 11, in &lt;module&gt;
+##     from sklearn.utils._param_validation import Interval, validate_params
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\_param_validation.py&quot;, line 17, in &lt;module&gt;
+##     from sklearn.utils.validation import _is_arraylike_not_scalar
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\validation.py&quot;, line 24, in &lt;module&gt;
+##     from sklearn.utils._array_api import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\_array_api.py&quot;, line 23, in &lt;module&gt;
+##     from sklearn.utils.fixes import parse_version
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\sklearn\utils\fixes.py&quot;, line 19, in &lt;module&gt;
+##     import pandas as pd
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pandas\__init__.py&quot;, line 49, in &lt;module&gt;
+##     from pandas.core.api import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pandas\core\api.py&quot;, line 9, in &lt;module&gt;
+##     from pandas.core.dtypes.dtypes import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pandas\core\dtypes\dtypes.py&quot;, line 24, in &lt;module&gt;
+##     from pandas._libs import (
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+##   File &quot;C:\1\QGIS\apps\Python312\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
+##     import pyarrow.lib as _lib
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 122, in _find_and_load_hook
+##     return _run_hook(name, _hook)
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 96, in _run_hook
+##     module = hook()
+##   File &quot;C:\Users\miguel\AppData\Local\R\win-library\4.4\reticulate\python\rpytools\loader.py&quot;, line 120, in _hook
+##     return _find_and_load(name, import_)
+## Traceback (most recent call last):
+##   File &quot;C:\Users\miguel\AppData\Roaming\Python\Python312\site-packages\numpy\core\_multiarray_umath.py&quot;, line 46, in __getattr__
+##     raise ImportError(msg)
+## ImportError: 
+## A module that was compiled using NumPy 1.x cannot be run in
+## NumPy 2.5.1 as it may crash. To support both 1.x and 2.x
+## versions of NumPy, modules must be compiled with NumPy 2.0.
+## Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+## 
+## If you are a user of the module, the easiest solution will be to
+## downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+## We expect that some modules will need time to support NumPy 2.</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="coleta-de-dados-e-regressão-linear.html#cb3-1" tabindex="-1"></a>X <span class="op">=</span> np.array([[<span class="dv">40</span>], [<span class="dv">50</span>], [<span class="dv">60</span>], [<span class="dv">70</span>], [<span class="dv">80</span>]])</span>
+<span id="cb3-2"><a href="coleta-de-dados-e-regressão-linear.html#cb3-2" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">220</span>, <span class="dv">260</span>, <span class="dv">310</span>, <span class="dv">350</span>, <span class="dv">410</span>])</span>
+<span id="cb3-3"><a href="coleta-de-dados-e-regressão-linear.html#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="coleta-de-dados-e-regressão-linear.html#cb3-4" tabindex="-1"></a><span class="co"># Crie o seu modelo</span></span>
+<span id="cb3-5"><a href="coleta-de-dados-e-regressão-linear.html#cb3-5" tabindex="-1"></a>modelo <span class="op">=</span> LinearRegression()</span>
+<span id="cb3-6"><a href="coleta-de-dados-e-regressão-linear.html#cb3-6" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="coleta-de-dados-e-regressão-linear.html#cb3-7" tabindex="-1"></a><span class="co"># Treine o seu modelo (ajuste sua reta aos pontos)</span></span>
+<span id="cb3-8"><a href="coleta-de-dados-e-regressão-linear.html#cb3-8" tabindex="-1"></a>modelo.fit(X, y)</span></code></pre></div>
+<style>.sk-global {
+  /* Definition of color scheme common for light and dark mode */
+  --sklearn-color-text: #000;
+  --sklearn-color-text-muted: #666;
+  --sklearn-color-line: gray;
+  /* Definition of color scheme for unfitted estimators */
+  --sklearn-color-unfitted-level-0: #fff5e6;
+  --sklearn-color-unfitted-level-1: #f6e4d2;
+  --sklearn-color-unfitted-level-2: #ffe0b3;
+  --sklearn-color-unfitted-level-3: chocolate;
+  /* Definition of color scheme for fitted estimators */
+  --sklearn-color-fitted-level-0: #f0f8ff;
+  --sklearn-color-fitted-level-1: #d4ebff;
+  --sklearn-color-fitted-level-2: #b3dbfd;
+  --sklearn-color-fitted-level-3: cornflowerblue;
+}
 
-<div id="exercícios---organização-e-preparação-dos-dados-regressão-logística-e-knn" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN<a href="coleta-de-dados-e-regressão-linear.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+.sk-global.light {
+  /* Specific color for light theme */
+  --sklearn-color-text-on-default-background: black;
+  --sklearn-color-background: white;
+  --sklearn-color-border-box: black;
+  --sklearn-color-icon: #696969;
+}
 
+.sk-global.dark {
+  --sklearn-color-text-on-default-background: white;
+  --sklearn-color-background: #111;
+  --sklearn-color-border-box: white;
+  --sklearn-color-icon: #878787;
+}
+
+.sk-global {
+  color: var(--sklearn-color-text);
+}
+
+.sk-global pre {
+  padding: 0;
+}
+
+.sk-global input.sk-hidden--visually {
+  border: 0;
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.sk-global div.sk-dashed-wrapped {
+  border: 1px dashed var(--sklearn-color-line);
+  margin: 0 0.4em 0.5em 0.4em;
+  box-sizing: border-box;
+  padding-bottom: 0.4em;
+  background-color: var(--sklearn-color-background);
+}
+
+.sk-global div.sk-container {
+  /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
+     but bootstrap.min.css set `[hidden] { display: none !important; }`
+     so we also need the `!important` here to be able to override the
+     default hidden behavior on the sphinx rendered scikit-learn.org.
+     See: https://github.com/scikit-learn/scikit-learn/issues/21755 */
+  display: inline-block !important;
+  position: relative;
+}
+
+.sk-global div.sk-text-repr-fallback {
+  display: none;
+}
+
+div.sk-parallel-item,
+div.sk-serial,
+div.sk-item {
+  /* draw centered vertical line to link estimators */
+  background-image: linear-gradient(var(--sklearn-color-text-on-default-background), var(--sklearn-color-text-on-default-background));
+  background-size: 2px 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Parallel-specific style estimator block */
+
+.sk-global div.sk-parallel-item::after {
+  content: "";
+  width: 100%;
+  border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
+  flex-grow: 1;
+}
+
+.sk-global div.sk-parallel {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  background-color: var(--sklearn-color-background);
+  position: relative;
+}
+
+.sk-global div.sk-parallel-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.sk-global div.sk-parallel-item:first-child::after {
+  align-self: flex-end;
+  width: 50%;
+}
+
+.sk-global div.sk-parallel-item:last-child::after {
+  align-self: flex-start;
+  width: 50%;
+}
+
+.sk-global div.sk-parallel-item:only-child::after {
+  width: 0;
+}
+
+/* Serial-specific style estimator block */
+
+.sk-global div.sk-serial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--sklearn-color-background);
+  padding-right: 1em;
+  padding-left: 1em;
+}
+
+
+/* Toggleable style: style used for estimator/Pipeline/ColumnTransformer box that is
+clickable and can be expanded/collapsed.
+- Pipeline and ColumnTransformer use this feature and define the default style
+- Estimators will overwrite some part of the style using the `sk-estimator` class
+*/
+
+/* Pipeline and ColumnTransformer style (default) */
+
+.sk-global div.sk-toggleable {
+  /* Default theme specific background. It is overwritten whether we have a
+  specific estimator or a Pipeline/ColumnTransformer */
+  background-color: var(--sklearn-color-background);
+}
+
+/* Toggleable label */
+.sk-global label.sk-toggleable__label {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.sk-global label.sk-toggleable__label .caption {
+  font-size: 0.6rem;
+  font-weight: lighter;
+  color: var(--sklearn-color-text-muted);
+}
+
+.sk-global label.sk-toggleable__label-arrow:before {
+  /* Arrow on the left of the label */
+  content: "▸";
+  float: left;
+  margin-right: 0.25em;
+  color: var(--sklearn-color-icon);
+}
+
+.sk-global label.sk-toggleable__label-arrow:hover:before {
+  color: var(--sklearn-color-text);
+}
+
+/* Toggleable content - dropdown */
+
+.sk-global div.sk-toggleable__content {
+  display: none;
+  text-align: left;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+.sk-global div.sk-toggleable__content.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+.sk-global div.sk-toggleable__content pre {
+  margin: 0.2em;
+  border-radius: 0.25em;
+  color: var(--sklearn-color-text);
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+.sk-global div.sk-toggleable__content.fitted pre {
+  /* unfitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+.sk-global input.sk-toggleable__control:checked~div.sk-toggleable__content {
+  /* Expand drop-down */
+  display: block;
+  width: 100%;
+  overflow: visible;
+}
+
+.sk-global input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+  content: "▾";
+}
+
+/* Pipeline/ColumnTransformer-specific style */
+
+.sk-global div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+.sk-global div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator-specific style */
+
+/* Colorize estimator box */
+.sk-global div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+.sk-global div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+.sk-global div.sk-label label.sk-toggleable__label,
+.sk-global div.sk-label label {
+  /* The background is the default theme color */
+  color: var(--sklearn-color-text-on-default-background);
+}
+
+/* On hover, darken the color of the background */
+.sk-global div.sk-label:hover label.sk-toggleable__label {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+/* Label box, darken color on hover, fitted */
+.sk-global div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Estimator label */
+
+.sk-global div.sk-label label {
+  font-family: monospace;
+  font-weight: bold;
+  line-height: 1.2em;
+}
+
+.sk-global div.sk-label-container {
+  text-align: center;
+}
+
+/* Estimator-specific */
+.sk-global div.sk-estimator {
+  font-family: monospace;
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: 0.25em;
+  box-sizing: border-box;
+  margin-bottom: 0.5em;
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-0);
+}
+
+.sk-global div.sk-estimator.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+/* on hover */
+.sk-global div.sk-estimator:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+.sk-global div.sk-estimator.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+/* Specification for estimator info (e.g. "i" and "?") */
+
+/* Common style for "i" and "?" */
+
+.sk-estimator-doc-link,
+a:link.sk-estimator-doc-link,
+a:visited.sk-estimator-doc-link {
+  float: right;
+  font-size: smaller;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-unfitted-level-0);
+  border-radius: 1em;
+  height: 1em;
+  width: 1em;
+  text-decoration: none !important;
+  margin-left: 0.5em;
+  text-align: center;
+  /* unfitted */
+  border: var(--sklearn-color-unfitted-level-3) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted,
+a:link.sk-estimator-doc-link.fitted,
+a:visited.sk-estimator-doc-link.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3) 1pt solid;
+  color: var(--sklearn-color-fitted-level-3);
+}
+
+/* On hover */
+div.sk-estimator:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover,
+div.sk-label-container:hover .sk-estimator-doc-link:hover,
+.sk-estimator-doc-link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  border: var(--sklearn-color-fitted-level-0) 1pt solid;
+  color: var(--sklearn-color-unfitted-level-0);
+  text-decoration: none;
+}
+
+div.sk-estimator.fitted:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover,
+div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
+.sk-estimator-doc-link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+  border: var(--sklearn-color-fitted-level-0) 1pt solid;
+  color: var(--sklearn-color-fitted-level-0);
+  text-decoration: none;
+}
+
+/* Span, style for the box shown on hovering the info icon */
+.sk-estimator-doc-link span {
+  display: none;
+  z-index: 9999;
+  position: relative;
+  font-weight: normal;
+  right: .2ex;
+  padding: .5ex;
+  margin: .5ex;
+  width: min-content;
+  min-width: 20ex;
+  max-width: 50ex;
+  color: var(--sklearn-color-text);
+  box-shadow: 2pt 2pt 4pt #999;
+  /* unfitted */
+  background: var(--sklearn-color-unfitted-level-0);
+  border: .5pt solid var(--sklearn-color-unfitted-level-3);
+}
+
+.sk-estimator-doc-link.fitted span {
+  /* fitted */
+  background: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-estimator-doc-link:hover span {
+  display: block;
+}
+
+/* "?"-specific style due to the `<a>` HTML tag */
+
+.sk-global a.estimator_doc_link {
+  float: right;
+  font-size: 1rem;
+  line-height: 1em;
+  font-family: monospace;
+  background-color: var(--sklearn-color-unfitted-level-0);
+  border-radius: 1rem;
+  height: 1rem;
+  width: 1rem;
+  text-decoration: none;
+  /* unfitted */
+  color: var(--sklearn-color-unfitted-level-1);
+  border: var(--sklearn-color-unfitted-level-1) 1pt solid;
+}
+
+.sk-global a.estimator_doc_link.fitted {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-0);
+  border: var(--sklearn-color-fitted-level-1) 1pt solid;
+  color: var(--sklearn-color-fitted-level-1);
+}
+
+/* On hover */
+.sk-global a.estimator_doc_link:hover {
+  /* unfitted */
+  background-color: var(--sklearn-color-unfitted-level-3);
+  color: var(--sklearn-color-background);
+  text-decoration: none;
+}
+
+.sk-global a.estimator_doc_link.fitted:hover {
+  /* fitted */
+  background-color: var(--sklearn-color-fitted-level-3);
+}
+
+.sk-top-container.sk-global {
+  /* pydata-sphinx-theme hides overflow, so scrolling is disabled.
+   We need to set it to !important and add tabindex="0" in the HTML
+   to allow keyboard-only users to navigate the display. */
+  overflow-x: scroll !important;
+  max-width: 100%;
+}
+
+.estimator-table {
+    font-family: monospace;
+}
+
+.estimator-table summary {
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.estimator-table summary::marker {
+    font-size: 0.7rem;
+}
+
+.estimator-table details[open] {
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+    padding-bottom: 0.3rem;
+}
+
+.estimator-table .parameters-table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 0;
+}
+
+.estimator-table .parameters-table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+.estimator-table .parameters-table tr:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.estimator-table .parameters-table tr:hover td {
+    background-color: #e0e0e0;
+}
+
+.estimator-table table :is(td, th) {
+    border: 1px solid rgba(106, 105, 104, 0.232);
+}
+
+/*
+    `table td`is set in notebook with right text-align.
+    We need to overwrite it.
+*/
+.estimator-table table td.param {
+    text-align: left;
+    position: relative;
+    padding: 0;
+}
+
+.user-set td {
+    color:rgb(255, 94, 0);
+    text-align: left !important;
+}
+
+.user-set td.value {
+    color:rgb(255, 94, 0);
+    background-color: transparent;
+}
+
+.default td, .estimator-table th {
+    color: black;
+    text-align: left !important;
+}
+
+.user-set td i,
+.default td i {
+    color: black;
+}
+
+td.fitted-att-type {
+    white-space: preserve nowrap;
+}
+
+/*
+    Styles for parameter documentation links
+    We need styling for visited so jupyter doesn't overwrite it
+*/
+a.param-doc-link,
+a.param-doc-link:link,
+a.param-doc-link:visited {
+    text-decoration: underline dashed;
+    text-underline-offset: .3em;
+    color: inherit;
+    display: block;
+    padding: .5em;
+}
+
+@supports(anchor-name: --doc-link) {
+    a.param-doc-link,
+    a.param-doc-link:link,
+    a.param-doc-link:visited {
+    anchor-name: --doc-link;
+    }
+}
+
+/* "hack" to make the entire area of the cell containing the link clickable */
+a.param-doc-link::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+}
+
+.param-doc-description {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    left: 0;
+    padding: .5ex;
+    margin-left: 1.5em;
+    color: var(--sklearn-color-text);
+    box-shadow: .3em .3em .4em #999;
+    width: max-content;
+    text-align: left;
+    max-height: 10em;
+    overflow-y: auto;
+
+    /* unfitted */
+    background: var(--sklearn-color-unfitted-level-0);
+    border: thin solid var(--sklearn-color-unfitted-level-3);
+}
+
+@supports(position-area: center right) {
+    .param-doc-description {
+    position-area: center right;
+    position: fixed;
+    margin-left: 0;
+    }
+}
+
+/* Fitted state for parameter tooltips */
+.fitted .param-doc-description {
+    /* fitted */
+    background: var(--sklearn-color-fitted-level-0);
+    border: thin solid var(--sklearn-color-fitted-level-3);
+}
+
+.param-doc-link:hover .param-doc-description {
+    display: block;
+}
+
+.copy-paste-icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIwOCAwTDMzMi4xIDBjMTIuNyAwIDI0LjkgNS4xIDMzLjkgMTQuMWw2Ny45IDY3LjljOSA5IDE0LjEgMjEuMiAxNC4xIDMzLjlMNDQ4IDMzNmMwIDI2LjUtMjEuNSA0OC00OCA0OGwtMTkyIDBjLTI2LjUgMC00OC0yMS41LTQ4LTQ4bDAtMjg4YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4ek00OCAxMjhsODAgMCAwIDY0LTY0IDAgMCAyNTYgMTkyIDAgMC0zMiA2NCAwIDAgNDhjMCAyNi41LTIxLjUgNDgtNDggNDhMNDggNTEyYy0yNi41IDAtNDgtMjEuNS00OC00OEwwIDE3NmMwLTI2LjUgMjEuNS00OCA0OC00OHoiLz48L3N2Zz4=);
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    background-position: 0;
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+}
+
+.features {
+  font-family: monospace;
+  cursor: pointer;
+  background-color: var(--sklearn-color-unfitted-level-0);
+  border: 1px dotted var(--sklearn-color-border-box);
+  border-radius: .20em;
+  margin-bottom: 0.5em;
+  font-size: inherit; /* Needed for jupyter */
+}
+
+.features.fitted {
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+.features summary {
+  cursor: pointer;
+  display: flex;
+  margin-bottom: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: .25em;
+}
+
+.features details[open] > summary {
+  color: var(--sklearn-color-text);
+  background-color: var(--sklearn-color-unfitted-level-2);
+  border-radius: .20em 0 0 0;
+}
+
+.features.fitted details[open] > summary {
+  background-color: var(--sklearn-color-fitted-level-2);
+  border-radius: .20em 0 0 0;
+}
+
+.features details > summary .arrow::before {
+  content: "▸";
+  color: grey;
+}
+
+.features details[open] > summary .arrow::before {
+  content: "▾";
+}
+
+.features details:hover > summary {
+  margin: 0;
+  background-color: var(--sklearn-color-unfitted-level-2);
+}
+
+.features.fitted details:hover > summary {
+  margin: 0;
+  background-color: var(--sklearn-color-fitted-level-2);
+}
+
+.features .features-container {
+  max-width: 15em;
+  max-height: 10em;
+  overflow: auto;
+  scrollbar-width: thin;
+  padding: .25em 0.1rem;
+  background-color: var(--sklearn-color-unfitted-level-0);
+  border-radius: 0 0 .5em .5em;
+}
+
+.features.fitted .features-container {
+  background-color: var(--sklearn-color-fitted-level-0);
+}
+
+.features .image-container {
+  block-size: 1em;
+  inline-size: 1em;
+  padding: 0;
+  margin: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features .copy-paste-icon {
+  background-size: 1em 1em;
+  width: 1em;
+  height: 1em;
+  filter: grayscale(100%) opacity(60%);
+}
+
+.features .features-container table {
+  width: 100%;
+  margin: 0.01em;
+}
+
+.features .features-container table tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+.features .features-container table tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+.features .features-container table tr:hover {
+  background-color: #e0e0e0;
+}
+
+.features .features-container table {
+  table-layout: inherit;
+}
+
+.features .features-container table td {
+  text-align: left;
+  padding: 0 0.5em;
+  border: 1px solid rgba(106, 105, 104, 0.232);
+  white-space: nowrap;
+  color: var(--sklearn-color-text);
+}
+
+.total_features {
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5em;
+}
+</style><body><div id="sk-container-id-1" tabindex="0" class="sk-top-container sk-global"><div class="sk-text-repr-fallback"><pre>LinearRegression()</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually sk-global" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label fitted sk-toggleable__label-arrow"><div><div>LinearRegression</div></div><div><a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html">?<span>Documentation for LinearRegression</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></div></label><div class="sk-toggleable__content fitted" data-param-prefix="">
+        <div class="estimator-table">
+            <details>
+                <summary>Parameters</summary>
+                <table class="parameters-table">
+                  <tbody>
+                    
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('fit_intercept',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-fit_intercept;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=fit_intercept,-bool%2C%20default%3DTrue">
+            fit_intercept
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-fit_intercept;">
+            fit_intercept: bool, default=True<br><br>Whether to calculate the intercept for this model. If set<br>to False, no intercept will be used in calculations<br>(i.e. data is expected to be centered).</span>
+        </a>
+    </td>
+            <td class="value">True</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('copy_X',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-copy_X;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=copy_X,-bool%2C%20default%3DTrue">
+            copy_X
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-copy_X;">
+            copy_X: bool, default=True<br><br>If True, X will be copied; else, it may be overwritten.</span>
+        </a>
+    </td>
+            <td class="value">True</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('tol',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-tol;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=tol,-float%2C%20default%3D1e-6">
+            tol
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-tol;">
+            tol: float, default=1e-6<br><br>The precision of the solution (`coef_`) is determined by `tol` which<br>specifies the convergence criterion of the underlying solver. `tol` is<br>set as `atol` and `btol` of :func:`scipy.sparse.linalg.lsqr` when<br>fitting on sparse training data. `tol` is set as `cond` of<br>:func:`scipy.linalg.lstsq` when fitting on dense training data.<br><br>.. versionadded:: 1.7<br>.. versionchanged:: 1.9<br>    Now supported on dense data, interpreted as the `cond` parameter.</span>
+        </a>
+    </td>
+            <td class="value">1e-06</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('n_jobs',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-n_jobs;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=n_jobs,-int%2C%20default%3DNone">
+            n_jobs
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-n_jobs;">
+            n_jobs: int, default=None<br><br>The number of jobs to use for the computation. This will only provide<br>speedup in case of sufficiently large problems, that is if firstly<br>`n_targets &gt; 1` and secondly `X` is sparse or if `positive` is set<br>to `True`. ``None`` means 1 unless in a<br>:obj:`joblib.parallel_backend` context. ``-1`` means using all<br>processors. See :term:`Glossary &lt;n_jobs&gt;` for more details.</span>
+        </a>
+    </td>
+            <td class="value">None</td>
+        </tr>
+    
+
+        <tr class="default">
+            <td><i class="copy-paste-icon"
+                 onclick="copyToClipboard('positive',
+                          this.parentElement.nextElementSibling)"
+            ></i></td>
+            <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-positive;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=positive,-bool%2C%20default%3DFalse">
+            positive
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-positive;">
+            positive: bool, default=False<br><br>When set to ``True``, forces the coefficients to be positive. This<br>option is only supported for dense arrays.<br><br>For a comparison between a linear regression model with positive constraints<br>on the regression coefficients and a linear regression without such constraints,<br>see :ref:`sphx_glr_auto_examples_linear_model_plot_nnls.py`.<br><br>.. versionadded:: 0.24</span>
+        </a>
+    </td>
+            <td class="value">False</td>
+        </tr>
+    
+                  </tbody>
+                </table>
+            </details>
+        </div>
+    
+        <div class="estimator-table">
+            <details>
+                <summary>Fitted attributes</summary>
+                <table class="parameters-table">
+                    <tbody>
+                        <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Value</th>
+                        </tr>
+                        
+       <tr class="default">
+           <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-coef_;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=coef_,-array%20of%20shape%20%28n_features%2C%20%29%20or%20%28n_targets%2C%20n_features%29">
+            coef_
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-coef_;">
+            coef_: array of shape (n_features, ) or (n_targets, n_features)<br><br>Estimated coefficients for the linear regression problem.<br>If multiple targets are passed during the fit (y 2D), this<br>is a 2D array of shape (n_targets, n_features), while if only<br>one target is passed, this is a 1D array of length n_features.</span>
+        </a>
+    </td>
+           <td class="fitted-att-type">ndarray[float64](1,)</td>
+           <td>[4.7]</td>
+
+       </tr>
+    
+
+       <tr class="default">
+           <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-intercept_;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=intercept_,-float%20or%20array%20of%20shape%20%28n_targets%2C%29">
+            intercept_
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-intercept_;">
+            intercept_: float or array of shape (n_targets,)<br><br>Independent term in the linear model. Set to 0.0 if<br>`fit_intercept = False`.</span>
+        </a>
+    </td>
+           <td class="fitted-att-type">float64</td>
+           <td>28</td>
+
+       </tr>
+    
+
+       <tr class="default">
+           <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-n_features_in_;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=n_features_in_,-int">
+            n_features_in_
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-n_features_in_;">
+            n_features_in_: int<br><br>Number of features seen during :term:`fit`.<br><br>.. versionadded:: 0.24</span>
+        </a>
+    </td>
+           <td class="fitted-att-type">int</td>
+           <td>1</td>
+
+       </tr>
+    
+
+       <tr class="default">
+           <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-rank_;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=rank_,-int">
+            rank_
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-rank_;">
+            rank_: int<br><br>Rank of matrix `X`. Only available when `X` is dense.</span>
+        </a>
+    </td>
+           <td class="fitted-att-type">int</td>
+           <td>1</td>
+
+       </tr>
+    
+
+       <tr class="default">
+           <td class="param">
+        <a class="param-doc-link"
+            style="anchor-name: --doc-link-singular_;"
+            rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.9/modules/generated/sklearn.linear_model.LinearRegression.html#:~:text=singular_,-array%20of%20shape%20%28min%28X%2C%20y%29%2C%29">
+            singular_
+            <span class="param-doc-description"
+            style="position-anchor: --doc-link-singular_;">
+            singular_: array of shape (min(X, y),)<br><br>Singular values of `X`. Only available when `X` is dense.</span>
+        </a>
+    </td>
+           <td class="fitted-att-type">ndarray[float64](1,)</td>
+           <td>[31.62]</td>
+
+       </tr>
+    
+                    </tbody>
+                </table>
+            </details>
+        </div>
+    </div></div></div></div></div><script>/*  Authors: The scikit-learn developers
+ SPDX-License-Identifier: BSD-3-Clause
+*/
+
+function copyToClipboard(text, element) {
+    // Get the parameter prefix from the closest toggleable content
+    const toggleableContent = element.closest('.sk-toggleable__content');
+    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
+    const fullParamName = paramPrefix ? `${paramPrefix}${text}` : text;
+
+    const originalStyle = element.style;
+    const computedStyle = window.getComputedStyle(element);
+    const originalWidth = computedStyle.width;
+    const originalHTML = element.innerHTML.replace('Copied!', '');
+
+    navigator.clipboard.writeText(fullParamName)
+        .then(() => {
+            element.style.width = originalWidth;
+            element.style.color = 'green';
+            element.innerHTML = "Copied!";
+
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Failed to copy:', err);
+            element.style.color = 'red';
+            element.innerHTML = "Failed!";
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 2000);
+        });
+    return false;
+}
+
+document.querySelectorAll('.copy-paste-icon').forEach(function(element) {
+    const toggleableContent = element.closest('.sk-toggleable__content');
+    const paramPrefix = toggleableContent ? toggleableContent.dataset.paramPrefix : '';
+
+    const parent = element.parentElement;
+    if (!parent || !parent.nextElementSibling) {
+        console.warn('Expected copy-paste icon is missing from the DOM structure');
+        return;
+    }
+
+    const paramName = element.parentElement.nextElementSibling
+        .textContent.trim().split(' ')[0];
+    const fullParamName = paramPrefix ? `${paramPrefix}${paramName}` : paramName;
+
+    element.setAttribute('title', fullParamName);
+});
+
+/**
+ * Copy the list of feature names formatted as a Python list.
+ *
+ * @param {HTMLElement} element - The copy button inside a `.features` block; its siblings
+ *   contain a `details` element and a table containing feature named.
+ * @returns {boolean} Always returns `false` so callers can prevent the default click behavior.
+ */
+function copyFeatureNamesToClipboard(element) {
+    var detailsElem = element.closest('.features').querySelector('details');
+    var wasOpen = detailsElem.open;
+    detailsElem.open = true;
+    var content = element.closest('.features').querySelector('tbody')
+                  .innerText.trim();
+    if (!wasOpen) detailsElem.open = false;
+    const rows = content.split('\n').map(row => `    "${row}"`);
+    const formattedText = `[\n${rows.join(',\n')},\n]`;
+    const originalHTML = element.innerHTML.replace('✔', '');
+    const originalStyle = element.style;
+    const copyMark = document.createElement('span');
+    copyMark.innerHTML = '✔';
+    copyMark.style.color = 'blue';
+    copyMark.style.fontSize = '1em';
+
+    navigator.clipboard.writeText(formattedText)
+        .then(() => {
+            element.style.display = 'none';
+            element.parentElement.appendChild(copyMark);
+
+            setTimeout(() => {
+                copyMark.remove();
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 1000);
+        })
+        .catch(err => {
+            console.error('Failed to copy:', err);
+            element.style.color = 'orange';
+            element.innerHTML = "Failed!";
+            setTimeout(() => {
+                element.innerHTML = originalHTML;
+                element.style = originalStyle;
+            }, 1000);
+        });
+    return false;
+}
+/**
+ * Adapted from Skrub
+ * https://github.com/skrub-data/skrub/blob/403466d1d5d4dc76a7ef569b3f8228db59a31dc3/skrub/_reporting/_data/templates/report.js#L789
+ * @returns "light" or "dark"
+ */
+function detectTheme(element) {
+    const body = document.querySelector('body');
+
+    // Check VSCode theme
+    const themeKindAttr = body.getAttribute('data-vscode-theme-kind');
+    const themeNameAttr = body.getAttribute('data-vscode-theme-name');
+
+    if (themeKindAttr && themeNameAttr) {
+        const themeKind = themeKindAttr.toLowerCase();
+        const themeName = themeNameAttr.toLowerCase();
+
+        if (themeKind.includes("dark") || themeName.includes("dark")) {
+            return "dark";
+        }
+        if (themeKind.includes("light") || themeName.includes("light")) {
+            return "light";
+        }
+    }
+
+    // Check Jupyter theme
+    if (body.getAttribute('data-jp-theme-light') === 'false') {
+        return 'dark';
+    } else if (body.getAttribute('data-jp-theme-light') === 'true') {
+        return 'light';
+    }
+
+    // Guess based on a parent element's color
+    const color = window.getComputedStyle(element.parentNode, null).getPropertyValue('color');
+    const match = color.match(/^rgb\s*\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)\s*$/i);
+    if (match) {
+        const [r, g, b] = [
+            parseFloat(match[1]),
+            parseFloat(match[2]),
+            parseFloat(match[3])
+        ];
+
+        // https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness
+        const luma = 0.299 * r + 0.587 * g + 0.114 * b;
+
+        if (luma > 180) {
+            // If the text is very bright we have a dark theme
+            return 'dark';
+        }
+        if (luma < 75) {
+            // If the text is very dark we have a light theme
+            return 'light';
+        }
+        // Otherwise fall back to the next heuristic.
+    }
+
+    // Fallback to system preference
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+
+function forceTheme(elementId) {
+    const estimatorElement = document.querySelector(`#${elementId}`);
+    if (estimatorElement === null) {
+        console.error(`Element with id ${elementId} not found.`);
+    } else {
+        const theme = detectTheme(estimatorElement);
+        estimatorElement.classList.add(theme);
+    }
+}
+
+forceTheme('sk-container-id-1');</script></body>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="coleta-de-dados-e-regressão-linear.html#cb4-1" tabindex="-1"></a><span class="co"># </span></span>
+<span id="cb4-2"><a href="coleta-de-dados-e-regressão-linear.html#cb4-2" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;O valor de W é: &quot;</span>,modelo.coef_)</span></code></pre></div>
+<pre><code>## O valor de W é:  [4.7]</code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="coleta-de-dados-e-regressão-linear.html#cb6-1" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;O valor de b é </span><span class="sc">{</span>modelo<span class="sc">.</span>intercept_<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<pre><code>## O valor de b é 28.0</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="coleta-de-dados-e-regressão-linear.html#cb8-1" tabindex="-1"></a><span class="co"># calcule: para um Apartamento de 65m^2 qual é o valor previsto em mil reais ?</span></span>
+<span id="cb8-2"><a href="coleta-de-dados-e-regressão-linear.html#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="coleta-de-dados-e-regressão-linear.html#cb8-3" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Qunado X vale 65, a saida vale: </span><span class="sc">{</span>modelo<span class="sc">.</span>predict([[<span class="dv">65</span>]])<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<pre><code>## Qunado X vale 65, a saida vale: [333.5]</code></pre>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide25.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide26.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+<div class="float">
+<img src="media/03-aula03/aula_regressao_linear/Slide27.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
+<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
+</div>
+
+<div id="exercícios---coleta-de-dados-e-regressão-linear" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> - Exercícios - Coleta de Dados e Regressão Linear<a href="coleta-de-dados-e-regressão-linear.html#exerc%C3%ADcios---coleta-de-dados-e-regress%C3%A3o-linear" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exemplo-01--" class="section level3 hasAnchor" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> Exemplo 01 -<a href="coleta-de-dados-e-regressão-linear.html#exemplo-01--" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Uma pesquisa foi realizada com o objetivo de verificar se existe
+associação entre a falta de sono e a capacidade de as pessoas resolverem
+problemas simples. Foram testadas 10 pessoas, mantendo-se sem dormir por
+um determinado número de horas. Após cada um destes períodos, cada
+pessoa teve de resolver um teste com adições simples, anotando-se então
+os erros cometidos. Os dados resultantes são os seguintes:</p>
+<table>
+<colgroup>
+<col width="26%" />
+<col width="41%" />
+<col width="31%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="center">Pessoa Observada (i)</th>
+<th align="center"><strong>Número de Horas sem Dormir ( X )</strong></th>
+<th align="center"><strong>Número de Erros ( Y )</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">8</td>
+<td align="center">6</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">8</td>
+<td align="center">8</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">12</td>
+<td align="center">6</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">12</td>
+<td align="center">10</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">16</td>
+<td align="center">8</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">16</td>
+<td align="center">14</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">20</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">20</td>
+<td align="center">14</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">24</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">24</td>
+<td align="center">16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><ol style="list-style-type: lower-alpha">
+<li>Calcule o <strong>coeficiente de correlação linear</strong> de Pearson,
+interprete e teste sua significância a <strong>5%</strong>.</li>
+</ol></li>
+<li><ol start="2" style="list-style-type: lower-alpha">
+<li>Ajuste, <strong>teste e interprete o modelo de regressão linear</strong>
+simples.</li>
+</ol></li>
+</ul>
+<p>No python Comece importando os cabeçalhos: - importe a biblioteca
+<strong>numpy</strong> para criar vetores de valores - importe a biblioteca <strong>stats</strong>
+para usar as funções para <code>linregress</code> para calcular a regressão
+linear - importe a biblioteca <strong>stats</strong> para usar as funções para
+<code>pearsonr</code> para calcular o coeficiente de correlação <code>r</code></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="coleta-de-dados-e-regressão-linear.html#cb10-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a href="coleta-de-dados-e-regressão-linear.html#cb10-2" tabindex="-1"></a><span class="im">from</span> scipy <span class="im">import</span> stats</span>
+<span id="cb10-3"><a href="coleta-de-dados-e-regressão-linear.html#cb10-3" tabindex="-1"></a><span class="im">from</span> yt_dlp.extractor <span class="im">import</span> agora</span></code></pre></div>
+<p>Agora precisamos criar uma função para calcular a <strong>regressão linear</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="coleta-de-dados-e-regressão-linear.html#cb11-1" tabindex="-1"></a><span class="kw">def</span> calcular_regressao_linear(x: np.ndarray, y: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>, <span class="bu">float</span>]:</span>
+<span id="cb11-2"><a href="coleta-de-dados-e-regressão-linear.html#cb11-2" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calcula os parâmetros e o teste de significância da regressão linear simples.&quot;&quot;&quot;</span></span>
+<span id="cb11-3"><a href="coleta-de-dados-e-regressão-linear.html#cb11-3" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;--- b) Modelo de Regressão Linear Simples ---&quot;</span>)</span>
+<span id="cb11-4"><a href="coleta-de-dados-e-regressão-linear.html#cb11-4" tabindex="-1"></a>    <span class="co"># Ajustando a reta de regressão e obtendo estatísticas completas</span></span>
+<span id="cb11-5"><a href="coleta-de-dados-e-regressão-linear.html#cb11-5" tabindex="-1"></a>    inclinacao_reta, interceptacao, correlacao_r, valor_p, erro_padrao <span class="op">=</span> stats.linregress(x, y)</span>
+<span id="cb11-6"><a href="coleta-de-dados-e-regressão-linear.html#cb11-6" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Coeficiente Angular ( m ): </span><span class="sc">{</span>inclinacao_reta<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb11-7"><a href="coleta-de-dados-e-regressão-linear.html#cb11-7" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Intercepto ( n ): </span><span class="sc">{</span>interceptacao<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb11-8"><a href="coleta-de-dados-e-regressão-linear.html#cb11-8" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Equação ajustada: Y_hat = </span><span class="sc">{</span>interceptacao<span class="sc">:.4f}</span><span class="ss"> + </span><span class="sc">{</span>inclinacao_reta<span class="sc">:.4f}</span><span class="ss"> * X&quot;</span>)</span>
+<span id="cb11-9"><a href="coleta-de-dados-e-regressão-linear.html#cb11-9" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;P-valor do coeficiente angular (teste do modelo): </span><span class="sc">{</span>valor_p<span class="sc">:.5f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb11-10"><a href="coleta-de-dados-e-regressão-linear.html#cb11-10" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="coleta-de-dados-e-regressão-linear.html#cb11-11" tabindex="-1"></a>    <span class="cf">if</span> ( valor_p <span class="op">&lt;</span> <span class="fl">0.05</span>):</span>
+<span id="cb11-12"><a href="coleta-de-dados-e-regressão-linear.html#cb11-12" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: O modelo de regressão linear é estatisticamente significativo a 5%.&quot;</span>)</span>
+<span id="cb11-13"><a href="coleta-de-dados-e-regressão-linear.html#cb11-13" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-14"><a href="coleta-de-dados-e-regressão-linear.html#cb11-14" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: O modelo não é estatisticamente significativo.&quot;</span>)</span>
+<span id="cb11-15"><a href="coleta-de-dados-e-regressão-linear.html#cb11-15" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="coleta-de-dados-e-regressão-linear.html#cb11-16" tabindex="-1"></a>    <span class="cf">return</span> interceptacao, inclinacao_reta, valor_p</span></code></pre></div>
+<p>Agora precisamos criar uma função para calcular o <strong>coeficiente de
+correlação</strong> <code>r</code></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="coleta-de-dados-e-regressão-linear.html#cb12-1" tabindex="-1"></a><span class="kw">def</span> calcular_correlacao_pearson(v_independentes_x: np.ndarray, v_dependentes_y: np.ndarray) <span class="op">-&gt;</span> <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]:</span>
+<span id="cb12-2"><a href="coleta-de-dados-e-regressão-linear.html#cb12-2" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;Calcula o coeficiente de correlação de Pearson e o p-valor correspondente.&quot;&quot;&quot;</span></span>
+<span id="cb12-3"><a href="coleta-de-dados-e-regressão-linear.html#cb12-3" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;--- a) Coeficiente de Correlação de Pearson e Teste ---&quot;</span>)</span>
+<span id="cb12-4"><a href="coleta-de-dados-e-regressão-linear.html#cb12-4" tabindex="-1"></a>    coeficiente_de_correlacao_r, valor_de_p <span class="op">=</span> stats.pearsonr(v_independentes_x, v_dependentes_y)</span>
+<span id="cb12-5"><a href="coleta-de-dados-e-regressão-linear.html#cb12-5" tabindex="-1"></a></span>
+<span id="cb12-6"><a href="coleta-de-dados-e-regressão-linear.html#cb12-6" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Coeficiente de Correlação (r): </span><span class="sc">{</span>coeficiente_de_correlacao_r<span class="sc">:.4f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb12-7"><a href="coleta-de-dados-e-regressão-linear.html#cb12-7" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;P-valor da correlação: </span><span class="sc">{</span>valor_de_p<span class="sc">:.5f}</span><span class="ss">&quot;</span>)</span>
+<span id="cb12-8"><a href="coleta-de-dados-e-regressão-linear.html#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="coleta-de-dados-e-regressão-linear.html#cb12-9" tabindex="-1"></a>    <span class="cf">if</span> ( valor_de_p <span class="op">&lt;</span> <span class="fl">0.05</span>):</span>
+<span id="cb12-10"><a href="coleta-de-dados-e-regressão-linear.html#cb12-10" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5%.</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb12-11"><a href="coleta-de-dados-e-regressão-linear.html#cb12-11" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-12"><a href="coleta-de-dados-e-regressão-linear.html#cb12-12" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">&quot;Conclusão: Não rejeitamos a Hipótese.</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb12-13"><a href="coleta-de-dados-e-regressão-linear.html#cb12-13" tabindex="-1"></a>    <span class="cf">return</span> coeficiente_de_correlacao_r, valor_de_p</span></code></pre></div>
+<p>Agora vamos definir a ordem de execução das funções:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="coleta-de-dados-e-regressão-linear.html#cb13-1" tabindex="-1"></a><span class="kw">def</span> funcao_principal() <span class="op">-&gt;</span> <span class="va">None</span>:</span>
+<span id="cb13-2"><a href="coleta-de-dados-e-regressão-linear.html#cb13-2" tabindex="-1"></a>    <span class="co"># Carregar os valores de X (que é a variável independente) no vetor variaveis_independentes_x</span></span>
+<span id="cb13-3"><a href="coleta-de-dados-e-regressão-linear.html#cb13-3" tabindex="-1"></a>    <span class="co"># X: Número de horas sem dormir</span></span>
+<span id="cb13-4"><a href="coleta-de-dados-e-regressão-linear.html#cb13-4" tabindex="-1"></a>    variaveis_independentes_x <span class="op">=</span> np.array([<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">24</span>, <span class="dv">24</span>])</span>
+<span id="cb13-5"><a href="coleta-de-dados-e-regressão-linear.html#cb13-5" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="coleta-de-dados-e-regressão-linear.html#cb13-6" tabindex="-1"></a>    <span class="co"># # Carregar os valores de Y (que é a variável independente) no vetor variaveis_dependentes_y</span></span>
+<span id="cb13-7"><a href="coleta-de-dados-e-regressão-linear.html#cb13-7" tabindex="-1"></a>    <span class="co"># Y: Número de erros</span></span>
+<span id="cb13-8"><a href="coleta-de-dados-e-regressão-linear.html#cb13-8" tabindex="-1"></a>    variaveis_dependentes_y <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">16</span>])</span>
+<span id="cb13-9"><a href="coleta-de-dados-e-regressão-linear.html#cb13-9" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="coleta-de-dados-e-regressão-linear.html#cb13-10" tabindex="-1"></a>    <span class="co"># Executando a correlação</span></span>
+<span id="cb13-11"><a href="coleta-de-dados-e-regressão-linear.html#cb13-11" tabindex="-1"></a>    calcular_correlacao_pearson(variaveis_independentes_x, variaveis_dependentes_y)</span>
+<span id="cb13-12"><a href="coleta-de-dados-e-regressão-linear.html#cb13-12" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="coleta-de-dados-e-regressão-linear.html#cb13-13" tabindex="-1"></a>    <span class="co"># Executando a regressão linear</span></span>
+<span id="cb13-14"><a href="coleta-de-dados-e-regressão-linear.html#cb13-14" tabindex="-1"></a>    calcular_regressao_linear(variaveis_independentes_x, variaveis_dependentes_y)</span></code></pre></div>
+<p>Finalmente, vamos iniciar o <strong>fluxo principal</strong> do programa, chamado a
+<strong>funcao_principal()</strong> que chamará todas as outras na ordem</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="coleta-de-dados-e-regressão-linear.html#cb14-1" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&#39;__main__&#39;</span>:</span>
+<span id="cb14-2"><a href="coleta-de-dados-e-regressão-linear.html#cb14-2" tabindex="-1"></a>    funcao_principal()</span></code></pre></div>
+<pre><code>## --- a) Coeficiente de Correlação de Pearson e Teste ---
+## Coeficiente de Correlação (r): 0.8015
+## P-valor da correlação: 0.00531
+## Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5%.
+## 
+## --- b) Modelo de Regressão Linear Simples ---
+## Coeficiente Angular ( m ): 0.4750
+## Intercepto ( n ): 3.0000
+## Equação ajustada: Y_hat = 3.0000 + 0.4750 * X
+## P-valor do coeficiente angular (teste do modelo): 0.00531
+## Conclusão: O modelo de regressão linear é estatisticamente significativo a 5%.</code></pre>
+<p>Como ficou a equação descoberta pela <strong>regressão linear simples</strong> ?</p>
+<p>Uma equação de reta segue o formato <span class="math inline">\(y = mx + n\)</span>.</p>
+<p><span class="math display">\[
+y = \underbrace{m}*{*\text{coeficiente angular}} x + \underbrace{n}{\text{coeficiente linear}}
+\]</span></p>
+<p>No exercício: - o valor de <code>m</code> é dado pelo valor do
+<code>coeficiente angular</code> ; - o valor de <code>n</code> é dado pelo valor do
+<code>intercepto</code> ;</p>
+<p>Então a equação ficou:</p>
+<p><span class="math display">\[
+y = 0,4750(x) + 3
+\]</span></p>
+<div id="gráfico-do-exemplo-00" class="section level4 hasAnchor" number="3.1.1.1">
+<h4><span class="header-section-number">3.1.1.1</span> Gráfico do Exemplo 00<a href="coleta-de-dados-e-regressão-linear.html#gr%C3%A1fico-do-exemplo-00" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="coleta-de-dados-e-regressão-linear.html#cb16-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb16-2"><a href="coleta-de-dados-e-regressão-linear.html#cb16-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-3"><a href="coleta-de-dados-e-regressão-linear.html#cb16-3" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="coleta-de-dados-e-regressão-linear.html#cb16-4" tabindex="-1"></a><span class="co"># Dados do problema</span></span>
+<span id="cb16-5"><a href="coleta-de-dados-e-regressão-linear.html#cb16-5" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">12</span>, <span class="dv">16</span>, <span class="dv">16</span>, <span class="dv">20</span>, <span class="dv">20</span>, <span class="dv">24</span>, <span class="dv">24</span>])</span>
+<span id="cb16-6"><a href="coleta-de-dados-e-regressão-linear.html#cb16-6" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">6</span>, <span class="dv">8</span>, <span class="dv">6</span>, <span class="dv">10</span>, <span class="dv">8</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">14</span>, <span class="dv">12</span>, <span class="dv">16</span>])</span>
+<span id="cb16-7"><a href="coleta-de-dados-e-regressão-linear.html#cb16-7" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="coleta-de-dados-e-regressão-linear.html#cb16-8" tabindex="-1"></a><span class="co"># Configuração do gráfico</span></span>
+<span id="cb16-9"><a href="coleta-de-dados-e-regressão-linear.html#cb16-9" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">7</span>))</span>
+<span id="cb16-10"><a href="coleta-de-dados-e-regressão-linear.html#cb16-10" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="coleta-de-dados-e-regressão-linear.html#cb16-11" tabindex="-1"></a><span class="co"># Definindo os limites dos eixos começando em 0</span></span>
+<span id="cb16-12"><a href="coleta-de-dados-e-regressão-linear.html#cb16-12" tabindex="-1"></a>plt.xlim(<span class="op">-</span><span class="dv">8</span>, <span class="bu">max</span>(x) <span class="op">+</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## (-8.0, 26.0)</code></pre>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="coleta-de-dados-e-regressão-linear.html#cb18-1" tabindex="-1"></a>plt.ylim(<span class="op">-</span><span class="dv">8</span>, <span class="bu">max</span>(y) <span class="op">+</span> <span class="dv">2</span>)</span></code></pre></div>
+<pre><code>## (-8.0, 18.0)</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="coleta-de-dados-e-regressão-linear.html#cb20-1" tabindex="-1"></a><span class="co"># Configurando a escala unitária (passo de 1 em 1) para os eixos X e Y</span></span>
+<span id="cb20-2"><a href="coleta-de-dados-e-regressão-linear.html#cb20-2" tabindex="-1"></a>plt.xticks(np.arange(<span class="dv">0</span>, <span class="bu">max</span>(x) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## ([&lt;matplotlib.axis.XTick object at 0x000001E1085525A0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10830FF20&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1084D7530&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108560620&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1085610D0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108562030&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108566810&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1085675C0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1085692B0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108569DF0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108453650&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1086563C0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108656F30&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108657BC0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108658710&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108659250&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108659CA0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865A7B0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865B200&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865BD40&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865C590&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865D310&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865DDF0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865E900&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865F4A0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865FF80&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108668A40&gt;], [Text(0, 0, &#39;0&#39;), Text(1, 0, &#39;1&#39;), Text(2, 0, &#39;2&#39;), Text(3, 0, &#39;3&#39;), Text(4, 0, &#39;4&#39;), Text(5, 0, &#39;5&#39;), Text(6, 0, &#39;6&#39;), Text(7, 0, &#39;7&#39;), Text(8, 0, &#39;8&#39;), Text(9, 0, &#39;9&#39;), Text(10, 0, &#39;10&#39;), Text(11, 0, &#39;11&#39;), Text(12, 0, &#39;12&#39;), Text(13, 0, &#39;13&#39;), Text(14, 0, &#39;14&#39;), Text(15, 0, &#39;15&#39;), Text(16, 0, &#39;16&#39;), Text(17, 0, &#39;17&#39;), Text(18, 0, &#39;18&#39;), Text(19, 0, &#39;19&#39;), Text(20, 0, &#39;20&#39;), Text(21, 0, &#39;21&#39;), Text(22, 0, &#39;22&#39;), Text(23, 0, &#39;23&#39;), Text(24, 0, &#39;24&#39;), Text(25, 0, &#39;25&#39;), Text(26, 0, &#39;26&#39;)])</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="coleta-de-dados-e-regressão-linear.html#cb22-1" tabindex="-1"></a>plt.yticks(np.arange(<span class="dv">0</span>, <span class="bu">max</span>(y) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## ([&lt;matplotlib.axis.YTick object at 0x000001E108552600&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108371760&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10866B200&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10866B710&gt;, &lt;matplotlib.axis.YTick object at 0x000001E1083DDFD0&gt;, &lt;matplotlib.axis.YTick object at 0x000001E1083DEC90&gt;, &lt;matplotlib.axis.YTick object at 0x000001E1083DF500&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108734380&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108735010&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108735AF0&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108736540&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108736F60&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108737A40&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108738200&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108738F80&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108739A00&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10873A480&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10873AF90&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10873B9B0&gt;], [Text(0, 0, &#39;0&#39;), Text(0, 1, &#39;1&#39;), Text(0, 2, &#39;2&#39;), Text(0, 3, &#39;3&#39;), Text(0, 4, &#39;4&#39;), Text(0, 5, &#39;5&#39;), Text(0, 6, &#39;6&#39;), Text(0, 7, &#39;7&#39;), Text(0, 8, &#39;8&#39;), Text(0, 9, &#39;9&#39;), Text(0, 10, &#39;10&#39;), Text(0, 11, &#39;11&#39;), Text(0, 12, &#39;12&#39;), Text(0, 13, &#39;13&#39;), Text(0, 14, &#39;14&#39;), Text(0, 15, &#39;15&#39;), Text(0, 16, &#39;16&#39;), Text(0, 17, &#39;17&#39;), Text(0, 18, &#39;18&#39;)])</code></pre>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="coleta-de-dados-e-regressão-linear.html#cb24-1" tabindex="-1"></a><span class="co"># Grade padrão em cinza claro para a escala geral</span></span>
+<span id="cb24-2"><a href="coleta-de-dados-e-regressão-linear.html#cb24-2" tabindex="-1"></a><span class="cf">for</span> xtick <span class="kw">in</span> np.arange(<span class="dv">0</span>, <span class="bu">max</span>(x) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>):</span>
+<span id="cb24-3"><a href="coleta-de-dados-e-regressão-linear.html#cb24-3" tabindex="-1"></a>    plt.axvline(xtick, color<span class="op">=</span><span class="st">&#39;gray&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>, linestyle<span class="op">=</span><span class="st">&#39;:&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, zorder<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb24-4"><a href="coleta-de-dados-e-regressão-linear.html#cb24-4" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="coleta-de-dados-e-regressão-linear.html#cb24-5" tabindex="-1"></a><span class="cf">for</span> ytick <span class="kw">in</span> np.arange(<span class="dv">0</span>, <span class="bu">max</span>(y) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>):</span>
+<span id="cb24-6"><a href="coleta-de-dados-e-regressão-linear.html#cb24-6" tabindex="-1"></a>    plt.axhline(ytick, color<span class="op">=</span><span class="st">&#39;gray&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>, linestyle<span class="op">=</span><span class="st">&#39;:&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, zorder<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb24-7"><a href="coleta-de-dados-e-regressão-linear.html#cb24-7" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="coleta-de-dados-e-regressão-linear.html#cb24-8" tabindex="-1"></a><span class="co"># Projetando linhas vermelhas contínuas sobre os pares ordenados formados pelos vetores x e y</span></span>
+<span id="cb24-9"><a href="coleta-de-dados-e-regressão-linear.html#cb24-9" tabindex="-1"></a><span class="cf">for</span> xi, yi <span class="kw">in</span> <span class="bu">zip</span>(x, y):</span>
+<span id="cb24-10"><a href="coleta-de-dados-e-regressão-linear.html#cb24-10" tabindex="-1"></a>    plt.vlines(xi, <span class="dv">0</span>, yi, color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, zorder<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb24-11"><a href="coleta-de-dados-e-regressão-linear.html#cb24-11" tabindex="-1"></a>    plt.hlines(yi, <span class="dv">0</span>, xi, color<span class="op">=</span><span class="st">&#39;green&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>, linestyle<span class="op">=</span><span class="st">&#39;--&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, zorder<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb24-12"><a href="coleta-de-dados-e-regressão-linear.html#cb24-12" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="coleta-de-dados-e-regressão-linear.html#cb24-13" tabindex="-1"></a><span class="co"># Destacando os eixos principais em (0,0)</span></span>
+<span id="cb24-14"><a href="coleta-de-dados-e-regressão-linear.html#cb24-14" tabindex="-1"></a>plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb24-15"><a href="coleta-de-dados-e-regressão-linear.html#cb24-15" tabindex="-1"></a>plt.axvline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>, linewidth<span class="op">=</span><span class="fl">1.2</span>, zorder<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb24-16"><a href="coleta-de-dados-e-regressão-linear.html#cb24-16" tabindex="-1"></a></span>
+<span id="cb24-17"><a href="coleta-de-dados-e-regressão-linear.html#cb24-17" tabindex="-1"></a><span class="co"># Gráfico de dispersão (pontos observados)</span></span>
+<span id="cb24-18"><a href="coleta-de-dados-e-regressão-linear.html#cb24-18" tabindex="-1"></a>plt.scatter(x, y, color<span class="op">=</span><span class="st">&#39;blue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Dados Observados&#39;</span>, s<span class="op">=</span><span class="dv">60</span>, zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb24-19"><a href="coleta-de-dados-e-regressão-linear.html#cb24-19" tabindex="-1"></a></span>
+<span id="cb24-20"><a href="coleta-de-dados-e-regressão-linear.html#cb24-20" tabindex="-1"></a><span class="co"># Adicionando rótulos com os pares ordenados (X, Y) em cada ponto</span></span>
+<span id="cb24-21"><a href="coleta-de-dados-e-regressão-linear.html#cb24-21" tabindex="-1"></a><span class="cf">for</span> xi, yi <span class="kw">in</span> <span class="bu">zip</span>(x, y):</span>
+<span id="cb24-22"><a href="coleta-de-dados-e-regressão-linear.html#cb24-22" tabindex="-1"></a>    plt.annotate(<span class="ss">f&quot;(</span><span class="sc">{</span>xi<span class="sc">}</span><span class="ss">, </span><span class="sc">{</span>yi<span class="sc">}</span><span class="ss">)&quot;</span>,</span>
+<span id="cb24-23"><a href="coleta-de-dados-e-regressão-linear.html#cb24-23" tabindex="-1"></a>                 (xi, yi),</span>
+<span id="cb24-24"><a href="coleta-de-dados-e-regressão-linear.html#cb24-24" tabindex="-1"></a>                 textcoords<span class="op">=</span><span class="st">&quot;offset points&quot;</span>,</span>
+<span id="cb24-25"><a href="coleta-de-dados-e-regressão-linear.html#cb24-25" tabindex="-1"></a>                 xytext<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">8</span>),  <span class="co"># Deslocamento vertical do texto em relação ao ponto</span></span>
+<span id="cb24-26"><a href="coleta-de-dados-e-regressão-linear.html#cb24-26" tabindex="-1"></a>                 ha<span class="op">=</span><span class="st">&#39;center&#39;</span>,</span>
+<span id="cb24-27"><a href="coleta-de-dados-e-regressão-linear.html#cb24-27" tabindex="-1"></a>                 fontsize<span class="op">=</span><span class="dv">8</span>,</span>
+<span id="cb24-28"><a href="coleta-de-dados-e-regressão-linear.html#cb24-28" tabindex="-1"></a>                 fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>,</span>
+<span id="cb24-29"><a href="coleta-de-dados-e-regressão-linear.html#cb24-29" tabindex="-1"></a>                 color<span class="op">=</span><span class="st">&#39;darkblue&#39;</span>,</span>
+<span id="cb24-30"><a href="coleta-de-dados-e-regressão-linear.html#cb24-30" tabindex="-1"></a>                 zorder<span class="op">=</span><span class="dv">6</span>)</span>
+<span id="cb24-31"><a href="coleta-de-dados-e-regressão-linear.html#cb24-31" tabindex="-1"></a></span>
+<span id="cb24-32"><a href="coleta-de-dados-e-regressão-linear.html#cb24-32" tabindex="-1"></a><span class="co"># Definindo os pontos para a reta y = 0.4750 * x + 3</span></span>
+<span id="cb24-33"><a href="coleta-de-dados-e-regressão-linear.html#cb24-33" tabindex="-1"></a>x_linha <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">7</span>, <span class="bu">max</span>(x), <span class="dv">100</span>)</span>
+<span id="cb24-34"><a href="coleta-de-dados-e-regressão-linear.html#cb24-34" tabindex="-1"></a>y_linha <span class="op">=</span> <span class="fl">0.4750</span> <span class="op">*</span> x_linha <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb24-35"><a href="coleta-de-dados-e-regressão-linear.html#cb24-35" tabindex="-1"></a></span>
+<span id="cb24-36"><a href="coleta-de-dados-e-regressão-linear.html#cb24-36" tabindex="-1"></a><span class="co"># Plotando a reta de regressão</span></span>
+<span id="cb24-37"><a href="coleta-de-dados-e-regressão-linear.html#cb24-37" tabindex="-1"></a>plt.plot(x_linha, y_linha, color<span class="op">=</span><span class="st">&#39;red&#39;</span>, linestyle<span class="op">=</span><span class="st">&#39;-&#39;</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">&#39;Reta: $Y = 0,4750X + 3$&#39;</span>, zorder<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb24-38"><a href="coleta-de-dados-e-regressão-linear.html#cb24-38" tabindex="-1"></a></span>
+<span id="cb24-39"><a href="coleta-de-dados-e-regressão-linear.html#cb24-39" tabindex="-1"></a><span class="co"># Rótulos e formatação</span></span>
+<span id="cb24-40"><a href="coleta-de-dados-e-regressão-linear.html#cb24-40" tabindex="-1"></a>plt.title(<span class="st">&#39;Gráfico com Pares Ordenados (X, Y) Identificados nos Pontos&#39;</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>)</span>
+<span id="cb24-41"><a href="coleta-de-dados-e-regressão-linear.html#cb24-41" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Número de Horas sem Dormir (X)&#39;</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb24-42"><a href="coleta-de-dados-e-regressão-linear.html#cb24-42" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Número de Erros (Y)&#39;</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb24-43"><a href="coleta-de-dados-e-regressão-linear.html#cb24-43" tabindex="-1"></a>plt.legend()</span>
+<span id="cb24-44"><a href="coleta-de-dados-e-regressão-linear.html#cb24-44" tabindex="-1"></a></span>
+<span id="cb24-45"><a href="coleta-de-dados-e-regressão-linear.html#cb24-45" tabindex="-1"></a><span class="co"># Exibir o gráfico</span></span>
+<span id="cb24-46"><a href="coleta-de-dados-e-regressão-linear.html#cb24-46" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="2026-AprendizadoProfundo_files/figure-html/exemplo00-grafico-1.png" alt="" width="960" /></p>
+
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -230,7 +1952,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="governança-de-dados-e-ciclo-de-vida-de-machine-learning.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>

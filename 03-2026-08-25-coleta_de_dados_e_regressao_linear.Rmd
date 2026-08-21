@@ -5,12 +5,89 @@ output:
     theme: cerulean
     df_print: kable
 ---
-# - Coleta de Dados e Regressão Linear
+
+# Coleta de Dados e Regressão Linear
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide1.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide2.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide3.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide4.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide5.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide6.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide7.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide8.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide9.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide10.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide11.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide12.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide13.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide14.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide15.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide16.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide17.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide18.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide19.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide20.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide21.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide22.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide23.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide24.JPG)
+
+```{python aula03-exemplo-01, echo=TRUE}
+
+import numpy as np
+from sklearn.linear_model import LinearRegression
+
+X = np.array([[40], [50], [60], [70], [80]])
+y = np.array([220, 260, 310, 350, 410])
+
+# Crie o seu modelo
+modelo = LinearRegression()
+
+# Treine o seu modelo (ajuste sua reta aos pontos)
+modelo.fit(X, y)
+
+# 
+print("O valor de W é: ",modelo.coef_)
+
+print(f"O valor de b é {modelo.intercept_}")
+
+# calcule: para um Apartamento de 65m^2 qual é o valor previsto em mil reais ?
+
+print(f"Qunado X vale 65, a saida vale: {modelo.predict([[65]])}")
 
 
 
+```
 
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide25.JPG)
 
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide26.JPG)
+
+![Aula 03 - Coleta de Dados e Regressão Linear](media/03-aula03/aula_regressao_linear/Slide27.JPG)
 
 ```{r 03-2026-08-25-coleta_de_dados_e_regressao_linear, eval=FALSE, include=FALSE}
 rmarkdown::render("03-2026-08-25-coleta_de_dados_e_regressao_linear.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
