@@ -7,6 +7,290 @@ output:
 ---
 ## - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN
 
+### Organização e Preparação de Dados: População, Estrato , proporção e Amostra
+
+A regra é:
+
+$$
+n_h = n\cdot\frac{N_h}{N}
+$$
+
+onde (N) é o tamanho da população, (N_h) é o tamanho do estrato, (n) é o tamanho total da amostra e (n_h) é a quantidade de elementos sorteados naquele estrato.
+
+#### 1. Alunos de uma universidade
+
+**População:** 10.000 alunos.
+**Amostra desejada:** 1.000 alunos.
+
+| Estrato       | População no estrato | Proporção | Amostra proporcional |
+| ------------- | -------------------: | --------: | -------------------: |
+| Engenharia    |                3.000 |       30% |                  300 |
+| Administração |                2.500 |       25% |                  ___ |
+| Direito       |                2.000 |       20% |                  ___ |
+| Saúde         |                1.500 |       15% |                  ___ |
+| Outros cursos |                1.000 |       10% |                  ___ |
+| **Total**     |           **10.000** |  **100%** |            **1.000** |
+
+Por exemplo:
+
+$$
+n_{\text{Engenharia}} = 1000\cdot\frac{3000}{10000} = 300
+$$
+
+---
+
+#### 2. Funcionários de uma empresa
+
+**População:** 2.000 funcionários.
+**Amostra:** 200 funcionários.
+
+| Estrato          | População | Proporção | Amostra |
+| ---------------- | --------: | --------: | ------: |
+| Produção         |       900 |       45% |      90 |
+| Administrativo   |       400 |       20% |      __ |
+| Comercial        |       300 |       15% |      __ |
+| Tecnologia       |       250 |     12,5% |      __ |
+| Diretoria/Gestão |       150 |      7,5% |      __ |
+| **Total**        | **2.000** |  **100%** | **200** |
+
+Assim, embora a área de Produção tenha muito mais funcionários, ela não domina arbitrariamente a pesquisa: sua participação na amostra permanece igual à sua participação na população.
+
+---
+
+#### 3. Moradores de uma cidade
+
+**População:** 50.000 moradores.
+**Amostra:** 1.000 moradores.
+
+Estratificação por faixa etária:
+
+| Estrato         |  População | Proporção |   Amostra |
+| --------------- | ---------: | --------: | --------: |
+| 0–17 anos       |     10.000 |       20% |       200 |
+| 18–29 anos      |      8.000 |       16% |       ___ |
+| 30–44 anos      |     12.000 |       24% |       ___ |
+| 45–59 anos      |     11.000 |       22% |       ___ |
+| 60 anos ou mais |      9.000 |       18% |       ___ |
+| **Total**       | **50.000** |  **100%** | **1.000** |
+
+Para a faixa de 30 a 44 anos:
+
+$$
+n_h = 1000\cdot\frac{12000}{50000}= 240
+$$
+
+---
+
+#### 4. Imagens do CIFAR-10
+
+Aqui temos um exemplo particularmente simples porque o CIFAR-10 é **balanceado entre as classes**.
+
+**População:** 60.000 imagens.
+**Amostra:** 6.000 imagens.
+
+Cada uma das 10 classes possui 6.000 imagens.
+
+| Estrato — classe |  População | Proporção |   Amostra |
+| ---------------- | ---------: | --------: | --------: |
+| airplane         |      6.000 |       10% |       600 |
+| automobile       |      6.000 |       10% |       ___ |
+| bird             |      6.000 |       10% |       ___ |
+| cat              |      6.000 |       10% |       ___ |
+| deer             |      6.000 |       10% |       ___ |
+| dog              |      6.000 |       10% |       ___ |
+| frog             |      6.000 |       10% |       ___ |
+| horse            |      6.000 |       10% |       ___ |
+| ship             |      6.000 |       10% |       ___ |
+| truck            |      6.000 |       10% |       ___ |
+| **Total**        | **60.000** |  **100%** | **6.000** |
+
+Neste caso:
+
+$$
+6000\cdot\frac{6000}{60000}=600
+$$
+
+Como todas as classes possuem a mesma quantidade de elementos, a amostra proporcional também fica perfeitamente balanceada.
+
+---
+
+#### 5. Domicílios de um município
+
+**População:** 20.000 domicílios.
+**Amostra:** 1.000 domicílios.
+
+Estratificação por região do município:
+
+| Estrato   | Domicílios | Proporção |   Amostra |
+| --------- | ---------: | --------: | --------: |
+| Centro    |      4.000 |       20% |       200 |
+| Norte     |      5.000 |       25% |       ___ |
+| Sul       |      3.000 |       15% |       ___ |
+| Leste     |      6.000 |       30% |       ___ |
+| Oeste     |      2.000 |       10% |       ___ |
+| **Total** | **20.000** |  **100%** | **1.000** |
+
+Por exemplo, para a região Leste:
+
+$$
+n_{\text{Leste}} = 1000\cdot\frac{6000}{20000} = 300
+$$
+
+O ponto central para mostrar no slide é:
+
+$$
+\boxed{\text{A proporção de cada estrato na amostra é igual à sua proporção na população}}
+$$
+
+
+#### 6. Pacientes de uma clínica — população balanceada
+
+**População:** 4.000 pacientes.
+**Amostra:** 400 pacientes.
+
+Estratificação por tipo de atendimento:
+
+| Estrato      | População | Proporção | Amostra |
+| ------------ | --------: | --------: | ------: |
+| Cardiologia  |     1.000 |       25% |     100 |
+| Ortopedia    |     1.000 |       25% |     ___ |
+| Dermatologia |     1.000 |       25% |     ___ |
+| Oftalmologia |     1.000 |       25% |     ___ |
+| **Total**    | **4.000** |  **100%** | **400** |
+
+Por exemplo:
+
+$$
+n_{\text{Cardiologia}} = 400\cdot\frac{1000}{4000} = 100
+$$
+
+Como todos os estratos têm o mesmo tamanho, a amostra também fica igualmente distribuída.
+
+---
+
+#### 7. Produtos de um estoque — população balanceada
+
+**População:** 10.000 produtos.
+**Amostra:** 1.000 produtos.
+
+Estratificação por categoria:
+
+| Estrato     |  População | Proporção |   Amostra |
+| ----------- | ---------: | --------: | --------: |
+| Eletrônicos |      2.000 |       20% |       200 |
+| Alimentos   |      2.000 |       20% |       ___ |
+| Vestuário   |      2.000 |       20% |       ___ |
+| Higiene     |      2.000 |       20% |       ___ |
+| Papelaria   |      2.000 |       20% |       ___ |
+| **Total**   | **10.000** |  **100%** | **1.000** |
+
+Para cada categoria:
+
+$$
+1000\cdot\frac{2000}{10000}=200
+$$
+
+Esse é outro caso de população perfeitamente balanceada.
+
+---
+
+### 8. Imagens de um dataset de classificação — população balanceada
+
+**População:** 30.000 imagens.
+**Amostra:** 3.000 imagens.
+
+Considere um dataset com 6 classes:
+
+| Estrato — classe |  População | Proporção |   Amostra |
+| ---------------- | ---------: | --------: | --------: |
+| Cachorro         |      5.000 |    16,67% |       500 |
+| Gato             |      5.000 |    16,67% |       ___ |
+| Cavalo           |      5.000 |    16,67% |       ___ |
+| Pássaro          |      5.000 |    16,67% |       ___ |
+| Peixe            |      5.000 |    16,67% |       ___ |
+| Coelho           |      5.000 |    16,67% |       ___ |
+| **Total**        | **30.000** |  **100%** | **3.000** |
+
+Para a classe "Cachorro":
+
+$$
+n_h= 3000\cdot\frac{5000}{30000} = 500
+$$
+
+Todas as classes possuem a mesma representatividade.
+
+---
+
+### 9. Clientes de um banco — população não balanceada
+
+**População:** 100.000 clientes.
+**Amostra:** 2.000 clientes.
+
+Estratificação por faixa de renda:
+
+| Estrato               |   População | Proporção |   Amostra |
+| --------------------- | ----------: | --------: | --------: |
+| Até R$ 2 mil          |      45.000 |       45% |       900 |
+| R$ 2 mil a R$ 5 mil   |      30.000 |       30% |       ___ |
+| R$ 5 mil a R$ 10 mil  |      15.000 |       15% |       ___ |
+| R$ 10 mil a R$ 20 mil |       7.000 |        7% |       ___ |
+| Acima de R$ 20 mil    |       3.000 |        3% |       ___ |
+| **Total**             | **100.000** |  **100%** | **2.000** |
+
+Para o primeiro estrato:
+
+$$
+n_h = 2000\cdot\frac{45000}{100000} = 900
+$$
+
+Aqui os estratos possuem tamanhos bastante diferentes, mas a amostra preserva essas diferenças proporcionalmente.
+
+---
+
+### 10. Dataset de detecção de fraude — população não balanceada
+
+**População:** 50.000 transações.
+**Amostra:** 5.000 transações.
+
+Estratificação pelo tipo de transação:
+
+| Estrato            |  População | Proporção |   Amostra |
+| ------------------ | ---------: | --------: | --------: |
+| Transações normais |     42.500 |       85% |     4.250 |
+| Fraudes leves      |      4.000 |        8% |     _____ |
+| Fraudes moderadas  |      2.000 |        4% |     _____ |
+| Fraudes graves     |      1.000 |        2% |     _____ |
+| Fraudes críticas   |        500 |        1% |     _____ |
+| **Total**          | **50.000** |  **100%** | **5.000** |
+
+Para as fraudes críticas:
+
+$$
+n_{\text{críticas}} = 5000\cdot\frac{500}{50000} = 50
+$$
+
+OBS: **classes raras continuam raras na amostra proporcional**.
+
+Assim, podemos resumir os exemplos 6–10 como:
+
+| Exemplo | População                   | Situação       |
+| ------- | --------------------------- | -------------- |
+| 6       | Pacientes por especialidade | Balanceada     |
+| 7       | Produtos por categoria      | Balanceada     |
+| 8       | Dataset de imagens          | Balanceada     |
+| 9       | Clientes por faixa de renda | Não balanceada |
+| 10      | Transações financeiras      | Não balanceada |
+
+
+
+
+### Regressão Logística
+
+### KNN
+
+
+
+
 ```{r 04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn-exercicios, eval=FALSE, include=FALSE}
 rmarkdown::render("04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
 ```

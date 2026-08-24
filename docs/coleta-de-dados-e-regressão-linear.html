@@ -23,7 +23,7 @@
 <meta name="author" content="Professor Miguél Suares" />
 
 
-<meta name="date" content="2026-08-21" />
+<meta name="date" content="2026-08-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -52,6 +52,7 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 
 <style type="text/css">
@@ -124,6 +125,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -163,7 +187,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><i class="fa fa-check"></i><b>4</b> - Organização e Preparação dos Dados, Regressão Logística e KNN</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn"><i class="fa fa-check"></i><b>4.1</b> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN</a></li>
+<li class="chapter" data-level="4.1" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn"><i class="fa fa-check"></i><b>4.1</b> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-de-dados-popula%C3%A7%C3%A3o-estrato-propor%C3%A7%C3%A3o-e-amostra"><i class="fa fa-check"></i><b>4.1.1</b> Organização e Preparação de Dados: População, Estrato , proporção e Amostra</a></li>
+<li class="chapter" data-level="4.1.2" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#imagens-de-um-dataset-de-classifica%C3%A7%C3%A3o-popula%C3%A7%C3%A3o-balanceada"><i class="fa fa-check"></i><b>4.1.2</b> 8. Imagens de um dataset de classificação — população balanceada</a></li>
+<li class="chapter" data-level="4.1.3" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#clientes-de-um-banco-popula%C3%A7%C3%A3o-n%C3%A3o-balanceada"><i class="fa fa-check"></i><b>4.1.3</b> 9. Clientes de um banco — população não balanceada</a></li>
+<li class="chapter" data-level="4.1.4" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#dataset-de-detec%C3%A7%C3%A3o-de-fraude-popula%C3%A7%C3%A3o-n%C3%A3o-balanceada"><i class="fa fa-check"></i><b>4.1.4</b> 10. Dataset de detecção de fraude — população não balanceada</a></li>
+<li class="chapter" data-level="4.1.5" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#regress%C3%A3o-log%C3%ADstica"><i class="fa fa-check"></i><b>4.1.5</b> Regressão Logística</a></li>
+<li class="chapter" data-level="4.1.6" data-path="organização-e-preparação-dos-dados-regressão-logística-e-knn.html"><a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#knn"><i class="fa fa-check"></i><b>4.1.6</b> KNN</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><i class="fa fa-check"></i><b>5</b> - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a>
 <ul>
@@ -219,10 +251,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="coleta-de-dados-e-regressão-linear" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Capítulo 3</span> Coleta de Dados e Regressão Linear<a href="coleta-de-dados-e-regressão-linear.html#coleta-de-dados-e-regress%C3%A3o-linear" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="float">
-<img src="media/03-aula03/aula_regressao_linear/Slide1.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
-<div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
-</div>
+<p><img src="media/03-aula03/aula_regressao_linear/Slide1.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" /> <span class="citation">(Capítulo 14 <a href="#ref-Grus2015DataScience">Grus 2015</a>, p.)</span></p>
 <div class="float">
 <img src="media/03-aula03/aula_regressao_linear/Slide2.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
@@ -279,6 +308,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src="media/03-aula03/aula_regressao_linear/Slide15.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
 </div>
+<p><img src="2026-AprendizadoProfundo_files/figure-html/linear-regression-labels-1.png" alt="" width="960" /></p>
 <div class="float">
 <img src="media/03-aula03/aula_regressao_linear/Slide16.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
@@ -287,10 +317,423 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <img src="media/03-aula03/aula_regressao_linear/Slide17.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
 </div>
+<p>00000000000000000000000000000000000000000000000000000000000000000000000000000000</p>
+<iframe srcdoc="
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 15px; }
+    .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #ddd; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; background: #f0f4f8; padding: 10px; border-radius: 6px; }
+    .inputs-group { display: flex; align-items: center; gap: 6px; }
+    .inputs-group input[type=&quot;number&quot;] { width: 55px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; text-align: center; }
+    .sliders { width: 100%; display: flex; gap: 20px; margin-top: 5px; }
+    .slider-group { flex: 1; }
+    .slider-group label { display: block; font-size: 12px; font-weight: bold; }
+    .slider-group input { width: 100%; }
+    button { padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    .btn-add { background: #28a745; color: white; }
+    .btn-reset { background: #dc3545; color: white; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h3 style=&quot;text-align: center; margin: 0 0 10px 0;&quot;&gt;Visualizador de Regressão Linear - Exemplo 1 - Valor Apartamento&lt;/h3&gt;
+    
+    &lt;div class=&quot;controls&quot;&gt;
+      &lt;div&gt;
+        &lt;label style=&quot;font-weight: bold; cursor: pointer;&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;autoOls&quot; checked&gt; Auto-calcular modelo (menor erro)&lt;/label&gt;
+        &lt;label style=&quot;font-weight: bold; cursor: pointer; margin-left: 10px;&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;showResiduals&quot; checked&gt; Mostrar o erro (resíduo)&lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;inputs-group&quot;&gt;
+        &lt;label style=&quot;font-size: 12px; font-weight: bold;&quot;&gt;X:&lt;/label&gt;
+        &lt;input type=&quot;number&quot; id=&quot;inputX&quot; min=&quot;20&quot; max=&quot;100&quot; value=&quot;65&quot;&gt;
+        &lt;label style=&quot;font-size: 12px; font-weight: bold;&quot;&gt;Y:&lt;/label&gt;
+        &lt;input type=&quot;number&quot; id=&quot;inputY&quot; min=&quot;100&quot; max=&quot;500&quot; value=&quot;320&quot;&gt;
+        &lt;button class=&quot;btn-add&quot; id=&quot;addPointBtn&quot;&gt;+ Add Point&lt;/button&gt;
+        &lt;button class=&quot;btn-reset&quot; id=&quot;resetBtn&quot;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;sliders&quot;&gt;
+        &lt;div class=&quot;slider-group&quot;&gt;
+          &lt;label&gt;Parâmetro w, ou inclinação (β₁): &lt;span id=&quot;beta1Val&quot;&gt;3.90&lt;/span&gt;&lt;/label&gt;
+          &lt;input type=&quot;range&quot; id=&quot;beta1Slider&quot; min=&quot;-5&quot; max=&quot;10&quot; step=&quot;0.1&quot; value=&quot;3.90&quot; disabled&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;slider-group&quot;&gt;
+          &lt;label&gt;parâmetro b, ou intercepto ou vício (β₀): &lt;span id=&quot;beta0Val&quot;&gt;61.00&lt;/span&gt;&lt;/label&gt;
+          &lt;input type=&quot;range&quot; id=&quot;beta0Slider&quot; min=&quot;0&quot; max=&quot;200&quot; step=&quot;1&quot; value=&quot;61.00&quot; disabled&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;canvas id=&quot;chart&quot; width=&quot;750&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    var initialPoints = [{x: 40, y: 220}];
+    var points = JSON.parse(JSON.stringify(initialPoints));
+    var currentBeta0 = 61.0, currentBeta1 = 3.9;
+
+    var autoOls = document.getElementById(&quot;autoOls&quot;);
+    var showResiduals = document.getElementById(&quot;showResiduals&quot;);
+    var beta1Slider = document.getElementById(&quot;beta1Slider&quot;);
+    var beta0Slider = document.getElementById(&quot;beta0Slider&quot;);
+    var inputX = document.getElementById(&quot;inputX&quot;);
+    var inputY = document.getElementById(&quot;inputY&quot;);
+
+    function calcOLS() {
+      var n = points.length;
+      if (n &lt; 2) return { beta0: 0, beta1: 0 };
+      var sx = 0, sy = 0, sxy = 0, sx2 = 0;
+      for (var i = 0; i &lt; n; i++) {
+        sx += points[i].x; sy += points[i].y;
+        sxy += points[i].x * points[i].y; sx2 += points[i].x * points[i].x;
+      }
+      var b1 = (n * sx2 - sx * sx) !== 0 ? (n * sxy - sx * sy) / (n * sx2 - sx * sx) : 0;
+      var b0 = (sy - b1 * sx) / n;
+      return { beta0: b0, beta1: b1 };
+    }
+
+    function calcMetrics(b0, b1) {
+      var n = points.length;
+      if (n === 0) return { mse: 0, r2: &quot;0.00&quot; };
+      var sy = 0, sse = 0, sst = 0;
+      for (var i = 0; i &lt; n; i++) sy += points[i].y;
+      var meanY = sy / n;
+      for (var j = 0; j &lt; n; j++) {
+        var yHat = b0 + b1 * points[j].x;
+        sse += Math.pow(points[j].y - yHat, 2);
+        sst += Math.pow(points[j].y - meanY, 2);
+      }
+      return { mse: Math.round(sse / n), r2: sst !== 0 ? Math.max(0, 1 - (sse / sst)).toFixed(2) : &quot;1.00&quot; };
+    }
+
+    var customPlugin = {
+      id: &quot;customPlugin&quot;,
+      beforeDatasetsDraw: function(chart) {
+        if (!showResiduals.checked) return;
+        var ctx = chart.ctx, xAxis = chart.scales.x, yAxis = chart.scales.y;
+        ctx.save(); ctx.strokeStyle = &quot;#ff9999&quot;; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]);
+        for (var i = 0; i &lt; points.length; i++) {
+          var p = points[i], yHat = currentBeta0 + currentBeta1 * p.x;
+          ctx.beginPath();
+          ctx.moveTo(xAxis.getPixelForValue(p.x), yAxis.getPixelForValue(p.y));
+          ctx.lineTo(xAxis.getPixelForValue(p.x), yAxis.getPixelForValue(yHat));
+          ctx.stroke();
+        }
+        ctx.restore();
+      },
+      afterDraw: function(chart) {
+        var ctx = chart.ctx; ctx.save();
+        var meta = chart.getDatasetMeta(0);
+        ctx.font = &quot;bold 11px sans-serif&quot;; ctx.fillStyle = &quot;#000&quot;; ctx.textAlign = &quot;center&quot;;
+        meta.data.forEach(function(el, idx) {
+          if (points[idx]) ctx.fillText(&quot;(&quot; + points[idx].x + &quot;, &quot; + points[idx].y + &quot;)&quot;, el.x, el.y - 10);
+        });
+        var m = calcMetrics(currentBeta0, currentBeta1);
+        var ca = chart.chartArea, bx = ca.right - 100, by = ca.bottom - 45;
+        ctx.fillStyle = &quot;#fff&quot;; ctx.strokeStyle = &quot;#ccc&quot;; ctx.lineWidth = 1;
+        ctx.fillRect(bx, by, 90, 40); ctx.strokeRect(bx, by, 90, 40);
+        ctx.font = &quot;11px sans-serif&quot;; ctx.fillStyle = &quot;#000&quot;; ctx.textAlign = &quot;left&quot;;
+        ctx.fillText(&quot;R² = &quot; + m.r2, bx + 8, by + 16);
+        ctx.fillText(&quot;MSE = &quot; + m.mse, bx + 8, by + 32);
+        ctx.restore();
+      }
+    };
+
+    var ctx = document.getElementById(&quot;chart&quot;).getContext(&quot;2d&quot;);
+    var chart = new Chart(ctx, {
+      type: &quot;scatter&quot;,
+      data: {
+        datasets: [
+          { label: &quot;Pontos&quot;, data: points, backgroundColor: &quot;blue&quot;, pointRadius: 5 },
+          { label: &quot;Reta&quot;, data: [], type: &quot;line&quot;, borderColor: &quot;red&quot;, borderWidth: 2, fill: false, pointRadius: 0 }
+        ]
+      },
+      options: {
+        responsive: true, animation: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { type: &quot;linear&quot;, min: 20, max: 100, title: { display: true, text: &quot;Entrada de dados X - Área Imóvel&quot; } },
+          y: { min: 100, max: 500, title: { display: true, text: &quot;Saída de dados Y - Valor do imóvel&quot; } }
+        }
+      },
+      plugins: [customPlugin]
+    });
+
+    function update() {
+      if (autoOls.checked) {
+        var ols = calcOLS(); currentBeta0 = ols.beta0; currentBeta1 = ols.beta1;
+        beta1Slider.disabled = beta0Slider.disabled = true;
+        beta1Slider.value = currentBeta1.toFixed(2); beta0Slider.value = currentBeta0.toFixed(2);
+      } else {
+        beta1Slider.disabled = beta0Slider.disabled = false;
+        currentBeta1 = parseFloat(beta1Slider.value); currentBeta0 = parseFloat(beta0Slider.value);
+      }
+      document.getElementById(&quot;beta1Val&quot;).innerText = currentBeta1.toFixed(2);
+      document.getElementById(&quot;beta0Val&quot;).innerText = currentBeta0.toFixed(2);
+      chart.data.datasets[0].data = points;
+      chart.data.datasets[1].data = [{ x: 20, y: currentBeta0 + currentBeta1 * 20 }, { x: 100, y: currentBeta0 + currentBeta1 * 100 }];
+      chart.update();
+    }
+
+    autoOls.addEventListener(&quot;change&quot;, update);
+    showResiduals.addEventListener(&quot;change&quot;, update);
+    beta1Slider.addEventListener(&quot;input&quot;, update);
+    beta0Slider.addEventListener(&quot;input&quot;, update);
+
+    document.getElementById(&quot;addPointBtn&quot;).addEventListener(&quot;click&quot;, function() {
+      var xVal = parseFloat(inputX.value);
+      var yVal = parseFloat(inputY.value);
+      if (!isNaN(xVal) &amp;&amp; !isNaN(yVal)) {
+        points.push({ x: xVal, y: yVal });
+        update();
+      }
+    });
+
+    document.getElementById(&quot;resetBtn&quot;).addEventListener(&quot;click&quot;, function() {
+      points = JSON.parse(JSON.stringify(initialPoints)); 
+      autoOls.checked = true; 
+      update();
+    });
+
+    document.getElementById(&quot;chart&quot;).addEventListener(&quot;click&quot;, function(evt) {
+      var rect = evt.target.getBoundingClientRect();
+      var xVal = Math.round(chart.scales.x.getValueForPixel(evt.clientX - rect.left));
+      var yVal = Math.round(chart.scales.y.getValueForPixel(evt.clientY - rect.top));
+      if (xVal &gt;= 20 &amp;&amp; xVal &lt;= 100 &amp;&amp; yVal &gt;= 100 &amp;&amp; yVal &lt;= 500) {
+        inputX.value = xVal;
+        inputY.value = yVal;
+        points.push({ x: xVal, y: yVal });
+        update();
+      }
+    });
+
+    update();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" style="width: 100%; height: 550px; border: none; overflow: hidden;">
+</iframe>
+<p>00000000000000000000000000000000000000000000000000000000000000000000000000000000</p>
 <div class="float">
 <img src="media/03-aula03/aula_regressao_linear/Slide18.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
 </div>
+<p>00000000000000000000000000000000000000000000000000000000000000000000000000000000</p>
+<iframe srcdoc="
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js&quot;&gt;&lt;/script&gt;
+  &lt;style&gt;
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 15px; }
+    .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #ddd; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; background: #f0f4f8; padding: 10px; border-radius: 6px; }
+    .inputs-group { display: flex; align-items: center; gap: 6px; }
+    .inputs-group input[type=&quot;number&quot;] { width: 55px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; text-align: center; }
+    .sliders { width: 100%; display: flex; gap: 20px; margin-top: 5px; }
+    .slider-group { flex: 1; }
+    .slider-group label { display: block; font-size: 12px; font-weight: bold; }
+    .slider-group input { width: 100%; }
+    button { padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    .btn-add { background: #28a745; color: white; }
+    .btn-reset { background: #dc3545; color: white; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h3 style=&quot;text-align: center; margin: 0 0 10px 0;&quot;&gt;Visualizador de Regressão Linear - Exemplo 1 - Valor Apartamento&lt;/h3&gt;
+    
+    &lt;div class=&quot;controls&quot;&gt;
+      &lt;div&gt;
+        &lt;label style=&quot;font-weight: bold; cursor: pointer;&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;autoOls&quot; checked&gt; Auto-calcular modelo (menor erro)&lt;/label&gt;
+        &lt;label style=&quot;font-weight: bold; cursor: pointer; margin-left: 10px;&quot;&gt;&lt;input type=&quot;checkbox&quot; id=&quot;showResiduals&quot; checked&gt; Mostrar o erro (resíduo)&lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;inputs-group&quot;&gt;
+        &lt;label style=&quot;font-size: 12px; font-weight: bold;&quot;&gt;X:&lt;/label&gt;
+        &lt;input type=&quot;number&quot; id=&quot;inputX&quot; min=&quot;20&quot; max=&quot;100&quot; value=&quot;65&quot;&gt;
+        &lt;label style=&quot;font-size: 12px; font-weight: bold;&quot;&gt;Y:&lt;/label&gt;
+        &lt;input type=&quot;number&quot; id=&quot;inputY&quot; min=&quot;100&quot; max=&quot;500&quot; value=&quot;320&quot;&gt;
+        &lt;button class=&quot;btn-add&quot; id=&quot;addPointBtn&quot;&gt;+ Add Point&lt;/button&gt;
+        &lt;button class=&quot;btn-reset&quot; id=&quot;resetBtn&quot;&gt;Reset&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&quot;sliders&quot;&gt;
+        &lt;div class=&quot;slider-group&quot;&gt;
+          &lt;label&gt;Parâmetro w, ou inclinação (β₁): &lt;span id=&quot;beta1Val&quot;&gt;3.90&lt;/span&gt;&lt;/label&gt;
+          &lt;input type=&quot;range&quot; id=&quot;beta1Slider&quot; min=&quot;-5&quot; max=&quot;10&quot; step=&quot;0.1&quot; value=&quot;3.90&quot; disabled&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;slider-group&quot;&gt;
+          &lt;label&gt;Parâmetro b, ou intercepto ou vício (β₀): &lt;span id=&quot;beta0Val&quot;&gt;61.00&lt;/span&gt;&lt;/label&gt;
+          &lt;input type=&quot;range&quot; id=&quot;beta0Slider&quot; min=&quot;0&quot; max=&quot;200&quot; step=&quot;1&quot; value=&quot;61.00&quot; disabled&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;canvas id=&quot;chart&quot; width=&quot;750&quot; height=&quot;380&quot;&gt;&lt;/canvas&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    var initialPoints = [{x: 40, y: 220}, {x: 50, y: 260}, {x: 60, y: 310}, {x: 70, y: 350}, {x: 80, y: 410}];
+    var points = JSON.parse(JSON.stringify(initialPoints));
+    var currentBeta0 = 61.0, currentBeta1 = 3.9;
+
+    var autoOls = document.getElementById(&quot;autoOls&quot;);
+    var showResiduals = document.getElementById(&quot;showResiduals&quot;);
+    var beta1Slider = document.getElementById(&quot;beta1Slider&quot;);
+    var beta0Slider = document.getElementById(&quot;beta0Slider&quot;);
+    var inputX = document.getElementById(&quot;inputX&quot;);
+    var inputY = document.getElementById(&quot;inputY&quot;);
+
+    function calcOLS() {
+      var n = points.length;
+      if (n &lt; 2) return { beta0: 0, beta1: 0 };
+      var sx = 0, sy = 0, sxy = 0, sx2 = 0;
+      for (var i = 0; i &lt; n; i++) {
+        sx += points[i].x; sy += points[i].y;
+        sxy += points[i].x * points[i].y; sx2 += points[i].x * points[i].x;
+      }
+      var b1 = (n * sx2 - sx * sx) !== 0 ? (n * sxy - sx * sy) / (n * sx2 - sx * sx) : 0;
+      var b0 = (sy - b1 * sx) / n;
+      return { beta0: b0, beta1: b1 };
+    }
+
+    function calcMetrics(b0, b1) {
+      var n = points.length;
+      if (n === 0) return { loss: 0, mse: 0, r2: &quot;0.00&quot; };
+      var sy = 0, sse = 0, sst = 0;
+      for (var i = 0; i &lt; n; i++) sy += points[i].y;
+      var meanY = sy / n;
+      for (var j = 0; j &lt; n; j++) {
+        var yHat = b0 + b1 * points[j].x;
+        sse += Math.pow(points[j].y - yHat, 2);
+        sst += Math.pow(points[j].y - meanY, 2);
+      }
+      var loss = Math.round(sse);
+      var mse = Math.round(sse / n);
+      var r2 = sst !== 0 ? Math.max(0, 1 - (sse / sst)).toFixed(2) : &quot;1.00&quot;;
+      return { loss: loss, mse: mse, r2: r2 };
+    }
+
+    var customPlugin = {
+      id: &quot;customPlugin&quot;,
+      beforeDatasetsDraw: function(chart) {
+        if (!showResiduals.checked) return;
+        var ctx = chart.ctx, xAxis = chart.scales.x, yAxis = chart.scales.y;
+        ctx.save(); ctx.strokeStyle = &quot;#ff9999&quot;; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]);
+        for (var i = 0; i &lt; points.length; i++) {
+          var p = points[i], yHat = currentBeta0 + currentBeta1 * p.x;
+          ctx.beginPath();
+          ctx.moveTo(xAxis.getPixelForValue(p.x), yAxis.getPixelForValue(p.y));
+          ctx.lineTo(xAxis.getPixelForValue(p.x), yAxis.getPixelForValue(yHat));
+          ctx.stroke();
+        }
+        ctx.restore();
+      },
+      afterDraw: function(chart) {
+        var ctx = chart.ctx; ctx.save();
+        var meta = chart.getDatasetMeta(0);
+        ctx.font = &quot;bold 11px sans-serif&quot;; ctx.fillStyle = &quot;#000&quot;; ctx.textAlign = &quot;center&quot;;
+        meta.data.forEach(function(el, idx) {
+          if (points[idx]) ctx.fillText(&quot;(&quot; + points[idx].x + &quot;, &quot; + points[idx].y + &quot;)&quot;, el.x, el.y - 10);
+        });
+        
+        var m = calcMetrics(currentBeta0, currentBeta1);
+        var ca = chart.chartArea, bx = ca.right - 120, by = ca.bottom - 60;
+        
+        // Desenha caixa de métricas expandida com Loss
+        ctx.fillStyle = &quot;#ffffff&quot;; ctx.strokeStyle = &quot;#ccc&quot;; ctx.lineWidth = 1;
+        ctx.fillRect(bx, by, 110, 52); ctx.strokeRect(bx, by, 110, 52);
+        
+        ctx.font = &quot;11px sans-serif&quot;; ctx.fillStyle = &quot;#000&quot;; ctx.textAlign = &quot;left&quot;;
+        ctx.fillText(&quot;Loss (SSE) = &quot; + m.loss, bx + 8, by + 16);
+        ctx.fillText(&quot;MSE = &quot; + m.mse, bx + 8, by + 31);
+        ctx.fillText(&quot;R² = &quot; + m.r2, bx + 8, by + 46);
+        
+        ctx.restore();
+      }
+    };
+
+    var ctx = document.getElementById(&quot;chart&quot;).getContext(&quot;2d&quot;);
+    var chart = new Chart(ctx, {
+      type: &quot;scatter&quot;,
+      data: {
+        datasets: [
+          { label: &quot;Pontos&quot;, data: points, backgroundColor: &quot;blue&quot;, pointRadius: 5 },
+          { label: &quot;Reta&quot;, data: [], type: &quot;line&quot;, borderColor: &quot;red&quot;, borderWidth: 2, fill: false, pointRadius: 0 }
+        ]
+      },
+      options: {
+        responsive: true, animation: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { type: &quot;linear&quot;, min: 20, max: 100, title: { display: true, text: &quot;Entrada de dados X - Área Imóvel&quot; } },
+          y: { min: 100, max: 500, title: { display: true, text: &quot;Saída de dados Y - Valor do imóvel&quot; } }
+        }
+      },
+      plugins: [customPlugin]
+    });
+
+    function update() {
+      if (autoOls.checked) {
+        var ols = calcOLS(); currentBeta0 = ols.beta0; currentBeta1 = ols.beta1;
+        beta1Slider.disabled = beta0Slider.disabled = true;
+        beta1Slider.value = currentBeta1.toFixed(2); beta0Slider.value = currentBeta0.toFixed(2);
+      } else {
+        beta1Slider.disabled = beta0Slider.disabled = false;
+        currentBeta1 = parseFloat(beta1Slider.value); currentBeta0 = parseFloat(beta0Slider.value);
+      }
+      document.getElementById(&quot;beta1Val&quot;).innerText = currentBeta1.toFixed(2);
+      document.getElementById(&quot;beta0Val&quot;).innerText = currentBeta0.toFixed(2);
+      chart.data.datasets[0].data = points;
+      chart.data.datasets[1].data = [{ x: 20, y: currentBeta0 + currentBeta1 * 20 }, { x: 100, y: currentBeta0 + currentBeta1 * 100 }];
+      chart.update();
+    }
+
+    autoOls.addEventListener(&quot;change&quot;, update);
+    showResiduals.addEventListener(&quot;change&quot;, update);
+    beta1Slider.addEventListener(&quot;input&quot;, update);
+    beta0Slider.addEventListener(&quot;input&quot;, update);
+
+    document.getElementById(&quot;addPointBtn&quot;).addEventListener(&quot;click&quot;, function() {
+      var xVal = parseFloat(inputX.value);
+      var yVal = parseFloat(inputY.value);
+      if (!isNaN(xVal) &amp;&amp; !isNaN(yVal)) {
+        points.push({ x: xVal, y: yVal });
+        update();
+      }
+    });
+
+    document.getElementById(&quot;resetBtn&quot;).addEventListener(&quot;click&quot;, function() {
+      points = JSON.parse(JSON.stringify(initialPoints)); 
+      autoOls.checked = true; 
+      update();
+    });
+
+    document.getElementById(&quot;chart&quot;).addEventListener(&quot;click&quot;, function(evt) {
+      var rect = evt.target.getBoundingClientRect();
+      var xVal = Math.round(chart.scales.x.getValueForPixel(evt.clientX - rect.left));
+      var yVal = Math.round(chart.scales.y.getValueForPixel(evt.clientY - rect.top));
+      if (xVal &gt;= 20 &amp;&amp; xVal &lt;= 100 &amp;&amp; yVal &gt;= 100 &amp;&amp; yVal &lt;= 500) {
+        inputX.value = xVal;
+        inputY.value = yVal;
+        points.push({ x: xVal, y: yVal });
+        update();
+      }
+    });
+
+    update();
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;" style="width: 100%; height: 560px; border: none; overflow: hidden;">
+</iframe>
+<p>00000000000000000000000000000000000000000000000000000000000000000000000000000000</p>
 <div class="float">
 <img src="media/03-aula03/aula_regressao_linear/Slide19.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
@@ -1704,6 +2147,7 @@ forceTheme('sk-container-id-1');</script></body>
 <img src="media/03-aula03/aula_regressao_linear/Slide27.JPG" alt="Aula 03 - Coleta de Dados e Regressão Linear" />
 <div class="figcaption">Aula 03 - Coleta de Dados e Regressão Linear</div>
 </div>
+<p><span class="citation">(<a href="#ref-Grus2015DataScience">Grus 2015</a>)</span></p>
 
 <div id="exercícios---coleta-de-dados-e-regressão-linear" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> - Exercícios - Coleta de Dados e Regressão Linear<a href="coleta-de-dados-e-regressão-linear.html#exerc%C3%ADcios---coleta-de-dados-e-regress%C3%A3o-linear" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -1717,9 +2161,9 @@ pessoa teve de resolver um teste com adições simples, anotando-se então
 os erros cometidos. Os dados resultantes são os seguintes:</p>
 <table>
 <colgroup>
-<col width="26%" />
-<col width="41%" />
-<col width="31%" />
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -1892,9 +2336,9 @@ y = 0,4750(x) + 3
 <pre><code>## (-8.0, 18.0)</code></pre>
 <div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="coleta-de-dados-e-regressão-linear.html#cb20-1" tabindex="-1"></a><span class="co"># Configurando a escala unitária (passo de 1 em 1) para os eixos X e Y</span></span>
 <span id="cb20-2"><a href="coleta-de-dados-e-regressão-linear.html#cb20-2" tabindex="-1"></a>plt.xticks(np.arange(<span class="dv">0</span>, <span class="bu">max</span>(x) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## ([&lt;matplotlib.axis.XTick object at 0x000001E1085525A0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10830FF20&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1084D7530&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108560620&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1085610D0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108562030&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108566810&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1085675C0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1085692B0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108569DF0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108453650&gt;, &lt;matplotlib.axis.XTick object at 0x000001E1086563C0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108656F30&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108657BC0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108658710&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108659250&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108659CA0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865A7B0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865B200&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865BD40&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865C590&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865D310&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865DDF0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865E900&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865F4A0&gt;, &lt;matplotlib.axis.XTick object at 0x000001E10865FF80&gt;, &lt;matplotlib.axis.XTick object at 0x000001E108668A40&gt;], [Text(0, 0, &#39;0&#39;), Text(1, 0, &#39;1&#39;), Text(2, 0, &#39;2&#39;), Text(3, 0, &#39;3&#39;), Text(4, 0, &#39;4&#39;), Text(5, 0, &#39;5&#39;), Text(6, 0, &#39;6&#39;), Text(7, 0, &#39;7&#39;), Text(8, 0, &#39;8&#39;), Text(9, 0, &#39;9&#39;), Text(10, 0, &#39;10&#39;), Text(11, 0, &#39;11&#39;), Text(12, 0, &#39;12&#39;), Text(13, 0, &#39;13&#39;), Text(14, 0, &#39;14&#39;), Text(15, 0, &#39;15&#39;), Text(16, 0, &#39;16&#39;), Text(17, 0, &#39;17&#39;), Text(18, 0, &#39;18&#39;), Text(19, 0, &#39;19&#39;), Text(20, 0, &#39;20&#39;), Text(21, 0, &#39;21&#39;), Text(22, 0, &#39;22&#39;), Text(23, 0, &#39;23&#39;), Text(24, 0, &#39;24&#39;), Text(25, 0, &#39;25&#39;), Text(26, 0, &#39;26&#39;)])</code></pre>
+<pre><code>## ([&lt;matplotlib.axis.XTick object at 0x0000019031B55880&gt;, &lt;matplotlib.axis.XTick object at 0x00000190318062A0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031975D90&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B64170&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B64B60&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B655E0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B66630&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B6AED0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B6CDD0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031B6D790&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031A4B170&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C56060&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C56B10&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C575F0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C5C500&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C5D010&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C5DAC0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C5E5A0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C5F080&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C5FB30&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C60620&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C61130&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C61BE0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C62690&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C631D0&gt;, &lt;matplotlib.axis.XTick object at 0x0000019031C63C80&gt;, &lt;matplotlib.axis.XTick object at 0x00000190319DE2A0&gt;], [Text(0, 0, &#39;0&#39;), Text(1, 0, &#39;1&#39;), Text(2, 0, &#39;2&#39;), Text(3, 0, &#39;3&#39;), Text(4, 0, &#39;4&#39;), Text(5, 0, &#39;5&#39;), Text(6, 0, &#39;6&#39;), Text(7, 0, &#39;7&#39;), Text(8, 0, &#39;8&#39;), Text(9, 0, &#39;9&#39;), Text(10, 0, &#39;10&#39;), Text(11, 0, &#39;11&#39;), Text(12, 0, &#39;12&#39;), Text(13, 0, &#39;13&#39;), Text(14, 0, &#39;14&#39;), Text(15, 0, &#39;15&#39;), Text(16, 0, &#39;16&#39;), Text(17, 0, &#39;17&#39;), Text(18, 0, &#39;18&#39;), Text(19, 0, &#39;19&#39;), Text(20, 0, &#39;20&#39;), Text(21, 0, &#39;21&#39;), Text(22, 0, &#39;22&#39;), Text(23, 0, &#39;23&#39;), Text(24, 0, &#39;24&#39;), Text(25, 0, &#39;25&#39;), Text(26, 0, &#39;26&#39;)])</code></pre>
 <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="coleta-de-dados-e-regressão-linear.html#cb22-1" tabindex="-1"></a>plt.yticks(np.arange(<span class="dv">0</span>, <span class="bu">max</span>(y) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## ([&lt;matplotlib.axis.YTick object at 0x000001E108552600&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108371760&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10866B200&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10866B710&gt;, &lt;matplotlib.axis.YTick object at 0x000001E1083DDFD0&gt;, &lt;matplotlib.axis.YTick object at 0x000001E1083DEC90&gt;, &lt;matplotlib.axis.YTick object at 0x000001E1083DF500&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108734380&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108735010&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108735AF0&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108736540&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108736F60&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108737A40&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108738200&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108738F80&gt;, &lt;matplotlib.axis.YTick object at 0x000001E108739A00&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10873A480&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10873AF90&gt;, &lt;matplotlib.axis.YTick object at 0x000001E10873B9B0&gt;], [Text(0, 0, &#39;0&#39;), Text(0, 1, &#39;1&#39;), Text(0, 2, &#39;2&#39;), Text(0, 3, &#39;3&#39;), Text(0, 4, &#39;4&#39;), Text(0, 5, &#39;5&#39;), Text(0, 6, &#39;6&#39;), Text(0, 7, &#39;7&#39;), Text(0, 8, &#39;8&#39;), Text(0, 9, &#39;9&#39;), Text(0, 10, &#39;10&#39;), Text(0, 11, &#39;11&#39;), Text(0, 12, &#39;12&#39;), Text(0, 13, &#39;13&#39;), Text(0, 14, &#39;14&#39;), Text(0, 15, &#39;15&#39;), Text(0, 16, &#39;16&#39;), Text(0, 17, &#39;17&#39;), Text(0, 18, &#39;18&#39;)])</code></pre>
+<pre><code>## ([&lt;matplotlib.axis.YTick object at 0x0000019031B558E0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031ACEA20&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031C3C7A0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031C3D490&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031C3DEE0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031C3E990&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031C3F530&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031C3FE60&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D34E00&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D358E0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D36300&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D36D80&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D37830&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D38320&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D38D40&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D397F0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D3A2D0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D3ACF0&gt;, &lt;matplotlib.axis.YTick object at 0x0000019031D3B740&gt;], [Text(0, 0, &#39;0&#39;), Text(0, 1, &#39;1&#39;), Text(0, 2, &#39;2&#39;), Text(0, 3, &#39;3&#39;), Text(0, 4, &#39;4&#39;), Text(0, 5, &#39;5&#39;), Text(0, 6, &#39;6&#39;), Text(0, 7, &#39;7&#39;), Text(0, 8, &#39;8&#39;), Text(0, 9, &#39;9&#39;), Text(0, 10, &#39;10&#39;), Text(0, 11, &#39;11&#39;), Text(0, 12, &#39;12&#39;), Text(0, 13, &#39;13&#39;), Text(0, 14, &#39;14&#39;), Text(0, 15, &#39;15&#39;), Text(0, 16, &#39;16&#39;), Text(0, 17, &#39;17&#39;), Text(0, 18, &#39;18&#39;)])</code></pre>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="coleta-de-dados-e-regressão-linear.html#cb24-1" tabindex="-1"></a><span class="co"># Grade padrão em cinza claro para a escala geral</span></span>
 <span id="cb24-2"><a href="coleta-de-dados-e-regressão-linear.html#cb24-2" tabindex="-1"></a><span class="cf">for</span> xtick <span class="kw">in</span> np.arange(<span class="dv">0</span>, <span class="bu">max</span>(x) <span class="op">+</span> <span class="dv">3</span>, <span class="dv">1</span>):</span>
 <span id="cb24-3"><a href="coleta-de-dados-e-regressão-linear.html#cb24-3" tabindex="-1"></a>    plt.axvline(xtick, color<span class="op">=</span><span class="st">&#39;gray&#39;</span>, linewidth<span class="op">=</span><span class="fl">0.3</span>, linestyle<span class="op">=</span><span class="st">&#39;:&#39;</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, zorder<span class="op">=</span><span class="dv">1</span>)</span>
@@ -1945,6 +2389,12 @@ y = 0,4750(x) + 3
 
 </div>
 </div>
+</div>
+</div>
+<h3>References</h3>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-Grus2015DataScience" class="csl-entry">
+Grus, Joel. 2015. <em>Ciência de Dados Do Zero: Primeiros Princípios Com Python</em>. 1st ed. Sebastopol, CA: O’Reilly Media. <a href="https://dokumen.pub/download/data-science-do-zero-primeiras-regras-com-o-python-9788550803876-9781491901427.html">https://dokumen.pub/download/data-science-do-zero-primeiras-regras-com-o-python-9788550803876-9781491901427.html</a>.
 </div>
 </div>
             </section>
