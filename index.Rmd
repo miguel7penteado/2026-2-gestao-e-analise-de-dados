@@ -62,7 +62,7 @@ knitr::knit_engines$set(plantuml = function(options)
 
 
 
-## Calendário das aulas
+## Calendário das aulas {.unnumbered}
 
 —————————————————————————————————————————————
 

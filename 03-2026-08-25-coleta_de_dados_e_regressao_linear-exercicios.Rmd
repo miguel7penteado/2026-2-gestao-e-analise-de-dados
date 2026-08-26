@@ -21,7 +21,7 @@ pessoa teve de resolver um teste com adições simples, anotando-se então
 os erros cometidos. Os dados resultantes são os seguintes:
 
 | Pessoa Observada (i) | **Número de Horas sem Dormir ( X )** | **Número de Erros ( Y )** |
-|:-----------------:|:----------------------------:|:---------------------:|
+|:--:|:--:|:--:|
 | 1 | 8 | 6 |
 | 2 | 8 | 8 |
 | 3 | 12 | 6 |
@@ -122,7 +122,6 @@ if __name__ == '__main__':
     funcao_principal()
 ```
 
-
 Como ficou a equação descoberta pela **regressão linear simples** ?
 
 Uma equação de reta segue o formato $y = mx + n$.
@@ -141,8 +140,8 @@ $$
 y = 0,4750(x) + 3
 $$
 
-
 #### Gráfico do Exemplo 00
+
 ```{python exemplo00-grafico, echo=TRUE}
 import numpy as np
 import matplotlib.pyplot as plt
@@ -209,13 +208,6 @@ plt.legend()
 # Exibir o gráfico
 plt.show()
 ```
-
-
-
-
-
-
-
 
 ```{r 03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios, eval=FALSE, include=FALSE}
 rmarkdown::render("03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")

@@ -1,2 +1,15 @@
 h2:exercícios---organização-e-preparação-dos-dados-regressão-logística-e-knn - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN
+h3:organização-e-preparação-de-dados-população-estrato-proporção-e-amostra Organização e Preparação de Dados: População, Estrato , proporção e Amostra
+h4:alunos-de-uma-universidade 1. Alunos de uma universidade
+h4:funcionários-de-uma-empresa 2. Funcionários de uma empresa
+h4:moradores-de-uma-cidade 3. Moradores de uma cidade
+h4:imagens-do-cifar-10 4. Imagens do CIFAR-10
+h4:domicílios-de-um-município 5. Domicílios de um município
+h4:pacientes-de-uma-clínica-população-balanceada 6. Pacientes de uma clínica — população balanceada
+h4:produtos-de-um-estoque-população-balanceada 7. Produtos de um estoque — população balanceada
+h3:imagens-de-um-dataset-de-classificação-população-balanceada 8. Imagens de um dataset de classificação — população balanceada
+h3:clientes-de-um-banco-população-não-balanceada 9. Clientes de um banco — população não balanceada
+h3:dataset-de-detecção-de-fraude-população-não-balanceada 10. Dataset de detecção de fraude — população não balanceada
+h3:regressão-logística Regressão Logística
+h3:knn KNN
 
