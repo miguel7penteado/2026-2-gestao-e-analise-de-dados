@@ -23,7 +23,7 @@
 <meta name="author" content="Professor Miguél Suares" />
 
 
-<meta name="date" content="2026-08-24" />
+<meta name="date" content="2026-08-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -251,6 +251,263 @@ div.csl-indent {
             <section class="normal" id="section-">
 <div id="organização-e-preparação-dos-dados-regressão-logística-e-knn" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Capítulo 4</span> - Organização e Preparação dos Dados, Regressão Logística e KNN<a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>================================================================================
+<iframe srcdoc='
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; margin: 0; padding: 15px; }
+    .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #ddd; }
+    .controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; justify-content: space-between; margin-bottom: 10px; background: #f0f4f8; padding: 10px; border-radius: 6px; }
+    .inputs-group { display: flex; align-items: center; gap: 6px; }
+    .inputs-group input[type="number"] { width: 55px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; text-align: center; }
+    .sliders { width: 100%; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; margin-top: 5px; }
+    .slider-group { flex: 1; }
+    .slider-group label { display: block; font-size: 12px; font-weight: bold; }
+    .slider-group input { width: 100%; }
+    button { padding: 6px 12px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; }
+    .btn-add { background: #28a745; color: white; }
+    .btn-reset { background: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3 style="text-align: center; margin: 0 0 10px 0;">Visualizador de Regressão Logística - Função Sigmóide</h3>
+    
+    <div class="controls">
+      <div>
+        <label style="font-weight: bold; cursor: pointer;"><input type="checkbox" id="showResiduals" checked> Mostrar resíduos (probabilidade vs real)</label>
+      </div>
+
+      <div class="inputs-group">
+        <label style="font-size: 12px; font-weight: bold;">X:</label>
+        <input type="number" id="inputX" min="0" max="100" value="50">
+        <label style="font-size: 12px; font-weight: bold;">Y (0 ou 1):</label>
+        <input type="number" id="inputY" min="0" max="1" step="1" value="1">
+        <button class="btn-add" id="addPointBtn">+ Add Point</button>
+        <button class="btn-reset" id="resetBtn">Reset</button>
+      </div>
+
+      <div class="sliders">
+        <div class="slider-group">
+          <label>Peso w (inclinação): <span id="weightVal">0.15</span></label>
+          <input type="range" id="weightSlider" min="-1.0" max="1.0" step="0.01" value="0.15">
+        </div>
+        <div class="slider-group">
+          <label>Vício b (bias): <span id="biasVal">-7.50</span></label>
+          <input type="range" id="biasSlider" min="-30" max="30" step="0.5" value="-7.50">
+        </div>
+        <div class="slider-group">
+          <label style="color: #d97706;">Threshold (Limiar): <span id="thresholdVal">50%</span></label>
+          <input type="range" id="thresholdSlider" min="0.0" max="1.0" step="0.01" value="0.50">
+        </div>
+      </div>
+    </div>
+
+    <canvas id="chart" width="750" height="380"></canvas>
+  </div>
+
+  <script>
+    var initialPoints = [
+      {x: 10, y: 0}, {x: 20, y: 0}, {x: 30, y: 0}, {x: 40, y: 0},
+      {x: 60, y: 1}, {x: 70, y: 1}, {x: 80, y: 1}, {x: 90, y: 1}
+    ];
+    var points = JSON.parse(JSON.stringify(initialPoints));
+    var currentW = 0.15, currentB = -7.50, currentThreshold = 0.50;
+
+    var showResiduals = document.getElementById("showResiduals");
+    var weightSlider = document.getElementById("weightSlider");
+    var biasSlider = document.getElementById("biasSlider");
+    var thresholdSlider = document.getElementById("thresholdSlider");
+    var inputX = document.getElementById("inputX");
+    var inputY = document.getElementById("inputY");
+
+    function sigmoid(z) {
+      return 1 / (1 + Math.exp(-z));
+    }
+
+    function predict(x, w, b) {
+      return sigmoid(w * x + b);
+    }
+
+    function getPredictedPoints(w, b) {
+      return points.map(function(p) {
+        return { x: p.x, y: predict(p.x, w, b) };
+      });
+    }
+
+    function calcMetrics(w, b, threshold) {
+      var n = points.length;
+      if (n === 0) return { logLoss: "0.000", accuracy: "0.0%" };
+      
+      var totalLoss = 0;
+      var correct = 0;
+      var eps = 1e-15;
+
+      for (var i = 0; i < n; i++) {
+        var p = points[i];
+        var yHat = predict(p.x, w, b);
+        yHat = Math.max(eps, Math.min(1 - eps, yHat));
+        
+        var loss = -(p.y * Math.log(yHat) + (1 - p.y) * Math.log(1 - yHat));
+        totalLoss += loss;
+
+        var predClass = yHat >= threshold ? 1 : 0;
+        if (predClass === p.y) correct++;
+      }
+
+      var avgLoss = totalLoss / n;
+      var acc = (correct / n) * 100;
+      return { logLoss: avgLoss.toFixed(3), accuracy: acc.toFixed(1) + "%" };
+    }
+
+    function generateSigmoidCurve(w, b) {
+      var curve = [];
+      for (var x = 0; x <= 100; x += 1) {
+        curve.push({ x: x, y: predict(x, w, b) });
+      }
+      return curve;
+    }
+
+    function generateThresholdLine(t) {
+      return [{ x: 0, y: t }, { x: 100, y: t }];
+    }
+
+    var customPlugin = {
+      id: "customPlugin",
+      beforeDatasetsDraw: function(chart) {
+        if (!showResiduals.checked) return;
+        var ctx = chart.ctx, xAxis = chart.scales.x, yAxis = chart.scales.y;
+        ctx.save(); ctx.strokeStyle = "#ff9999"; ctx.lineWidth = 1.5; ctx.setLineDash([4, 4]);
+        for (var i = 0; i < points.length; i++) {
+          var p = points[i];
+          var yHat = predict(p.x, currentW, currentB);
+          ctx.beginPath();
+          ctx.moveTo(xAxis.getPixelForValue(p.x), yAxis.getPixelForValue(p.y));
+          ctx.lineTo(xAxis.getPixelForValue(p.x), yAxis.getPixelForValue(yHat));
+          ctx.stroke();
+        }
+        ctx.restore();
+      },
+      afterDraw: function(chart) {
+        var ctx = chart.ctx; ctx.save();
+        var metaReal = chart.getDatasetMeta(0);
+        var metaPred = chart.getDatasetMeta(2);
+        
+        ctx.font = "bold 10px sans-serif"; ctx.textAlign = "center";
+        
+        // Rótulos dos pontos reais
+        ctx.fillStyle = "#0000ff";
+        metaReal.data.forEach(function(el, idx) {
+          if (points[idx]) ctx.fillText("(" + points[idx].x + ", " + points[idx].y + ")", el.x, points[idx].y > 0.5 ? el.y - 12 : el.y + 15);
+        });
+
+        // Rótulos dos pontos de probabilidade prevista (verde)
+        ctx.fillStyle = "#28a745";
+        metaPred.data.forEach(function(el, idx) {
+          if (points[idx]) {
+            var yHat = predict(points[idx].x, currentW, currentB);
+            ctx.fillText("P=" + yHat.toFixed(2), el.x, el.y - 8);
+          }
+        });
+        
+        var m = calcMetrics(currentW, currentB, currentThreshold);
+        var ca = chart.chartArea, bx = ca.right - 140, by = ca.bottom - 50;
+        
+        ctx.fillStyle = "#ffffff"; ctx.strokeStyle = "#ccc"; ctx.lineWidth = 1;
+        ctx.fillRect(bx, by, 130, 42); ctx.strokeRect(bx, by, 130, 42);
+        
+        ctx.font = "11px sans-serif"; ctx.fillStyle = "#000"; ctx.textAlign = "left";
+        ctx.fillText("Log Loss = " + m.logLoss, bx + 8, by + 16);
+        ctx.fillText("Acurácia = " + m.accuracy, bx + 8, by + 32);
+        
+        ctx.restore();
+      }
+    };
+
+    var ctx = document.getElementById("chart").getContext("2d");
+    var chart = new Chart(ctx, {
+      type: "scatter",
+      data: {
+        datasets: [
+          { label: "Pontos Reais (0 ou 1)", data: points, backgroundColor: "blue", pointRadius: 5 },
+          { label: "Curva Sigmóide", data: generateSigmoidCurve(currentW, currentB), type: "line", borderColor: "red", borderWidth: 2, fill: false, pointRadius: 0 },
+          { label: "Probabilidade Predita P(Y=1|X)", data: getPredictedPoints(currentW, currentB), backgroundColor: "#28a745", borderColor: "#28a745", pointRadius: 6, pointStyle: "circle", borderWidth: 2, fill: false },
+          { label: "Threshold (Limiar)", data: generateThresholdLine(currentThreshold), type: "line", borderColor: "#d97706", borderWidth: 2, borderDash: [6, 6], fill: false, pointRadius: 0 }
+        ]
+      },
+      options: {
+        responsive: true, animation: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { type: "linear", min: 0, max: 100, title: { display: true, text: "Variável de Entrada (X)" } },
+          y: { min: -0.05, max: 1.05, title: { display: true, text: "Probabilidade P(Y=1|X)" } }
+        }
+      },
+      plugins: [customPlugin]
+    });
+
+    function update() {
+      currentW = parseFloat(weightSlider.value);
+      currentB = parseFloat(biasSlider.value);
+      currentThreshold = parseFloat(thresholdSlider.value);
+      
+      document.getElementById("weightVal").innerText = currentW.toFixed(2);
+      document.getElementById("biasVal").innerText = currentB.toFixed(2);
+      document.getElementById("thresholdVal").innerText = Math.round(currentThreshold * 100) + "%";
+      
+      chart.data.datasets[0].data = points;
+      chart.data.datasets[1].data = generateSigmoidCurve(currentW, currentB);
+      chart.data.datasets[2].data = getPredictedPoints(currentW, currentB);
+      chart.data.datasets[3].data = generateThresholdLine(currentThreshold);
+      chart.update();
+    }
+
+    showResiduals.addEventListener("change", update);
+    weightSlider.addEventListener("input", update);
+    biasSlider.addEventListener("input", update);
+    thresholdSlider.addEventListener("input", update);
+
+    document.getElementById("addPointBtn").addEventListener("click", function() {
+      var xVal = parseFloat(inputX.value);
+      var yVal = Math.round(parseFloat(inputY.value));
+      yVal = Math.max(0, Math.min(1, yVal));
+      if (!isNaN(xVal) && !isNaN(yVal)) {
+        points.push({ x: xVal, y: yVal });
+        update();
+      }
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", function() {
+      points = JSON.parse(JSON.stringify(initialPoints)); 
+      weightSlider.value = 0.15;
+      biasSlider.value = -7.50;
+      thresholdSlider.value = 0.50;
+      update();
+    });
+
+    document.getElementById("chart").addEventListener("click", function(evt) {
+      var rect = evt.target.getBoundingClientRect();
+      var xVal = Math.round(chart.scales.x.getValueForPixel(evt.clientX - rect.left));
+      var rawY = chart.scales.y.getValueForPixel(evt.clientY - rect.top);
+      var yVal = rawY >= currentThreshold ? 1 : 0;
+      
+      if (xVal >= 0 && xVal <= 100) {
+        inputX.value = xVal;
+        inputY.value = yVal;
+        points.push({ x: xVal, y: yVal });
+        update();
+      }
+    });
+
+    update();
+  </script>
+</body>
+</html>' style="width: 100%; height: 560px; border: none; overflow: hidden;"></iframe>
+================================================================================</p>
 
 <div id="exercícios---organização-e-preparação-dos-dados-regressão-logística-e-knn" class="section level2 hasAnchor" number="4.1">
 <h2><span class="header-section-number">4.1</span> - Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN<a href="organização-e-preparação-dos-dados-regressão-logística-e-knn.html#exerc%C3%ADcios---organiza%C3%A7%C3%A3o-e-prepara%C3%A7%C3%A3o-dos-dados-regress%C3%A3o-log%C3%ADstica-e-knn" class="anchor-section" aria-label="Anchor link to header"></a></h2>
