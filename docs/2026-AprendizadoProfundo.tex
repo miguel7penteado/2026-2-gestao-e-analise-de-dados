@@ -1,0 +1,1351 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{book}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={GTI - Gestão e Análise de Dados},
+  pdfauthor={Professor Miguél Suares},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{GTI - Gestão e Análise de Dados}
+\author{Professor Miguél Suares}
+\date{2026-09-15}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter*{Sobre estas anotações}\label{sobre-estas-anotauxe7uxf5es}
+\addcontentsline{toc}{chapter}{Sobre estas anotações}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+\section*{Calendário das aulas}\label{calenduxe1rio-das-aulas}
+\addcontentsline{toc}{section}{Calendário das aulas}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+\paragraph{AGOSTO DE 2026}\label{agosto-de-2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0694}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0903}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1806}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.6597}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+04/08/2026 & Terça-Feira & Apresentação da disciplina & Apresentação do plano de ensino, objetivos, metodologia, avaliações e visão geral da disciplina \\
+11/08/2026 & Terça-Feira & Aula 01 & Dados como ativo estratégico e Introdução ao Machine Learning \\
+18/08/2026 & Terça-Feira & Aula 02 & Governança de Dados e ciclo de vida de Machine Learning \\
+25/08/2026 & Terça-Feira & Aula 03 & Coleta de dados e Regressão Linear \\
+\end{longtable}
+
+\paragraph{SETEMBRO DE 2026}\label{setembro-de-2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1075}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1398}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0753}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.6774}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+01/09/2026 & Terça-Feira & Aula 04 & Organização e preparação dos dados, Regressão Logística e KNN \\
+08/09/2026 & Terça-Feira & Aula 05 & Análise de dados, dilema Viés-Variância e Métricas de Avaliação \\
+15/09/2026 & Terça-Feira & Aula 06 & Relatórios, KPIs, avaliação de modelos e Árvores de Decisão \\
+22/09/2026 & Terça-Feira & NP1 & PROVA \\
+29/09/2026 & Terça-Feira & Aula 07 & Business Intelligence, Random Forest e Ensemble Learning \\
+\end{longtable}
+
+\paragraph{OUTUBRO DE 2026}\label{outubro-de-2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0990}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1287}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0693}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.7030}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+06/10/2026 & Terça-Feira & Aula 08 & Big Data e Support Vector Machines \\
+13/10/2026 & Terça-Feira & Aula 09 & Data-Driven Decision Making e Redução de Dimensionalidade \\
+20/10/2026 & Terça-Feira & Aula 10 & Modelos de gestão de riscos e técnicas de Agrupamento \\
+27/10/2026 & Terça-Feira & Aula 11 & Inteligência Artificial, análise preditiva e Seleção de Características \\
+\end{longtable}
+
+\paragraph{NOVEMBRO DE 2026}\label{novembro-de-2026}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0820}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1066}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.0574}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.7541}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Data
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Dia da Semana
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Aulas
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Conteúdo
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+03/11/2026 & Terça-Feira & Aula 12 & Monitoramento contínuo, melhoria de processos e ciclo de vida de modelos de Machine Learning \\
+10/11/2026 & Terça-Feira & NP2 & PROVA \\
+17/11/2026 & Terça-Feira & SUB & PROVA SUBSTITUTIVA \\
+24/11/2026 & Terça-Feira & & N/A \\
+\end{longtable}
+
+\paragraph{DEZEMBRO DE 2026}\label{dezembro-de-2026}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+Data & Dia da Semana & Aulas & Conteúdo \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+01/12/2026 & Terça-Feira & & N/A \\
+08/12/2026 & Terça-Feira & EXAME & PROVA \\
+\end{longtable}
+
+\chapter*{Apresentação da Disciplina}\label{apresentauxe7uxe3o-da-disciplina}
+\addcontentsline{toc}{chapter}{Apresentação da Disciplina}
+
+\chapter{- Dados com Ativo Estratégico: Introdução ao Machine Learning}\label{dados-com-ativo-estratuxe9gico-introduuxe7uxe3o-ao-machine-learning}
+
+\section{- Exercícios - Dados com Atvo Estratégico: Introdução ao Machine Learning}\label{exercuxedcios---dados-com-atvo-estratuxe9gico-introduuxe7uxe3o-ao-machine-learning}
+
+\chapter{- Governança de Dados e Ciclo de Vida de Machine Learning}\label{governanuxe7a-de-dados-e-ciclo-de-vida-de-machine-learning}
+
+\section{- Governança de Dados e Ciclo de Vida de Machine Learning}\label{governanuxe7a-de-dados-e-ciclo-de-vida-de-machine-learning-1}
+
+\chapter{Coleta de Dados e Regressão Linear}\label{coleta-de-dados-e-regressuxe3o-linear}
+
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide1.JPG}} \citep[Capítulo 14][p.]{Grus2015DataScience}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide2.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide3.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide4.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide5.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide6.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide7.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide8.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide9.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide10.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide11.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide12.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide13.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide14.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide15.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/2026-AprendizadoProfundo_files/figure-latex/linear-regression-labels-1.pdf}}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide16.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide17.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+00000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+00000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide18.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+00000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+00000000000000000000000000000000000000000000000000000000000000000000000000000000
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide19.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide20.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide21.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide22.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide23.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide24.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+\ImportTok{from}\NormalTok{ sklearn.linear\_model }\ImportTok{import}\NormalTok{ LinearRegression}
+
+\NormalTok{X }\OperatorTok{=}\NormalTok{ np.array([[}\DecValTok{40}\NormalTok{], [}\DecValTok{50}\NormalTok{], [}\DecValTok{60}\NormalTok{], [}\DecValTok{70}\NormalTok{], [}\DecValTok{80}\NormalTok{]])}
+\NormalTok{y }\OperatorTok{=}\NormalTok{ np.array([}\DecValTok{220}\NormalTok{, }\DecValTok{260}\NormalTok{, }\DecValTok{310}\NormalTok{, }\DecValTok{350}\NormalTok{, }\DecValTok{410}\NormalTok{])}
+
+\CommentTok{\# Crie o seu modelo}
+\NormalTok{modelo }\OperatorTok{=}\NormalTok{ LinearRegression()}
+
+\CommentTok{\# Treine o seu modelo (ajuste sua reta aos pontos)}
+\NormalTok{modelo.fit(X, y)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## LinearRegression()
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# }
+\BuiltInTok{print}\NormalTok{(}\StringTok{"O valor de W é: "}\NormalTok{,modelo.coef\_)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## O valor de W é:  [4.7]
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"O valor de b é }\SpecialCharTok{\{}\NormalTok{modelo}\SpecialCharTok{.}\NormalTok{intercept\_}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## O valor de b é 28.0
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# calcule: para um Apartamento de 65m\^{}2 qual é o valor previsto em mil reais ?}
+
+\BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Qunado X vale 65, a saida vale: }\SpecialCharTok{\{}\NormalTok{modelo}\SpecialCharTok{.}\NormalTok{predict([[}\DecValTok{65}\NormalTok{]])}\SpecialCharTok{\}}\SpecialStringTok{"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Qunado X vale 65, a saida vale: [333.5]
+\end{verbatim}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide25.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide26.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/media/03-aula03/aula_regressao_linear/Slide27.JPG}}
+\caption{Aula 03 - Coleta de Dados e Regressão Linear}
+\end{figure}
+
+\citep{Grus2015DataScience}
+
+\section{- Exercícios - Coleta de Dados e Regressão Linear}\label{exercuxedcios---coleta-de-dados-e-regressuxe3o-linear}
+
+\subsection{Exemplo 01 -}\label{exemplo-01--}
+
+Uma pesquisa foi realizada com o objetivo de verificar se existe
+associação entre a falta de sono e a capacidade de as pessoas resolverem
+problemas simples. Foram testadas 10 pessoas, mantendo-se sem dormir por
+um determinado número de horas. Após cada um destes períodos, cada
+pessoa teve de resolver um teste com adições simples, anotando-se então
+os erros cometidos. Os dados resultantes são os seguintes:
+
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3194}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3194}}
+  >{\centering\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3194}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+Pessoa Observada (i)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Número de Horas
+sem Dormir ( X )}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Número de Erros (
+Y )}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 8 & 6 \\
+2 & 8 & 8 \\
+3 & 12 & 6 \\
+4 & 12 & 10 \\
+5 & 16 & 8 \\
+6 & 16 & 14 \\
+7 & 20 & 12 \\
+8 & 20 & 14 \\
+9 & 24 & 12 \\
+10 & 24 & 16 \\
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi})}
+  \tightlist
+  \item
+    Calcule o \textbf{coeficiente de correlação linear} de Pearson,
+    interprete e teste sua significância a \textbf{5\%}.
+  \end{enumerate}
+\item
+  \begin{enumerate}
+  \def\labelenumi{\alph{enumi})}
+  \setcounter{enumi}{1}
+  \tightlist
+  \item
+    Ajuste, \textbf{teste e interprete o modelo de regressão linear}
+    simples.
+  \end{enumerate}
+\end{itemize}
+
+No python Comece importando os cabeçalhos: - importe a biblioteca
+\textbf{numpy} para criar vetores de valores - importe a biblioteca \textbf{stats}
+para usar as funções para \texttt{linregress} para calcular a regressão
+linear - importe a biblioteca \textbf{stats} para usar as funções para
+\texttt{pearsonr} para calcular o coeficiente de correlação \texttt{r}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+\ImportTok{from}\NormalTok{ scipy }\ImportTok{import}\NormalTok{ stats}
+\ImportTok{from}\NormalTok{ yt\_dlp.extractor }\ImportTok{import}\NormalTok{ agora}
+\end{Highlighting}
+\end{Shaded}
+
+Agora precisamos criar uma função para calcular a \textbf{regressão linear}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ calcular\_regressao\_linear(x: np.ndarray, y: np.ndarray) }\OperatorTok{{-}\textgreater{}} \BuiltInTok{tuple}\NormalTok{[}\BuiltInTok{float}\NormalTok{, }\BuiltInTok{float}\NormalTok{, }\BuiltInTok{float}\NormalTok{]:}
+    \CommentTok{"""Calcula os parâmetros e o teste de significância da regressão linear simples."""}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"{-}{-}{-} b) Modelo de Regressão Linear Simples {-}{-}{-}"}\NormalTok{)}
+    \CommentTok{\# Ajustando a reta de regressão e obtendo estatísticas completas}
+\NormalTok{    inclinacao\_reta, interceptacao, correlacao\_r, valor\_p, erro\_padrao }\OperatorTok{=}\NormalTok{ stats.linregress(x, y)}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Coeficiente Angular ( m ): }\SpecialCharTok{\{}\NormalTok{inclinacao\_reta}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Intercepto ( n ): }\SpecialCharTok{\{}\NormalTok{interceptacao}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Equação ajustada: Y\_hat = }\SpecialCharTok{\{}\NormalTok{interceptacao}\SpecialCharTok{:.4f\}}\SpecialStringTok{ + }\SpecialCharTok{\{}\NormalTok{inclinacao\_reta}\SpecialCharTok{:.4f\}}\SpecialStringTok{ * X"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"P{-}valor do coeficiente angular (teste do modelo): }\SpecialCharTok{\{}\NormalTok{valor\_p}\SpecialCharTok{:.5f\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \ControlFlowTok{if}\NormalTok{ ( valor\_p }\OperatorTok{\textless{}} \FloatTok{0.05}\NormalTok{):}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Conclusão: O modelo de regressão linear é estatisticamente significativo a 5\%."}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Conclusão: O modelo não é estatisticamente significativo."}\NormalTok{)}
+
+    \ControlFlowTok{return}\NormalTok{ interceptacao, inclinacao\_reta, valor\_p}
+\end{Highlighting}
+\end{Shaded}
+
+Agora precisamos criar uma função para calcular o \textbf{coeficiente de
+correlação} \texttt{r}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ calcular\_correlacao\_pearson(v\_independentes\_x: np.ndarray, v\_dependentes\_y: np.ndarray) }\OperatorTok{{-}\textgreater{}} \BuiltInTok{tuple}\NormalTok{[}\BuiltInTok{float}\NormalTok{, }\BuiltInTok{float}\NormalTok{]:}
+    \CommentTok{"""Calcula o coeficiente de correlação de Pearson e o p{-}valor correspondente."""}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"{-}{-}{-} a) Coeficiente de Correlação de Pearson e Teste {-}{-}{-}"}\NormalTok{)}
+\NormalTok{    coeficiente\_de\_correlacao\_r, valor\_de\_p }\OperatorTok{=}\NormalTok{ stats.pearsonr(v\_independentes\_x, v\_dependentes\_y)}
+
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"Coeficiente de Correlação (r): }\SpecialCharTok{\{}\NormalTok{coeficiente\_de\_correlacao\_r}\SpecialCharTok{:.4f\}}\SpecialStringTok{"}\NormalTok{)}
+    \BuiltInTok{print}\NormalTok{(}\SpecialStringTok{f"P{-}valor da correlação: }\SpecialCharTok{\{}\NormalTok{valor\_de\_p}\SpecialCharTok{:.5f\}}\SpecialStringTok{"}\NormalTok{)}
+
+    \ControlFlowTok{if}\NormalTok{ ( valor\_de\_p }\OperatorTok{\textless{}} \FloatTok{0.05}\NormalTok{):}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5\%.}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+    \ControlFlowTok{else}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(}\StringTok{"Conclusão: Não rejeitamos a Hipótese.}\CharTok{\textbackslash{}n}\StringTok{"}\NormalTok{)}
+    \ControlFlowTok{return}\NormalTok{ coeficiente\_de\_correlacao\_r, valor\_de\_p}
+\end{Highlighting}
+\end{Shaded}
+
+Agora vamos definir a ordem de execução das funções:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ funcao\_principal() }\OperatorTok{{-}\textgreater{}} \VariableTok{None}\NormalTok{:}
+    \CommentTok{\# Carregar os valores de X (que é a variável independente) no vetor variaveis\_independentes\_x}
+    \CommentTok{\# X: Número de horas sem dormir}
+\NormalTok{    variaveis\_independentes\_x }\OperatorTok{=}\NormalTok{ np.array([}\DecValTok{8}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{24}\NormalTok{])}
+
+    \CommentTok{\# \# Carregar os valores de Y (que é a variável independente) no vetor variaveis\_dependentes\_y}
+    \CommentTok{\# Y: Número de erros}
+\NormalTok{    variaveis\_dependentes\_y }\OperatorTok{=}\NormalTok{ np.array([}\DecValTok{6}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{16}\NormalTok{])}
+
+    \CommentTok{\# Executando a correlação}
+\NormalTok{    calcular\_correlacao\_pearson(variaveis\_independentes\_x, variaveis\_dependentes\_y)}
+
+    \CommentTok{\# Executando a regressão linear}
+\NormalTok{    calcular\_regressao\_linear(variaveis\_independentes\_x, variaveis\_dependentes\_y)}
+\end{Highlighting}
+\end{Shaded}
+
+Finalmente, vamos iniciar o \textbf{fluxo principal} do programa, chamado a
+\textbf{funcao\_principal()} que chamará todas as outras na ordem
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if} \VariableTok{\_\_name\_\_} \OperatorTok{==} \StringTok{\textquotesingle{}\_\_main\_\_\textquotesingle{}}\NormalTok{:}
+\NormalTok{    funcao\_principal()}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## --- a) Coeficiente de Correlação de Pearson e Teste ---
+## Coeficiente de Correlação (r): 0.8015
+## P-valor da correlação: 0.00531
+## Conclusão: Rejeitamos a Hipótese. A correlação é estatisticamente relevante a 5%.
+## 
+## --- b) Modelo de Regressão Linear Simples ---
+## Coeficiente Angular ( m ): 0.4750
+## Intercepto ( n ): 3.0000
+## Equação ajustada: Y_hat = 3.0000 + 0.4750 * X
+## P-valor do coeficiente angular (teste do modelo): 0.00531
+## Conclusão: O modelo de regressão linear é estatisticamente significativo a 5%.
+\end{verbatim}
+
+Como ficou a equação descoberta pela \textbf{regressão linear simples} ?
+
+Uma equação de reta segue o formato \(y = mx + n\).
+
+\[
+y = \underbrace{m}*{*\text{coeficiente angular}} x + \underbrace{n}{\text{coeficiente linear}}
+\]
+
+No exercício: - o valor de \texttt{m} é dado pelo valor do
+\texttt{coeficiente\ angular} ; - o valor de \texttt{n} é dado pelo valor do
+\texttt{intercepto} ;
+
+Então a equação ficou:
+
+\[
+y = 0,4750(x) + 3
+\]
+
+\subsubsection{Gráfico do Exemplo 00}\label{gruxe1fico-do-exemplo-00}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+\ImportTok{import}\NormalTok{ matplotlib.pyplot }\ImportTok{as}\NormalTok{ plt}
+
+\CommentTok{\# Dados do problema}
+\NormalTok{x }\OperatorTok{=}\NormalTok{ np.array([}\DecValTok{8}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{16}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{24}\NormalTok{])}
+\NormalTok{y }\OperatorTok{=}\NormalTok{ np.array([}\DecValTok{6}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{8}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{16}\NormalTok{])}
+
+\CommentTok{\# Configuração do gráfico}
+\NormalTok{plt.figure(figsize}\OperatorTok{=}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{7}\NormalTok{))}
+
+\CommentTok{\# Definindo os limites dos eixos começando em 0}
+\NormalTok{plt.xlim(}\OperatorTok{{-}}\DecValTok{8}\NormalTok{, }\BuiltInTok{max}\NormalTok{(x) }\OperatorTok{+} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (-8.0, 26.0)
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plt.ylim(}\OperatorTok{{-}}\DecValTok{8}\NormalTok{, }\BuiltInTok{max}\NormalTok{(y) }\OperatorTok{+} \DecValTok{2}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## (-8.0, 18.0)
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Configurando a escala unitária (passo de 1 em 1) para os eixos X e Y}
+\NormalTok{plt.xticks(np.arange(}\DecValTok{0}\NormalTok{, }\BuiltInTok{max}\NormalTok{(x) }\OperatorTok{+} \DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ([<matplotlib.axis.XTick object at 0x0000024305DAD520>, <matplotlib.axis.XTick object at 0x0000024305C2A2D0>, <matplotlib.axis.XTick object at 0x0000024305CFFE30>, <matplotlib.axis.XTick object at 0x0000024305E2CC20>, <matplotlib.axis.XTick object at 0x0000024305D93740>, <matplotlib.axis.XTick object at 0x0000024305D925A0>, <matplotlib.axis.XTick object at 0x0000024305E2D490>, <matplotlib.axis.XTick object at 0x0000024305E2E1B0>, <matplotlib.axis.XTick object at 0x0000024305E2ECF0>, <matplotlib.axis.XTick object at 0x0000024305E2DF70>, <matplotlib.axis.XTick object at 0x0000024305E2F440>, <matplotlib.axis.XTick object at 0x0000024305E32CC0>, <matplotlib.axis.XTick object at 0x0000024305E33710>, <matplotlib.axis.XTick object at 0x0000024305E38170>, <matplotlib.axis.XTick object at 0x0000024305E30710>, <matplotlib.axis.XTick object at 0x0000024305E38BF0>, <matplotlib.axis.XTick object at 0x0000024305E396D0>, <matplotlib.axis.XTick object at 0x0000024305E3A120>, <matplotlib.axis.XTick object at 0x0000024305E3AEA0>, <matplotlib.axis.XTick object at 0x0000024305E390D0>, <matplotlib.axis.XTick object at 0x0000024305E3FA10>, <matplotlib.axis.XTick object at 0x0000024305CCE270>, <matplotlib.axis.XTick object at 0x0000024305CCF140>, <matplotlib.axis.XTick object at 0x0000024305CCFD10>, <matplotlib.axis.XTick object at 0x0000024305CCED80>, <matplotlib.axis.XTick object at 0x0000024305F28500>, <matplotlib.axis.XTick object at 0x0000024305F2B560>], [Text(0, 0, '0'), Text(1, 0, '1'), Text(2, 0, '2'), Text(3, 0, '3'), Text(4, 0, '4'), Text(5, 0, '5'), Text(6, 0, '6'), Text(7, 0, '7'), Text(8, 0, '8'), Text(9, 0, '9'), Text(10, 0, '10'), Text(11, 0, '11'), Text(12, 0, '12'), Text(13, 0, '13'), Text(14, 0, '14'), Text(15, 0, '15'), Text(16, 0, '16'), Text(17, 0, '17'), Text(18, 0, '18'), Text(19, 0, '19'), Text(20, 0, '20'), Text(21, 0, '21'), Text(22, 0, '22'), Text(23, 0, '23'), Text(24, 0, '24'), Text(25, 0, '25'), Text(26, 0, '26')])
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{plt.yticks(np.arange(}\DecValTok{0}\NormalTok{, }\BuiltInTok{max}\NormalTok{(y) }\OperatorTok{+} \DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## ([<matplotlib.axis.YTick object at 0x0000024305DAC530>, <matplotlib.axis.YTick object at 0x0000024305C29C40>, <matplotlib.axis.YTick object at 0x0000024305F29040>, <matplotlib.axis.YTick object at 0x0000024305F2D700>, <matplotlib.axis.YTick object at 0x0000024305F2E570>, <matplotlib.axis.YTick object at 0x0000024305F2F0B0>, <matplotlib.axis.YTick object at 0x0000024305F2F7A0>, <matplotlib.axis.YTick object at 0x0000024305F2E8A0>, <matplotlib.axis.YTick object at 0x0000024305F305F0>, <matplotlib.axis.YTick object at 0x0000024305F31130>, <matplotlib.axis.YTick object at 0x0000024305F31B80>, <matplotlib.axis.YTick object at 0x0000024305F32630>, <matplotlib.axis.YTick object at 0x0000024305F31370>, <matplotlib.axis.YTick object at 0x0000024305F33020>, <matplotlib.axis.YTick object at 0x0000024305F33C20>, <matplotlib.axis.YTick object at 0x0000024305F34710>, <matplotlib.axis.YTick object at 0x0000024305F35100>, <matplotlib.axis.YTick object at 0x0000024305F2FE90>, <matplotlib.axis.YTick object at 0x0000024305D09B50>], [Text(0, 0, '0'), Text(0, 1, '1'), Text(0, 2, '2'), Text(0, 3, '3'), Text(0, 4, '4'), Text(0, 5, '5'), Text(0, 6, '6'), Text(0, 7, '7'), Text(0, 8, '8'), Text(0, 9, '9'), Text(0, 10, '10'), Text(0, 11, '11'), Text(0, 12, '12'), Text(0, 13, '13'), Text(0, 14, '14'), Text(0, 15, '15'), Text(0, 16, '16'), Text(0, 17, '17'), Text(0, 18, '18')])
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Grade padrão em cinza claro para a escala geral}
+\ControlFlowTok{for}\NormalTok{ xtick }\KeywordTok{in}\NormalTok{ np.arange(}\DecValTok{0}\NormalTok{, }\BuiltInTok{max}\NormalTok{(x) }\OperatorTok{+} \DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{):}
+\NormalTok{    plt.axvline(xtick, color}\OperatorTok{=}\StringTok{\textquotesingle{}gray\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\FloatTok{0.3}\NormalTok{, linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}:\textquotesingle{}}\NormalTok{, alpha}\OperatorTok{=}\FloatTok{0.5}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+
+\ControlFlowTok{for}\NormalTok{ ytick }\KeywordTok{in}\NormalTok{ np.arange(}\DecValTok{0}\NormalTok{, }\BuiltInTok{max}\NormalTok{(y) }\OperatorTok{+} \DecValTok{3}\NormalTok{, }\DecValTok{1}\NormalTok{):}
+\NormalTok{    plt.axhline(ytick, color}\OperatorTok{=}\StringTok{\textquotesingle{}gray\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\FloatTok{0.3}\NormalTok{, linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}:\textquotesingle{}}\NormalTok{, alpha}\OperatorTok{=}\FloatTok{0.5}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{1}\NormalTok{)}
+
+\CommentTok{\# Projetando linhas vermelhas contínuas sobre os pares ordenados formados pelos vetores x e y}
+\ControlFlowTok{for}\NormalTok{ xi, yi }\KeywordTok{in} \BuiltInTok{zip}\NormalTok{(x, y):}
+\NormalTok{    plt.vlines(xi, }\DecValTok{0}\NormalTok{, yi, color}\OperatorTok{=}\StringTok{\textquotesingle{}green\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\FloatTok{0.5}\NormalTok{, linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}{-}{-}\textquotesingle{}}\NormalTok{, alpha}\OperatorTok{=}\FloatTok{0.5}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{2}\NormalTok{)}
+\NormalTok{    plt.hlines(yi, }\DecValTok{0}\NormalTok{, xi, color}\OperatorTok{=}\StringTok{\textquotesingle{}green\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\FloatTok{0.5}\NormalTok{, linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}{-}{-}\textquotesingle{}}\NormalTok{, alpha}\OperatorTok{=}\FloatTok{0.5}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{2}\NormalTok{)}
+
+\CommentTok{\# Destacando os eixos principais em (0,0)}
+\NormalTok{plt.axhline(}\DecValTok{0}\NormalTok{, color}\OperatorTok{=}\StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\FloatTok{1.2}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{3}\NormalTok{)}
+\NormalTok{plt.axvline(}\DecValTok{0}\NormalTok{, color}\OperatorTok{=}\StringTok{\textquotesingle{}black\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\FloatTok{1.2}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{3}\NormalTok{)}
+
+\CommentTok{\# Gráfico de dispersão (pontos observados)}
+\NormalTok{plt.scatter(x, y, color}\OperatorTok{=}\StringTok{\textquotesingle{}blue\textquotesingle{}}\NormalTok{, label}\OperatorTok{=}\StringTok{\textquotesingle{}Dados Observados\textquotesingle{}}\NormalTok{, s}\OperatorTok{=}\DecValTok{60}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{5}\NormalTok{)}
+
+\CommentTok{\# Adicionando rótulos com os pares ordenados (X, Y) em cada ponto}
+\ControlFlowTok{for}\NormalTok{ xi, yi }\KeywordTok{in} \BuiltInTok{zip}\NormalTok{(x, y):}
+\NormalTok{    plt.annotate(}\SpecialStringTok{f"(}\SpecialCharTok{\{}\NormalTok{xi}\SpecialCharTok{\}}\SpecialStringTok{, }\SpecialCharTok{\{}\NormalTok{yi}\SpecialCharTok{\}}\SpecialStringTok{)"}\NormalTok{,}
+\NormalTok{                 (xi, yi),}
+\NormalTok{                 textcoords}\OperatorTok{=}\StringTok{"offset points"}\NormalTok{,}
+\NormalTok{                 xytext}\OperatorTok{=}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{8}\NormalTok{),  }\CommentTok{\# Deslocamento vertical do texto em relação ao ponto}
+\NormalTok{                 ha}\OperatorTok{=}\StringTok{\textquotesingle{}center\textquotesingle{}}\NormalTok{,}
+\NormalTok{                 fontsize}\OperatorTok{=}\DecValTok{8}\NormalTok{,}
+\NormalTok{                 fontweight}\OperatorTok{=}\StringTok{\textquotesingle{}bold\textquotesingle{}}\NormalTok{,}
+\NormalTok{                 color}\OperatorTok{=}\StringTok{\textquotesingle{}darkblue\textquotesingle{}}\NormalTok{,}
+\NormalTok{                 zorder}\OperatorTok{=}\DecValTok{6}\NormalTok{)}
+
+\CommentTok{\# Definindo os pontos para a reta y = 0.4750 * x + 3}
+\NormalTok{x\_linha }\OperatorTok{=}\NormalTok{ np.linspace(}\OperatorTok{{-}}\DecValTok{7}\NormalTok{, }\BuiltInTok{max}\NormalTok{(x), }\DecValTok{100}\NormalTok{)}
+\NormalTok{y\_linha }\OperatorTok{=} \FloatTok{0.4750} \OperatorTok{*}\NormalTok{ x\_linha }\OperatorTok{+} \DecValTok{3}
+
+\CommentTok{\# Plotando a reta de regressão}
+\NormalTok{plt.plot(x\_linha, y\_linha, color}\OperatorTok{=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{, linestyle}\OperatorTok{=}\StringTok{\textquotesingle{}{-}\textquotesingle{}}\NormalTok{, linewidth}\OperatorTok{=}\DecValTok{2}\NormalTok{, label}\OperatorTok{=}\StringTok{\textquotesingle{}Reta: $Y = 0,4750X + 3$\textquotesingle{}}\NormalTok{, zorder}\OperatorTok{=}\DecValTok{4}\NormalTok{)}
+
+\CommentTok{\# Rótulos e formatação}
+\NormalTok{plt.title(}\StringTok{\textquotesingle{}Gráfico com Pares Ordenados (X, Y) Identificados nos Pontos\textquotesingle{}}\NormalTok{, fontsize}\OperatorTok{=}\DecValTok{12}\NormalTok{, fontweight}\OperatorTok{=}\StringTok{\textquotesingle{}bold\textquotesingle{}}\NormalTok{)}
+\NormalTok{plt.xlabel(}\StringTok{\textquotesingle{}Número de Horas sem Dormir (X)\textquotesingle{}}\NormalTok{, fontsize}\OperatorTok{=}\DecValTok{10}\NormalTok{)}
+\NormalTok{plt.ylabel(}\StringTok{\textquotesingle{}Número de Erros (Y)\textquotesingle{}}\NormalTok{, fontsize}\OperatorTok{=}\DecValTok{10}\NormalTok{)}
+\NormalTok{plt.legend()}
+
+\CommentTok{\# Exibir o gráfico}
+\NormalTok{plt.show()}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{2026-AprendizadoProfundo_files/2026-AprendizadoProfundo_files/figure-latex/exemplo00-grafico-1.pdf}}
+
+\subsection{Testes de Multipla-Escolha:}\label{testes-de-multipla-escolha}
+
+\section{Questão 1}\label{questuxe3o-1}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Questão 1}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Na \textbf{Regressão Linear simples}, o modelo é representado por:
+\(\hat{y}=w(x)+b\)
+
+Assinale a alternativa correta sobre os \textbf{parâmetros} \(w\) e \(b\). \\
+\textbf{A)} \(w\) representa o erro do modelo e \(b\) representa o valor real
+observado. \\
+\textbf{B)} \(w\) representa a inclinação da reta e \(b\) representa o
+intercepto/deslocamento vertical. \\
+\textbf{C)} \(w\) representa a variável dependente e \(b\) representa a
+variável independente. \\
+\textbf{D)} \(w\) representa o número de observações e \(b\) representa o
+número de previsões. \\
+\textbf{E)} \(w\) e \(b\) são sempre fornecidos previamente e não são
+aprendidos pelo modelo. \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Questão 2}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Na \textbf{programação tradicional}, conhecemos uma entrada \(\textbf{x}\) e
+uma função \(\textbf{f(x)}\), e então calculamos a saída \(\textbf{y}\).
+
+No \textbf{aprendizado de máquina supervisionado}, durante o treinamento,
+a lógica é diferente. Assinale a alternativa que melhor representa
+esse processo. \\
+\textbf{A)} Dados + modelo conhecido \(\rightarrow\) resposta. \\
+\textbf{B)} Modelo + resposta \(\rightarrow\) dados. \\
+\textbf{C)} Dados + respostas conhecidas \(\rightarrow\) aprendizado de um
+modelo. \\
+\textbf{D)} Dados sem respostas \(\rightarrow\) resultado exato. \\
+\textbf{E)} Apenas a variável \(x\) é suficiente para descobrir qualquer
+modelo. \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Questão 3}\label{questuxe3o-3}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Questão 3}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Considere o modelo de \textbf{Regressão Linear}:
+
+\(\hat{y}=4{,}7x+28\)
+
+onde:
+
+• \(x\) representa a área do imóvel em \(m^2\);
+
+• \(\hat{y}\) representa o preço estimado em milhares de reais.
+
+Para um apartamento com \(65\,m^2\):
+
+\(\hat{y}=4{,}7(65)+28\)
+
+\(\hat{y}=333{,}5\)
+
+Analise as afirmações:
+
+\textbf{I.} O preço estimado para um apartamento de \(65\,m^2\) é de
+aproximadamente \textbf{R\$ 333,5 mil}.
+
+\textbf{II.} O coeficiente \(4{,}7\) indica que, segundo o modelo, cada
+aumento de \(1\,m^2\) está associado a um aumento estimado de \textbf{R\$ 4,7
+mil}.
+
+\textbf{III.} O valor \(28\) corresponde à inclinação da reta.
+
+Assinale a alternativa \textbf{correta}. \\
+\textbf{A)} Apenas I está correta. \\
+\textbf{B)} Apenas II está correta. \\
+\textbf{C)} Apenas I e II estão corretas. \\
+\textbf{D)} Apenas II e III estão corretas. \\
+\textbf{E)} I, II e III estão corretas. \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Questão 4}\label{questuxe3o-4}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{1.0000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Questão 4}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Considere os seguintes \textbf{pares ordenados} \((x,y)\), ou ainda
+\textbf{(entrada, saída)}, observados:
+
+\((40,220),\ (50,260),\ (60,310),\ (70,350),\ (80,410)\)
+
+A partir desses dados, foi obtido o \textbf{modelo}:
+
+\(\hat{y}=4{,}7x+28\)
+
+Analise as afirmações:
+
+\textbf{I.} A variável \(x\) representa a área do apartamento.
+
+\textbf{II.} A variável \(\hat{y}\) representa o preço estimado pelo modelo.
+
+\textbf{III.} Depois que o modelo foi encontrado, ele pode ser utilizado
+para estimar o preço de um apartamento com área diferente das que
+aparecem na tabela, como \(65\,m^2\).
+
+Assinale a alternativa \textbf{correta}. \\
+\textbf{A)} Apenas I está correta. \\
+\textbf{B)} Apenas I e II estão corretas. \\
+\textbf{C)} Apenas II e III estão corretas. \\
+\textbf{D)} Apenas I e III estão corretas. \\
+\textbf{E)} I, II e III estão corretas. \\
+\end{longtable}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\chapter{Gabarito}\label{gabarito}
+
+\begin{longtable}[]{@{}cc@{}}
+\toprule\noalign{}
+\textbf{Questão} & \textbf{Resposta correta} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{1} & \textbf{B} \\
+\textbf{2} & \textbf{C} \\
+\textbf{3} & \textbf{C} \\
+\textbf{4} & \textbf{E} \\
+\end{longtable}
+
+Também retirei da Questão 2 o comentário explicativo após o gabarito,
+para manter todas as questões no mesmo padrão de prova.
+
+\chapter{- Organização e Preparação dos Dados, Regressão Logística e KNN}\label{organizauxe7uxe3o-e-preparauxe7uxe3o-dos-dados-regressuxe3o-loguxedstica-e-knn}
+
+================================================================================
+================================================================================
+
+\section{- Exercícios - Organização e Preparação dos Dados, Regressão Logística e KNN}\label{exercuxedcios---organizauxe7uxe3o-e-preparauxe7uxe3o-dos-dados-regressuxe3o-loguxedstica-e-knn}
+
+\subsection{Organização e Preparação de Dados: População, Estrato , proporção e Amostra}\label{organizauxe7uxe3o-e-preparauxe7uxe3o-de-dados-populauxe7uxe3o-estrato-proporuxe7uxe3o-e-amostra}
+
+A regra é:
+
+\[
+n_h = n\cdot\frac{N_h}{N}
+\]
+
+onde (N) é o tamanho da população, (N\_h) é o tamanho do estrato, (n) é o tamanho total da amostra e (n\_h) é a quantidade de elementos sorteados naquele estrato.
+
+\subsubsection{1. Alunos de uma universidade}\label{alunos-de-uma-universidade}
+
+\textbf{População:} 10.000 alunos.
+\textbf{Amostra desejada:} 1.000 alunos.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2097}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3226}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.1452}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3226}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Estrato
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+População no estrato
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Proporção
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Amostra proporcional
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Engenharia & 3.000 & 30\% & 300 \\
+Administração & 2.500 & 25\% & \_\_\_ \\
+Direito & 2.000 & 20\% & \_\_\_ \\
+Saúde & 1.500 & 15\% & \_\_\_ \\
+Outros cursos & 1.000 & 10\% & \_\_\_ \\
+\textbf{Total} & \textbf{10.000} & \textbf{100\%} & \textbf{1.000} \\
+\end{longtable}
+
+Por exemplo:
+
+\[
+n_{\text{Engenharia}} = 1000\cdot\frac{3000}{10000} = 300
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{2. Funcionários de uma empresa}\label{funcionuxe1rios-de-uma-empresa}
+
+\textbf{População:} 2.000 funcionários.
+\textbf{Amostra:} 200 funcionários.
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Produção & 900 & 45\% & 90 \\
+Administrativo & 400 & 20\% & \_\_ \\
+Comercial & 300 & 15\% & \_\_ \\
+Tecnologia & 250 & 12,5\% & \_\_ \\
+Diretoria/Gestão & 150 & 7,5\% & \_\_ \\
+\textbf{Total} & \textbf{2.000} & \textbf{100\%} & \textbf{200} \\
+\end{longtable}
+
+Assim, embora a área de Produção tenha muito mais funcionários, ela não domina arbitrariamente a pesquisa: sua participação na amostra permanece igual à sua participação na população.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{3. Moradores de uma cidade}\label{moradores-de-uma-cidade}
+
+\textbf{População:} 50.000 moradores.
+\textbf{Amostra:} 1.000 moradores.
+
+Estratificação por faixa etária:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0--17 anos & 10.000 & 20\% & 200 \\
+18--29 anos & 8.000 & 16\% & \_\_\_ \\
+30--44 anos & 12.000 & 24\% & \_\_\_ \\
+45--59 anos & 11.000 & 22\% & \_\_\_ \\
+60 anos ou mais & 9.000 & 18\% & \_\_\_ \\
+\textbf{Total} & \textbf{50.000} & \textbf{100\%} & \textbf{1.000} \\
+\end{longtable}
+
+Para a faixa de 30 a 44 anos:
+
+\[
+n_h = 1000\cdot\frac{12000}{50000}= 240
+\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{4. Imagens do CIFAR-10}\label{imagens-do-cifar-10}
+
+Aqui temos um exemplo particularmente simples porque o CIFAR-10 é \textbf{balanceado entre as classes}.
+
+\textbf{População:} 60.000 imagens.
+\textbf{Amostra:} 6.000 imagens.
+
+Cada uma das 10 classes possui 6.000 imagens.
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato --- classe & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+airplane & 6.000 & 10\% & 600 \\
+automobile & 6.000 & 10\% & \_\_\_ \\
+bird & 6.000 & 10\% & \_\_\_ \\
+cat & 6.000 & 10\% & \_\_\_ \\
+deer & 6.000 & 10\% & \_\_\_ \\
+dog & 6.000 & 10\% & \_\_\_ \\
+frog & 6.000 & 10\% & \_\_\_ \\
+horse & 6.000 & 10\% & \_\_\_ \\
+ship & 6.000 & 10\% & \_\_\_ \\
+truck & 6.000 & 10\% & \_\_\_ \\
+\textbf{Total} & \textbf{60.000} & \textbf{100\%} & \textbf{6.000} \\
+\end{longtable}
+
+Neste caso:
+
+\[
+6000\cdot\frac{6000}{60000}=600
+\]
+
+Como todas as classes possuem a mesma quantidade de elementos, a amostra proporcional também fica perfeitamente balanceada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{5. Domicílios de um município}\label{domicuxedlios-de-um-municuxedpio}
+
+\textbf{População:} 20.000 domicílios.
+\textbf{Amostra:} 1.000 domicílios.
+
+Estratificação por região do município:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & Domicílios & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Centro & 4.000 & 20\% & 200 \\
+Norte & 5.000 & 25\% & \_\_\_ \\
+Sul & 3.000 & 15\% & \_\_\_ \\
+Leste & 6.000 & 30\% & \_\_\_ \\
+Oeste & 2.000 & 10\% & \_\_\_ \\
+\textbf{Total} & \textbf{20.000} & \textbf{100\%} & \textbf{1.000} \\
+\end{longtable}
+
+Por exemplo, para a região Leste:
+
+\[
+n_{\text{Leste}} = 1000\cdot\frac{6000}{20000} = 300
+\]
+
+O ponto central para mostrar no slide é:
+
+\[
+\boxed{\text{A proporção de cada estrato na amostra é igual à sua proporção na população}}
+\]
+
+\subsubsection{6. Pacientes de uma clínica --- população balanceada}\label{pacientes-de-uma-cluxednica-populauxe7uxe3o-balanceada}
+
+\textbf{População:} 4.000 pacientes.
+\textbf{Amostra:} 400 pacientes.
+
+Estratificação por tipo de atendimento:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cardiologia & 1.000 & 25\% & 100 \\
+Ortopedia & 1.000 & 25\% & \_\_\_ \\
+Dermatologia & 1.000 & 25\% & \_\_\_ \\
+Oftalmologia & 1.000 & 25\% & \_\_\_ \\
+\textbf{Total} & \textbf{4.000} & \textbf{100\%} & \textbf{400} \\
+\end{longtable}
+
+Por exemplo:
+
+\[
+n_{\text{Cardiologia}} = 400\cdot\frac{1000}{4000} = 100
+\]
+
+Como todos os estratos têm o mesmo tamanho, a amostra também fica igualmente distribuída.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{7. Produtos de um estoque --- população balanceada}\label{produtos-de-um-estoque-populauxe7uxe3o-balanceada}
+
+\textbf{População:} 10.000 produtos.
+\textbf{Amostra:} 1.000 produtos.
+
+Estratificação por categoria:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Eletrônicos & 2.000 & 20\% & 200 \\
+Alimentos & 2.000 & 20\% & \_\_\_ \\
+Vestuário & 2.000 & 20\% & \_\_\_ \\
+Higiene & 2.000 & 20\% & \_\_\_ \\
+Papelaria & 2.000 & 20\% & \_\_\_ \\
+\textbf{Total} & \textbf{10.000} & \textbf{100\%} & \textbf{1.000} \\
+\end{longtable}
+
+Para cada categoria:
+
+\[
+1000\cdot\frac{2000}{10000}=200
+\]
+
+Esse é outro caso de população perfeitamente balanceada.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{8. Imagens de um dataset de classificação --- população balanceada}\label{imagens-de-um-dataset-de-classificauxe7uxe3o-populauxe7uxe3o-balanceada}
+
+\textbf{População:} 30.000 imagens.
+\textbf{Amostra:} 3.000 imagens.
+
+Considere um dataset com 6 classes:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato --- classe & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Cachorro & 5.000 & 16,67\% & 500 \\
+Gato & 5.000 & 16,67\% & \_\_\_ \\
+Cavalo & 5.000 & 16,67\% & \_\_\_ \\
+Pássaro & 5.000 & 16,67\% & \_\_\_ \\
+Peixe & 5.000 & 16,67\% & \_\_\_ \\
+Coelho & 5.000 & 16,67\% & \_\_\_ \\
+\textbf{Total} & \textbf{30.000} & \textbf{100\%} & \textbf{3.000} \\
+\end{longtable}
+
+Para a classe ``Cachorro'':
+
+\[
+n_h= 3000\cdot\frac{5000}{30000} = 500
+\]
+
+Todas as classes possuem a mesma representatividade.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{9. Clientes de um banco --- população não balanceada}\label{clientes-de-um-banco-populauxe7uxe3o-nuxe3o-balanceada}
+
+\textbf{População:} 100.000 clientes.
+\textbf{Amostra:} 2.000 clientes.
+
+Estratificação por faixa de renda:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Até R\$ 2 mil & 45.000 & 45\% & 900 \\
+R\$ 2 mil a R\$ 5 mil & 30.000 & 30\% & \_\_\_ \\
+R\$ 5 mil a R\$ 10 mil & 15.000 & 15\% & \_\_\_ \\
+R\$ 10 mil a R\$ 20 mil & 7.000 & 7\% & \_\_\_ \\
+Acima de R\$ 20 mil & 3.000 & 3\% & \_\_\_ \\
+\textbf{Total} & \textbf{100.000} & \textbf{100\%} & \textbf{2.000} \\
+\end{longtable}
+
+Para o primeiro estrato:
+
+\[
+n_h = 2000\cdot\frac{45000}{100000} = 900
+\]
+
+Aqui os estratos possuem tamanhos bastante diferentes, mas a amostra preserva essas diferenças proporcionalmente.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{10. Dataset de detecção de fraude --- população não balanceada}\label{dataset-de-detecuxe7uxe3o-de-fraude-populauxe7uxe3o-nuxe3o-balanceada}
+
+\textbf{População:} 50.000 transações.
+\textbf{Amostra:} 5.000 transações.
+
+Estratificação pelo tipo de transação:
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule\noalign{}
+Estrato & População & Proporção & Amostra \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Transações normais & 42.500 & 85\% & 4.250 \\
+Fraudes leves & 4.000 & 8\% & \_\_\_\_\_ \\
+Fraudes moderadas & 2.000 & 4\% & \_\_\_\_\_ \\
+Fraudes graves & 1.000 & 2\% & \_\_\_\_\_ \\
+Fraudes críticas & 500 & 1\% & \_\_\_\_\_ \\
+\textbf{Total} & \textbf{50.000} & \textbf{100\%} & \textbf{5.000} \\
+\end{longtable}
+
+Para as fraudes críticas:
+
+\[
+n_{\text{críticas}} = 5000\cdot\frac{500}{50000} = 50
+\]
+
+OBS: \textbf{classes raras continuam raras na amostra proporcional}.
+
+Assim, podemos resumir os exemplos 6--10 como:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Exemplo & População & Situação \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+6 & Pacientes por especialidade & Balanceada \\
+7 & Produtos por categoria & Balanceada \\
+8 & Dataset de imagens & Balanceada \\
+9 & Clientes por faixa de renda & Não balanceada \\
+10 & Transações financeiras & Não balanceada \\
+\end{longtable}
+
+\subsection{Regressão Logística}\label{regressuxe3o-loguxedstica}
+
+\subsection{KNN}\label{knn}
+
+\chapter{- Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação}\label{anuxe1lise-de-dados-dilema-viuxe9s-variuxe2ncia-e-muxe9tricas-de-avaliauxe7uxe3o}
+
+\section{- Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação}\label{exercuxedcios---anuxe1lise-de-dados-dilema-viuxe9s-variuxe2ncia-e-muxe9tricas-de-avaliauxe7uxe3o}
+
+\chapter{- Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão}\label{relatuxf3rios-k.p.i.---avaliauxe7uxe3o-de-modelos-e-uxe1rvores-de-decisuxe3o}
+
+\section{- Exercícios - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão}\label{exercuxedcios---relatuxf3rios-k.p.i.---avaliauxe7uxe3o-de-modelos-e-uxe1rvores-de-decisuxe3o}
+
+\chapter{- Business Intelligence: Random Forest e Ensemble Learning}\label{business-intelligence-random-forest-e-ensemble-learning}
+
+\section{- Exercícios - Business Intelligence: Random Forest e Ensemble Learning}\label{exercuxedcios---business-intelligence-random-forest-e-ensemble-learning}
+
+\chapter{- Big Data e Support Vector Machines}\label{big-data-e-support-vector-machines}
+
+\section{- Exercícios - Big Data e Support Vector Machines}\label{exercuxedcios---big-data-e-support-vector-machines}
+
+\chapter{- Data Driven Decision Making e Redução de Dimensionalidade}\label{data-driven-decision-making-e-reduuxe7uxe3o-de-dimensionalidade}
+
+\section{- Exercícios - Data Driven Decision Making e Redução de Dimensionalidade}\label{exercuxedcios---data-driven-decision-making-e-reduuxe7uxe3o-de-dimensionalidade}
+
+\chapter{- Modelos de Gestão de Risco e Técnicas de Agrupamento}\label{modelos-de-gestuxe3o-de-risco-e-tuxe9cnicas-de-agrupamento}
+
+\section{- Exercícios - Modelos de Gestão de Risco e Técnicas de Agrupamento}\label{exercuxedcios---modelos-de-gestuxe3o-de-risco-e-tuxe9cnicas-de-agrupamento}
+
+\chapter{- Inteligência Artificial, Análise Preditiva e Seleção de Características}\label{inteliguxeancia-artificial-anuxe1lise-preditiva-e-seleuxe7uxe3o-de-caracteruxedsticas}
+
+\section{- Exercícios - Inteligência Artificial, Análise Preditiva e Seleção de Características}\label{exercuxedcios---inteliguxeancia-artificial-anuxe1lise-preditiva-e-seleuxe7uxe3o-de-caracteruxedsticas}
+
+\chapter{- Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning}\label{monitoramento-contuxednuo-e-ciclo-de-vida-de-modelos-de-machine-learning}
+
+\section{- Exercícios - Monitoramento Contínuo e Ciclo de Vida de Modelos de Machine Learning}\label{exercuxedcios---monitoramento-contuxednuo-e-ciclo-de-vida-de-modelos-de-machine-learning}
+
+\bibliography{book.bib}
+
+\end{document}

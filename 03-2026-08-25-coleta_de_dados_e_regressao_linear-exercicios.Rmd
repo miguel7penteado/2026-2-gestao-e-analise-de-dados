@@ -20,18 +20,30 @@ um determinado número de horas. Após cada um destes períodos, cada
 pessoa teve de resolver um teste com adições simples, anotando-se então
 os erros cometidos. Os dados resultantes são os seguintes:
 
-| Pessoa Observada (i) | **Número de Horas sem Dormir ( X )** | **Número de Erros ( Y )** |
-|:--:|:--:|:--:|
-| 1 | 8 | 6 |
-| 2 | 8 | 8 |
-| 3 | 12 | 6 |
-| 4 | 12 | 10 |
-| 5 | 16 | 8 |
-| 6 | 16 | 14 |
-| 7 | 20 | 12 |
-| 8 | 20 | 14 |
-| 9 | 24 | 12 |
-| 10 | 24 | 16 |
++----------------------+----------------------+----------------------+
+| Pessoa Observada (i) | **Número de Horas    | **Número de Erros (  |
+|                      | sem Dormir ( X )**   | Y )**                |
++:====================:+:====================:+:====================:+
+| 1                    | 8                    | 6                    |
++----------------------+----------------------+----------------------+
+| 2                    | 8                    | 8                    |
++----------------------+----------------------+----------------------+
+| 3                    | 12                   | 6                    |
++----------------------+----------------------+----------------------+
+| 4                    | 12                   | 10                   |
++----------------------+----------------------+----------------------+
+| 5                    | 16                   | 8                    |
++----------------------+----------------------+----------------------+
+| 6                    | 16                   | 14                   |
++----------------------+----------------------+----------------------+
+| 7                    | 20                   | 12                   |
++----------------------+----------------------+----------------------+
+| 8                    | 20                   | 14                   |
++----------------------+----------------------+----------------------+
+| 9                    | 24                   | 12                   |
++----------------------+----------------------+----------------------+
+| 10                   | 24                   | 16                   |
++----------------------+----------------------+----------------------+
 
 -   
 
@@ -208,6 +220,159 @@ plt.legend()
 # Exibir o gráfico
 plt.show()
 ```
+
+### Testes de Multipla-Escolha:
+
+## Questão 1
+
++-----------------------------------------------------------------------+
+| **Questão 1**                                                         |
++=======================================================================+
+| Na **Regressão Linear simples**, o modelo é representado por:         |
+| $\hat{y}=w(x)+b$                                                      |
+|                                                                       |
+| Assinale a alternativa correta sobre os **parâmetros** $w$ e $b$.     |
++-----------------------------------------------------------------------+
+| **A)** $w$ representa o erro do modelo e $b$ representa o valor real  |
+| observado.                                                            |
++-----------------------------------------------------------------------+
+| **B)** $w$ representa a inclinação da reta e $b$ representa o         |
+| intercepto/deslocamento vertical.                                     |
++-----------------------------------------------------------------------+
+| **C)** $w$ representa a variável dependente e $b$ representa a        |
+| variável independente.                                                |
++-----------------------------------------------------------------------+
+| **D)** $w$ representa o número de observações e $b$ representa o      |
+| número de previsões.                                                  |
++-----------------------------------------------------------------------+
+| **E)** $w$ e $b$ são sempre fornecidos previamente e não são          |
+| aprendidos pelo modelo.                                               |
++-----------------------------------------------------------------------+
+
+------------------------------------------------------------------------
+
++-----------------------------------------------------------------------+
+| **Questão 2**                                                         |
++=======================================================================+
+| Na **programação tradicional**, conhecemos uma entrada $\textbf{x}$ e |
+| uma função $\textbf{f(x)}$, e então calculamos a saída $\textbf{y}$.  |
+|                                                                       |
+| No **aprendizado de máquina supervisionado**, durante o treinamento,  |
+| a lógica é diferente. Assinale a alternativa que melhor representa    |
+| esse processo.                                                        |
++-----------------------------------------------------------------------+
+| **A)** Dados + modelo conhecido $\rightarrow$ resposta.               |
++-----------------------------------------------------------------------+
+| **B)** Modelo + resposta $\rightarrow$ dados.                         |
++-----------------------------------------------------------------------+
+| **C)** Dados + respostas conhecidas $\rightarrow$ aprendizado de um   |
+| modelo.                                                               |
++-----------------------------------------------------------------------+
+| **D)** Dados sem respostas $\rightarrow$ resultado exato.             |
++-----------------------------------------------------------------------+
+| **E)** Apenas a variável $x$ é suficiente para descobrir qualquer     |
+| modelo.                                                               |
++-----------------------------------------------------------------------+
+
+------------------------------------------------------------------------
+
+## Questão 3
+
++-----------------------------------------------------------------------+
+| **Questão 3**                                                         |
++=======================================================================+
+| Considere o modelo de **Regressão Linear**:                           |
+|                                                                       |
+| $\hat{y}=4{,}7x+28$                                                   |
+|                                                                       |
+| onde:                                                                 |
+|                                                                       |
+| • $x$ representa a área do imóvel em $m^2$;                           |
+|                                                                       |
+| • $\hat{y}$ representa o preço estimado em milhares de reais.         |
+|                                                                       |
+| Para um apartamento com $65\,m^2$:                                    |
+|                                                                       |
+| $\hat{y}=4{,}7(65)+28$                                                |
+|                                                                       |
+| $\hat{y}=333{,}5$                                                     |
+|                                                                       |
+| Analise as afirmações:                                                |
+|                                                                       |
+| **I.** O preço estimado para um apartamento de $65\,m^2$ é de         |
+| aproximadamente **R\$ 333,5 mil**.                                    |
+|                                                                       |
+| **II.** O coeficiente $4{,}7$ indica que, segundo o modelo, cada      |
+| aumento de $1\,m^2$ está associado a um aumento estimado de **R\$ 4,7 |
+| mil**.                                                                |
+|                                                                       |
+| **III.** O valor $28$ corresponde à inclinação da reta.               |
+|                                                                       |
+| Assinale a alternativa **correta**.                                   |
++-----------------------------------------------------------------------+
+| **A)** Apenas I está correta.                                         |
++-----------------------------------------------------------------------+
+| **B)** Apenas II está correta.                                        |
++-----------------------------------------------------------------------+
+| **C)** Apenas I e II estão corretas.                                  |
++-----------------------------------------------------------------------+
+| **D)** Apenas II e III estão corretas.                                |
++-----------------------------------------------------------------------+
+| **E)** I, II e III estão corretas.                                    |
++-----------------------------------------------------------------------+
+
+------------------------------------------------------------------------
+
+## Questão 4
+
++-----------------------------------------------------------------------+
+| **Questão 4**                                                         |
++=======================================================================+
+| Considere os seguintes **pares ordenados** $(x,y)$, ou ainda          |
+| **(entrada, saída)**, observados:                                     |
+|                                                                       |
+| $(40,220),\ (50,260),\ (60,310),\ (70,350),\ (80,410)$                |
+|                                                                       |
+| A partir desses dados, foi obtido o **modelo**:                       |
+|                                                                       |
+| $\hat{y}=4{,}7x+28$                                                   |
+|                                                                       |
+| Analise as afirmações:                                                |
+|                                                                       |
+| **I.** A variável $x$ representa a área do apartamento.               |
+|                                                                       |
+| **II.** A variável $\hat{y}$ representa o preço estimado pelo modelo. |
+|                                                                       |
+| **III.** Depois que o modelo foi encontrado, ele pode ser utilizado   |
+| para estimar o preço de um apartamento com área diferente das que     |
+| aparecem na tabela, como $65\,m^2$.                                   |
+|                                                                       |
+| Assinale a alternativa **correta**.                                   |
++-----------------------------------------------------------------------+
+| **A)** Apenas I está correta.                                         |
++-----------------------------------------------------------------------+
+| **B)** Apenas I e II estão corretas.                                  |
++-----------------------------------------------------------------------+
+| **C)** Apenas II e III estão corretas.                                |
++-----------------------------------------------------------------------+
+| **D)** Apenas I e III estão corretas.                                 |
++-----------------------------------------------------------------------+
+| **E)** I, II e III estão corretas.                                    |
++-----------------------------------------------------------------------+
+
+------------------------------------------------------------------------
+
+# Gabarito
+
+| **Questão** | **Resposta correta** |
+|:-----------:|:--------------------:|
+|    **1**    |        **B**         |
+|    **2**    |        **C**         |
+|    **3**    |        **C**         |
+|    **4**    |        **E**         |
+
+Também retirei da Questão 2 o comentário explicativo após o gabarito,
+para manter todas as questões no mesmo padrão de prova.
 
 ```{r 03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios, eval=FALSE, include=FALSE}
 rmarkdown::render("03-2026-08-25-coleta_de_dados_e_regressao_linear-exercicios.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
