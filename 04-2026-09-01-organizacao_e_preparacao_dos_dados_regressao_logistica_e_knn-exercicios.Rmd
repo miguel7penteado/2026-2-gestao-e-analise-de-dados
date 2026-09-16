@@ -16,12 +16,19 @@ editor_options:
 A regra é:
 
 $$
-n_h = n\cdot\frac{N_h}{N}
+\boxed{ n_h = n\cdot\frac{N_h}{N} }
 $$
 
-onde (N) é o tamanho da população, (N_h) é o tamanho do estrato, (n) é o tamanho total da amostra e (n_h) é a quantidade de elementos sorteados naquele estrato.
+onde
 
-#### 1. Alunos de uma universidade
+$$
+\text{n_h}   \rightarrow \text{é a quantidade de elementos selecionados no estrato ou agrupamento} \\
+\text{"n"}   \rightarrow \text{é o tamanho total da amostra} \\
+\text{"N_h"} \rightarrow \text{é o tamanho do estrato ou agrupamento} \\
+\text{"N"}   \rightarrow \text{é o tamanho da população}
+$$
+
+#### Exercício 01 - Alunos de uma universidade
 
 **População:** 10.000 alunos.
 **Amostra desejada:** 1.000 alunos.
@@ -45,12 +52,12 @@ onde (N) é o tamanho da população, (N_h) é o tamanho do estrato, (n) é o ta
 Por exemplo:
 
 $$
-n_{\text{Engenharia}} = 1000\cdot\frac{3000}{10000} = 300
+\boxed{ n_{\text{Engenharia}} = 1000\cdot\frac{3000}{10000} = 300 }
 $$
 
 ------------------------------------------------------------------------
 
-#### 2. Funcionários de uma empresa
+#### Exercício 02 - Funcionários de uma empresa
 
 **População:** 2.000 funcionários.
 **Amostra:** 200 funcionários.
@@ -68,7 +75,7 @@ Assim, embora a área de Produção tenha muito mais funcionários, ela não dom
 
 ------------------------------------------------------------------------
 
-#### 3. Moradores de uma cidade
+#### Exercício 03 - Moradores de uma cidade
 
 **População:** 50.000 moradores.
 **Amostra:** 1.000 moradores.
@@ -87,12 +94,12 @@ Estratificação por faixa etária:
 Para a faixa de 30 a 44 anos:
 
 $$
-n_h = 1000\cdot\frac{12000}{50000}= 240
+\boxed{n_h = 1000\cdot\frac{12000}{50000}= 240}
 $$
 
 ------------------------------------------------------------------------
 
-#### 4. Imagens do CIFAR-10
+#### Exercício 04 - Imagens do CIFAR-10
 
 Aqui temos um exemplo particularmente simples porque o CIFAR-10 é **balanceado entre as classes**.
 
@@ -118,14 +125,14 @@ Cada uma das 10 classes possui 6.000 imagens.
 Neste caso:
 
 $$
-6000\cdot\frac{6000}{60000}=600
+\boxed{6000\cdot\frac{6000}{60000}=600}
 $$
 
 Como todas as classes possuem a mesma quantidade de elementos, a amostra proporcional também fica perfeitamente balanceada.
 
 ------------------------------------------------------------------------
 
-#### 5. Domicílios de um município
+#### Exercício 05 - Domicílios de um município
 
 **População:** 20.000 domicílios.
 **Amostra:** 1.000 domicílios.
@@ -144,7 +151,7 @@ Estratificação por região do município:
 Por exemplo, para a região Leste:
 
 $$
-n_{\text{Leste}} = 1000\cdot\frac{6000}{20000} = 300
+\boxed{n_{\text{Leste}} = 1000\cdot\frac{6000}{20000} = 300}
 $$
 
 O ponto central para mostrar no slide é:
@@ -153,7 +160,7 @@ $$
 \boxed{\text{A proporção de cada estrato na amostra é igual à sua proporção na população}}
 $$
 
-#### 6. Pacientes de uma clínica — população balanceada
+#### Exercício 06 - Pacientes de uma clínica — população balanceada
 
 **População:** 4.000 pacientes.
 **Amostra:** 400 pacientes.
@@ -171,14 +178,14 @@ Estratificação por tipo de atendimento:
 Por exemplo:
 
 $$
-n_{\text{Cardiologia}} = 400\cdot\frac{1000}{4000} = 100
+\boxed{n_{\text{Cardiologia}} = 400\cdot\frac{1000}{4000} = 100}
 $$
 
 Como todos os estratos têm o mesmo tamanho, a amostra também fica igualmente distribuída.
 
 ------------------------------------------------------------------------
 
-#### 7. Produtos de um estoque — população balanceada
+#### Exercício 07 - Produtos de um estoque — população balanceada
 
 **População:** 10.000 produtos.
 **Amostra:** 1.000 produtos.
@@ -197,14 +204,14 @@ Estratificação por categoria:
 Para cada categoria:
 
 $$
-1000\cdot\frac{2000}{10000}=200
+\boxed{1000\cdot\frac{2000}{10000}=200}
 $$
 
 Esse é outro caso de população perfeitamente balanceada.
 
 ------------------------------------------------------------------------
 
-### 8. Imagens de um dataset de classificação — população balanceada
+#### Exercício 08 - Imagens de um dataset de classificação — população balanceada
 
 **População:** 30.000 imagens.
 **Amostra:** 3.000 imagens.
@@ -224,14 +231,14 @@ Considere um dataset com 6 classes:
 Para a classe "Cachorro":
 
 $$
-n_h= 3000\cdot\frac{5000}{30000} = 500
+\boxed{n_h= 3000\cdot\frac{5000}{30000} = 500}
 $$
 
 Todas as classes possuem a mesma representatividade.
 
 ------------------------------------------------------------------------
 
-### 9. Clientes de um banco — população não balanceada
+#### Exercício 09 - Clientes de um banco — população não balanceada
 
 **População:** 100.000 clientes.
 **Amostra:** 2.000 clientes.
@@ -250,14 +257,14 @@ Estratificação por faixa de renda:
 Para o primeiro estrato:
 
 $$
-n_h = 2000\cdot\frac{45000}{100000} = 900
+\boxed{n_h = 2000\cdot\frac{45000}{100000} = 900}
 $$
 
 Aqui os estratos possuem tamanhos bastante diferentes, mas a amostra preserva essas diferenças proporcionalmente.
 
 ------------------------------------------------------------------------
 
-### 10. Dataset de detecção de fraude — população não balanceada
+#### Exercício 10 - Dataset de detecção de fraude — população não balanceada
 
 **População:** 50.000 transações.
 **Amostra:** 5.000 transações.
@@ -276,7 +283,7 @@ Estratificação pelo tipo de transação:
 Para as fraudes críticas:
 
 $$
-n_{\text{críticas}} = 5000\cdot\frac{500}{50000} = 50
+\boxed{n_{\text{críticas}} = 5000\cdot\frac{500}{50000} = 50}
 $$
 
 OBS: **classes raras continuam raras na amostra proporcional**.
@@ -293,7 +300,7 @@ Assim, podemos resumir os exemplos 6–10 como:
 
 ### TESTES DE MULTIPLA ESCOLHA
 
-### Estratos , Proporções e Amostras
+#### Questão 05 - Estratos , Proporções e Amostras
 
 +--------------------------------------------------------------------------------------------------------------------------------------------+
 | **Questão 5**                                                                                                                              |
@@ -315,7 +322,7 @@ Assim, podemos resumir os exemplos 6–10 como:
 
 ------------------------------------------------------------------------
 
-### Questão 6 KNN
+#### Questão 06 - KNN
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | **Questão 6**                                                                                                                                            |
@@ -335,115 +342,151 @@ Assim, podemos resumir os exemplos 6–10 como:
 
 ------------------------------------------------------------------------
 
-### Questão 7 - Regressão Logística
+#### Questão 07 - Regressão Logística
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-| **Questão 7 — Exercício resolvido: Regressão Logística**                                                                         |
-+==================================================================================================================================+
-| Considere o modelo de **Regressão Logística** apresentado em aula: <br><br> $\displaystyle z = wX + b$ <br><br> com:             |
-|                                                                                                                                  |
-| $\displaystyle w = 1{,}19$                                                                                                       |
-|                                                                                                                                  |
-| e                                                                                                                                |
-|                                                                                                                                  |
-| $\displaystyle b = -6{,}52$                                                                                                      |
-|                                                                                                                                  |
-| Para um aluno que estudou **6 horas**, temos:                                                                                    |
-|                                                                                                                                  |
-| $\displaystyle z = 1{,}19(6) - 6{,}52$                                                                                           |
-|                                                                                                                                  |
-| $\displaystyle z = 7{,}14 - 6{,}52$                                                                                              |
-|                                                                                                                                  |
-| $\displaystyle z = 0{,}62$                                                                                                       |
-|                                                                                                                                  |
-| Aplicando a **função logística (sigmoide)**:                                                                                     |
-|                                                                                                                                  |
-| $\displaystyle P(Y=1 \mid X) = \frac{1}{1+e^{-z}}$                                                                               |
-|                                                                                                                                  |
-| temos aproximadamente:                                                                                                           |
-|                                                                                                                                  |
-| $\displaystyle P(Y=1 \mid X=6) \approx 0{,}65$                                                                                   |
-|                                                                                                                                  |
-| ou seja, aproximadamente **65%**.                                                                                                |
-|                                                                                                                                  |
-| Considerando um limiar de classificação de **50%**, analise as afirmações:                                                       |
-|                                                                                                                                  |
-| ***I.** Como a probabilidade calculada é aproximadamente 65%, o aluno será classificado como **Aprovado**.*                      |
-|                                                                                                                                  |
-| ***II.** O valor* $z=0{,}62$ *corresponde diretamente a uma probabilidade de 62%.*                                               |
-|                                                                                                                                  |
-| ***III.** A função sigmoide transforma o valor de* $z$ *em um número entre 0 e 1, que pode ser interpretado como probabilidade.* |
-|                                                                                                                                  |
-| Assinale a alternativa **correta**.                                                                                              |
-+----------------------------------------------------------------------------------------------------------------------------------+
-| **A)** Apenas I está correta.                                                                                                    |
-+----------------------------------------------------------------------------------------------------------------------------------+
-| **B)** Apenas II está correta.                                                                                                   |
-+----------------------------------------------------------------------------------------------------------------------------------+
-| **C)** Apenas I e II estão corretas.                                                                                             |
-+----------------------------------------------------------------------------------------------------------------------------------+
-| **D)** Apenas I e III estão corretas.                                                                                            |
-+----------------------------------------------------------------------------------------------------------------------------------+
-| **E)** I, II e III estão corretas.                                                                                               |
-+----------------------------------------------------------------------------------------------------------------------------------+
+Considere o modelo de **Regressão Logística** apresentado em aula:
 
-------------------------------------------------------------------------
+$$
+\boxed{z = \textbf{w}X + \textbf{b}}
+$$
 
-### Questão 8 - KNN
+com:
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **Questão 8**                                                                                                                 |
-+===============================================================================================================================+
-| Considere uma nova observação:                                                                                                |
-|                                                                                                                               |
-| $\displaystyle X=(4,4)$                                                                                                       |
-|                                                                                                                               |
-| e quatro observações já classificadas:                                                                                        |
-|                                                                                                                               |
-| **A:** $(2,3)$ — Azul ; **B:** $(3,4)$ — Azul ; **C:** $(5,4)$ — Vermelho ; **D:** $(8,8)$ — Vermelho ;                       |
-|                                                                                                                               |
-| Utilizando a **distância Euclidiana**:                                                                                        |
-|                                                                                                                               |
-| $\displaystyle d(P,X)=\sqrt{(x_P-x_X)^2+(y_P-y_X)^2}$                                                                         |
-|                                                                                                                               |
-| temos:                                                                                                                        |
-|                                                                                                                               |
-| $\displaystyle d(A,X)=\sqrt{(2-4)^2+(3-4)^2}=\sqrt{5}\approx 2{,}24$                                                          |
-|                                                                                                                               |
-| $\displaystyle d(B,X)=\sqrt{(3-4)^2+(4-4)^2}=1$                                                                               |
-|                                                                                                                               |
-| $\displaystyle d(C,X)=\sqrt{(5-4)^2+(4-4)^2}=1$                                                                               |
-|                                                                                                                               |
-| $\displaystyle d(D,X)=\sqrt{(8-4)^2+(8-4)^2}=\sqrt{32}\approx 5{,}66$                                                         |
-|                                                                                                                               |
-| Portanto, considerando $K=3$, os três vizinhos mais próximos são **B, C e A**, cujas classes são:                             |
-|                                                                                                                               |
-| **Azul, Vermelho, Azul**.                                                                                                     |
-|                                                                                                                               |
-| Analise as afirmações:                                                                                                        |
-|                                                                                                                               |
-| **I.** Para $K=3$, a nova observação será classificada como **Azul**.                                                         |
-|                                                                                                                               |
-| **II.** O ponto D possui menor distância até $X$ do que o ponto A.                                                            |
-|                                                                                                                               |
-| **III.** No KNN com $K=3$, são considerados os três pontos que apresentam as menores distâncias em relação à nova observação. |
-|                                                                                                                               |
-| Assinale a alternativa **correta**.                                                                                           |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **A)** Apenas I está correta.                                                                                                 |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **B)** Apenas II está correta.                                                                                                |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **C)** Apenas I e II estão corretas.                                                                                          |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **D)** Apenas II e III estão corretas.                                                                                        |
-+-------------------------------------------------------------------------------------------------------------------------------+
-| **E)** Apenas I e III estão corretas.                                                                                         |
-+-------------------------------------------------------------------------------------------------------------------------------+
+$$
+\boxed{\textbf{w} = \mathbf{1{,}19}}
+$$
+
+e
+
+$$
+\boxed{\textbf{b} = \mathbf{-6{,}52}}
+$$
+
+Para um aluno que estudou **6 horas**, temos:
+
+$$
+z = \mathbf{1{,}19} \cdot (6) - \mathbf{6{,}52}
+$$
+
+$$
+z = \mathbf{7{,}14} - \mathbf{6{,}52}
+$$
+
+$$
+\boxed{z = \mathbf{0{,}62}}
+$$
+
+Aplicando a **função logística (sigmoide)**:
+
+$$
+\text{probabilidade da saída Y ser TRUE tal que a entrada X vale ...} \frac{1}{1 + e^{-z}} \\
+\boxed{P(Y=1 \mid X) = \frac{1}{1+e^{\mathbf{-z}}}}
+$$
+
+temos aproximadamente:
+
+$$
+\text{probabilidade da saída Y ser TRUE tal que entrada X vale 6 horas é }\\
+\boxed{P(Y=1 \mid \mathbf{X=6}) \approx \mathbf{0{,}65}}
+$$
+
+ou seja, aproximadamente **65%**.
+
+Considerando um limiar de classificação de **50%**, analise as afirmações:
+
+**I.** Como a probabilidade calculada é aproximadamente **65%**, o aluno será classificado como **Aprovado**.
+
+**II.** O valor $\textbf{z=0{,}62}$ corresponde diretamente a uma probabilidade de **62%**.
+
+**III.** A função sigmoide transforma o valor de $\mathbf{z}$ em um número entre **0 e 1**, que pode ser interpretado como probabilidade.
+
+Assinale a alternativa **correta**.
+
+| Alternativa | Resposta                       |
+| :---------: | ------------------------------ |
+|    **A)**   | Apenas I está correta.         |
+|    **B)**   | Apenas II está correta.        |
+|    **C)**   | Apenas I e II estão corretas.  |
+|    **D)**   | Apenas I e III estão corretas. |
+|    **E)**   | I, II e III estão corretas.    |
+
 
 ------------------------------------------------------------------------
 
-# Gabarito
+#### Questão 08 - KNN
+
+Considere uma nova observação:
+
+$$
+X=(4,4)
+$$
+
+e quatro observações já classificadas:
+
+**A:** $(2,3)$ — Time Azul
+**B:** $(3,4)$ — Time Azul
+**C:** $(5,5)$ — Time Vermelho
+**D:** $(8,8)$ — Time Vermelho
+
+Utilizando a **distância Euclidiana**:
+
+$$
+\boxed{d(P,X)=\sqrt{(x_P-x_X)^2+(y_P-y_X)^2}}
+$$
+
+temos:
+
+$$
+d(A,X)=\sqrt{(2-4)^2+(3-4)^2}=\sqrt{5} \approx \boxed{2{,}24}
+$$
+
+$$
+d(B,X)=\sqrt{(3-4)^2+(4-4)^2}=\boxed{1}
+$$
+
+$$
+d(C,X)=\sqrt{(5-4)^2+(5-4)^2}=\sqrt{2} \approx \boxed{1{,}41}
+$$
+
+$$
+d(D,X)=\sqrt{(8-4)^2+(8-4)^2}=\sqrt{32} \approx \boxed{5{,}66}
+$$
+
+Portanto, considerando $K=3$, os três vizinhos mais próximos são, em ordem de distância:
+
+1. **B** — Time Azul — distância $1$
+2. **C** — Time Vermelho — distância $\sqrt{2}\approx1{,}41$
+3. **A** — Time Azul — distância $\sqrt{5}\approx2{,}24$
+
+Assim, as classes dos três vizinhos são:
+
+$$
+\text{Time Azul, Time Vermelho, Time Azul}
+$$
+
+Analise as afirmações:
+
+**I.** Para $K=3$, a nova observação será classificada como **Time Azul**.
+
+**II.** O ponto D possui menor distância até $X$ do que o ponto A.
+
+**III.** No KNN com $K=3$, são considerados os três pontos que apresentam as menores distâncias em relação à nova observação.
+
+Assinale a alternativa **correta**.
+
+| Alternativa | Resposta                        |
+| :---------: | ------------------------------- |
+|    **A)**   | Apenas I está correta.          |
+|    **B)**   | Apenas II está correta.         |
+|    **C)**   | Apenas I e II estão corretas.   |
+|    **D)**   | Apenas II e III estão corretas. |
+|    **E)**   | Apenas I e III estão corretas.  |
+
+
+
+------------------------------------------------------------------------
+
+#### Gabarito
 
 | **Questão** | **Resposta correta** |
 |:-----------:|:--------------------:|
