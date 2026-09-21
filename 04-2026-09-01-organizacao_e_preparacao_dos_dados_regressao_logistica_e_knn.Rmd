@@ -8,12 +8,82 @@ output:
 
 # Organização e Preparação dos Dados, Regressão Logística e KNN
 
-teste
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide1.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide2.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide3.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide4.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide5.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide6.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide7.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide8.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide9.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide10.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide11.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide12.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide13.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide14.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide15.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide16.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide17.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide18.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide19.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide20.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide21.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide22.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide23.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide24.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide25.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide26.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide27.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide28.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide29.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide30.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide31.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide32.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide33.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide34.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide35.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide36.JPG)
+
+![Organização e Preparação de Dados, Regressão Logística e Agrupamentos com KNN](media/04-aula04/aula04_organizacao_regressao_logistica_knn_template_unip/Slide37.JPG)
 
 ```{r, child='exemplos/04-aula04/visualizador-04.html'}
 ```
-
-
 
 ```{r 04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn, eval=FALSE, include=FALSE}
 rmarkdown::render("04-2026-09-01-organizacao_e_preparacao_dos_dados_regressao_logistica_e_knn.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
