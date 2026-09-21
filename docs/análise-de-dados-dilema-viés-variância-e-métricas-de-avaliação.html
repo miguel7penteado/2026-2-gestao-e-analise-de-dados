@@ -196,7 +196,10 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="5" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><i class="fa fa-check"></i><b>5</b> - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a>
 <ul>
-<li class="chapter" data-level="5.1" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios---an%C3%A1lise-de-dados-dilema-vi%C3%A9s-vari%C3%A2ncia-e-m%C3%A9tricas-de-avalia%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>5.1</b> - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a></li>
+<li class="chapter" data-level="5.1" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios---an%C3%A1lise-de-dados-dilema-vi%C3%A9s-vari%C3%A2ncia-e-m%C3%A9tricas-de-avalia%C3%A7%C3%A3o"><i class="fa fa-check"></i><b>5.1</b> - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios-de-treino-e-teste-de-modelos"><i class="fa fa-check"></i><b>5.1.1</b> Exercícios de TREINO e TESTE de Modelos</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><a href="relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão.html"><i class="fa fa-check"></i><b>6</b> - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão</a>
 <ul>
@@ -319,7 +322,436 @@ div.csl-indent {
 
 <div id="exercícios---análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> - Exercícios - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios---an%C3%A1lise-de-dados-dilema-vi%C3%A9s-vari%C3%A2ncia-e-m%C3%A9tricas-de-avalia%C3%A7%C3%A3o" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exercícios-de-treino-e-teste-de-modelos" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Exercícios de TREINO e TESTE de Modelos<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcios-de-treino-e-teste-de-modelos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="exercício-1-regressão-linear-tempo-de-entrega" class="section level4 hasAnchor" number="5.1.1.1">
+<h4><span class="header-section-number">5.1.1.1</span> Exercício 1 — Regressão Linear: tempo de entrega<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcio-1-regress%C3%A3o-linear-tempo-de-entrega" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="alert alert-info">
+<p>Uma empresa de entregas quer estimar o <strong>tempo de entrega</strong> de um pedido a partir da <strong>distância até o cliente</strong>. Considere:</p>
+</div>
+<div class="float">
+<img src="media/05-aula05/exercicios/01-exercicio01.jpg" alt="Estimar tempo de entrega das pizzas - motoboys" />
+<div class="figcaption">Estimar tempo de entrega das pizzas - motoboys</div>
+</div>
+<p><span class="math display">\[
+\boxed{\text{Entrada } X = \text{distância da entrega, em km}}
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\text{Saída } Y = \text{tempo de entrega, em minutos}}
+\]</span></p>
+<div class="alert alert-info">
+<p>A empresa coletou dados de 10 entregas. Sete serão usados para treinar o modelo e três para testar.</p>
+</div>
+<div class="alert alert-warning">
+<blockquote>
+<p>Dados de treino</p>
+</blockquote>
+<p>Lembrando que no treino seu modelo é criado através da descoberta dos (melhores) valores dos PARÂMETROS <code>w</code> e <code>b</code>.</p>
+<p>Segue o dataset de dados de treino do seu modelo.</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Entrega</th>
+<th align="center">Distância <span class="math inline">\(X\)</span> km</th>
+<th align="center">Tempo <span class="math inline">\(Y\)</span> min</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">2</td>
+<td align="center">18</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">3</td>
+<td align="center">21</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">4</td>
+<td align="center">25</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">5</td>
+<td align="center">28</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">6</td>
+<td align="center">32</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">8</td>
+<td align="center">38</td>
+</tr>
+<tr class="odd">
+<td align="center">G</td>
+<td align="center">10</td>
+<td align="center">45</td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-warning">
+<p>Use um modelo linear para resolver o problema. Seu modelo deve ter a “cara” de uma equação de reta:</p>
+</div>
+<p><span class="math display">\[
+\hat y = wx+b
+\]</span></p>
+<div class="alert alert-warning">
+<p>Resolva utilizando programação. No python utilize o pacote <code>LinearRegression</code> da biblioteca <code>SciKitLearn</code>:</p>
+</div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb25-1" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span></code></pre></div>
+<div class="alert alert-success">
+<blockquote>
+<p>Dados de teste</p>
+</blockquote>
+<p>Uma vez criado o seu modelo <span class="math inline">\(\hat y = wx+b\)</span>, use os dados de teste a seguir</p>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Entrega</th>
+<th align="center">Distância <span class="math inline">\(X\)</span> km</th>
+<th align="center">Tempo real <span class="math inline">\(Y\)</span> min</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">H</td>
+<td align="center">3.5</td>
+<td align="center">23</td>
+</tr>
+<tr class="even">
+<td align="center">I</td>
+<td align="center">7</td>
+<td align="center">35</td>
+</tr>
+<tr class="odd">
+<td align="center">J</td>
+<td align="center">9</td>
+<td align="center">42</td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-info">
+<p>Descubra:</p>
+<ul>
+<li>Qual é a saída prevista pelo seu modelo para a entrega <code>H</code>, <code>I</code> e <code>J</code> ?</li>
+<li>Qual é a saída real para a entrega <code>H</code>, <code>I</code> e <code>J</code> ?</li>
+<li>Qual é a diferença entre a saída real e a saída prevista pelo seu modelo para <code>H</code>, <code>I</code> e <code>J</code>, também chamado de M.S.E. ?</li>
+</ul>
+</div>
+<div id="tarefas" class="section level5 hasAnchor" number="5.1.1.1.1">
+<h5><span class="header-section-number">5.1.1.1.1</span> Tarefas<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#tarefas" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb26-2"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-2" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LinearRegression</span>
+<span id="cb26-3"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-3" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
+<span id="cb26-4"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-4" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-5" tabindex="-1"></a>X_train <span class="op">=</span> np.array([</span>
+<span id="cb26-6"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-6" tabindex="-1"></a>    [<span class="dv">2</span>],</span>
+<span id="cb26-7"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-7" tabindex="-1"></a>    [<span class="dv">3</span>],</span>
+<span id="cb26-8"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-8" tabindex="-1"></a>    [<span class="dv">4</span>],</span>
+<span id="cb26-9"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-9" tabindex="-1"></a>    [<span class="dv">5</span>],</span>
+<span id="cb26-10"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-10" tabindex="-1"></a>    [<span class="dv">6</span>],</span>
+<span id="cb26-11"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-11" tabindex="-1"></a>    [<span class="dv">8</span>],</span>
+<span id="cb26-12"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-12" tabindex="-1"></a>    [<span class="dv">10</span>]</span>
+<span id="cb26-13"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-13" tabindex="-1"></a>])</span>
+<span id="cb26-14"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-14" tabindex="-1"></a></span>
+<span id="cb26-15"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-15" tabindex="-1"></a>y_train <span class="op">=</span> np.array([</span>
+<span id="cb26-16"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-16" tabindex="-1"></a>    <span class="dv">18</span>,</span>
+<span id="cb26-17"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-17" tabindex="-1"></a>    <span class="dv">21</span>,</span>
+<span id="cb26-18"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-18" tabindex="-1"></a>    <span class="dv">25</span>,</span>
+<span id="cb26-19"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-19" tabindex="-1"></a>    <span class="dv">28</span>,</span>
+<span id="cb26-20"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-20" tabindex="-1"></a>    <span class="dv">32</span>,</span>
+<span id="cb26-21"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-21" tabindex="-1"></a>    <span class="dv">38</span>,</span>
+<span id="cb26-22"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-22" tabindex="-1"></a>    <span class="dv">45</span></span>
+<span id="cb26-23"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-23" tabindex="-1"></a>])</span>
+<span id="cb26-24"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-24" tabindex="-1"></a></span>
+<span id="cb26-25"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-25" tabindex="-1"></a>X_test <span class="op">=</span> np.array([</span>
+<span id="cb26-26"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-26" tabindex="-1"></a>    [<span class="fl">3.5</span>],</span>
+<span id="cb26-27"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-27" tabindex="-1"></a>    [<span class="dv">7</span>],</span>
+<span id="cb26-28"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-28" tabindex="-1"></a>    [<span class="dv">9</span>]</span>
+<span id="cb26-29"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-29" tabindex="-1"></a>])</span>
+<span id="cb26-30"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-30" tabindex="-1"></a></span>
+<span id="cb26-31"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-31" tabindex="-1"></a>y_test <span class="op">=</span> np.array([</span>
+<span id="cb26-32"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-32" tabindex="-1"></a>    <span class="dv">23</span>,</span>
+<span id="cb26-33"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-33" tabindex="-1"></a>    <span class="dv">35</span>,</span>
+<span id="cb26-34"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-34" tabindex="-1"></a>    <span class="dv">42</span></span>
+<span id="cb26-35"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-35" tabindex="-1"></a>])</span>
+<span id="cb26-36"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-36" tabindex="-1"></a></span>
+<span id="cb26-37"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-37" tabindex="-1"></a>modelo <span class="op">=</span> LinearRegression()</span>
+<span id="cb26-38"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-38" tabindex="-1"></a></span>
+<span id="cb26-39"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-39" tabindex="-1"></a>modelo.fit(X_train, y_train)</span>
+<span id="cb26-40"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-40" tabindex="-1"></a></span>
+<span id="cb26-41"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-41" tabindex="-1"></a>w <span class="op">=</span> modelo.coef_[<span class="dv">0</span>]</span>
+<span id="cb26-42"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-42" tabindex="-1"></a>b <span class="op">=</span> modelo.intercept_</span>
+<span id="cb26-43"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-43" tabindex="-1"></a></span>
+<span id="cb26-44"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-44" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;w =&quot;</span>, w)</span>
+<span id="cb26-45"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-45" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;b =&quot;</span>, b)</span>
+<span id="cb26-46"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-46" tabindex="-1"></a></span>
+<span id="cb26-47"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-47" tabindex="-1"></a>y_pred <span class="op">=</span> modelo.predict(X_test)</span>
+<span id="cb26-48"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-48" tabindex="-1"></a></span>
+<span id="cb26-49"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-49" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Previsões:&quot;</span>, y_pred)</span>
+<span id="cb26-50"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-50" tabindex="-1"></a></span>
+<span id="cb26-51"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-51" tabindex="-1"></a>mse <span class="op">=</span> mean_squared_error(y_test, y_pred)</span>
+<span id="cb26-52"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-52" tabindex="-1"></a></span>
+<span id="cb26-53"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-53" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;MSE teste =&quot;</span>, mse)</span>
+<span id="cb26-54"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-54" tabindex="-1"></a></span>
+<span id="cb26-55"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-55" tabindex="-1"></a>nova_distancia <span class="op">=</span> np.array([[<span class="fl">7.5</span>]])</span>
+<span id="cb26-56"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-56" tabindex="-1"></a></span>
+<span id="cb26-57"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-57" tabindex="-1"></a>tempo_estimado <span class="op">=</span> modelo.predict(nova_distancia)</span>
+<span id="cb26-58"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-58" tabindex="-1"></a></span>
+<span id="cb26-59"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb26-59" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Tempo estimado:&quot;</span>, tempo_estimado[<span class="dv">0</span>])</span></code></pre></div>
+<p>A ideia conceitual do exercício é:</p>
+<p><span class="math display">\[
+\boxed{
+\text{distância}
+\rightarrow
+\text{modelo linear}
+\rightarrow
+\text{tempo estimado}
+}
+\]</span></p>
+</div>
+</div>
+<div id="exercício-2-regressão-logística-aprovação-de-crédito" class="section level4 hasAnchor" number="5.1.1.2">
+<h4><span class="header-section-number">5.1.1.2</span> Exercício 2 — Regressão Logística: aprovação de crédito<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#exerc%C3%ADcio-2-regress%C3%A3o-log%C3%ADstica-aprova%C3%A7%C3%A3o-de-cr%C3%A9dito" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="alert alert-info">
+<p>Agora queremos trabalhar com <strong>classificação</strong>, não com previsão de um valor contínuo. Um banco está testando um modelo simplificado para classificar solicitações de crédito.</p>
+<p>Considere:</p>
+</div>
+<div class="float">
+<img src="media/05-aula05/exercicios/02-exercicio02.jpg" alt="Classificação de Crédito" />
+<div class="figcaption">Classificação de Crédito</div>
+</div>
+<p><span class="math display">\[
+\boxed{\text{Entrada } X = \text{pontuação de crédito}}
+\]</span></p>
+<p>e:</p>
+<p><span class="math display">\[
+\boxed{\text{Saída } Y =
+\begin{cases}
+0, &amp; \text{crédito não aprovado}\\
+1, &amp; \text{crédito aprovado}
+\end{cases}}
+\]</span></p>
+<div class="alert alert-info">
+<p>Temos novamente 10 clientes: 7 para treinamento e 3 para teste.</p>
+</div>
+<div class="alert alert-warning">
+<blockquote>
+<p>Dados de treino</p>
+</blockquote>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Cliente</th>
+<th align="center">Pontuação <span class="math inline">\(X\)</span></th>
+<th align="center">Classe <span class="math inline">\(Y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">420</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">460</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">500</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">540</td>
+<td align="center">0</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">600</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">F</td>
+<td align="center">650</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">G</td>
+<td align="center">720</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-warning">
+<p>Os alunos devem treinar um modelo de Regressão Logística:</p>
+</div>
+<p><span class="math display">\[
+\text{% de Probabilidade de saída &quot;Y&quot; ser TRUE, tal que entrada vale X será igual a } \mathbf{\frac{1}{1+e^{-(wx+b)}} } \\
+\boxed{P(Y=TRUE|X) = \frac{1}{1+e^{-(wx+b)}}}
+\]</span></p>
+<div class="alert alert-sucess">
+<blockquote>
+<p>Dados de teste</p>
+</blockquote>
+</div>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Cliente</th>
+<th align="center">Pontuação <span class="math inline">\(X\)</span></th>
+<th align="center">Classe real <span class="math inline">\(Y\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">H</td>
+<td align="center">480</td>
+<td align="center">0</td>
+</tr>
+<tr class="even">
+<td align="center">I</td>
+<td align="center">580</td>
+<td align="center">1</td>
+</tr>
+<tr class="odd">
+<td align="center">J</td>
+<td align="center">680</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<div id="tarefas-1" class="section level5 hasAnchor" number="5.1.1.2.1">
+<h5><span class="header-section-number">5.1.1.2.1</span> Tarefas<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#tarefas-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="alert alert-info">
+<ul>
+<li>Crie <code>X_train</code>, <code>y_train</code>, <code>X_test</code> e <code>y_test</code>.</li>
+<li>Treine uma <code>LogisticRegression</code>.</li>
+<li>Use o python para descubra os parâmetros :</li>
+</ul>
+</div>
+<p><span class="math display">\[
+\text{Parâmetro } \boxed{w}
+\]</span></p>
+<p>e</p>
+<p><span class="math display">\[
+\text{Parâmetro } \boxed{b}
+\]</span></p>
+<ul>
+<li>Calcule as probabilidades:</li>
+</ul>
+<p><span class="math display">\[
+\text{Probabilidade da saída Y ser classificada como TRUE} \\
+\\
+\boxed{P(Y=TRUE)}
+\]</span></p>
+<p>para os três dados de teste.</p>
+<p>-Classifique os três clientes usando o limiar (threshold) de 50%:</p>
+<p><span class="math display">\[
+\text{saída Y igual ou acima de 50%, classifica como TRUE, &quot;pode emprestar dinheiro&quot;} \\
+\text{saída Y abaixo de 50%, classifica como FALSE, &quot;não emprestar dinheiro&quot;} \\
+\boxed{\text{threshold}=0{,}5} \\
+P(Y=TRUE|X) = \frac{1}{1+e^{-(wx+b)}} \\
+\text{em outras palavras } \\
+\text{considere como TRUE: empresta grana se }\frac{1}{1+e^{-(wx+b)}} \textbf{&gt;= 50%}
+\\
+\text{considere como FALSE: não empresta grana se }\frac{1}{1+e^{-(wx+b)}} \textbf{&lt; 50% }
+\]</span></p>
+<div class="alert alert-info">
+<ul>
+<li>Compare as classes previstas com as classes reais.</li>
+<li>Calcule a acurácia no conjunto de teste.</li>
+<li>Use o modelo para responder:</li>
+</ul>
+<blockquote>
+<p><strong>Um cliente com pontuação de crédito igual a 560 seria classificado como crédito aprovado ou não aprovado?</strong></p>
+</blockquote>
+<ul>
+<li>Informe também a probabilidade estimada de aprovação.</li>
+</ul>
+</div>
+</div>
+<div id="estrutura-esperada-em-python" class="section level5 hasAnchor" number="5.1.1.2.2">
+<h5><span class="header-section-number">5.1.1.2.2</span> Estrutura esperada em Python<a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#estrutura-esperada-em-python" class="anchor-section" aria-label="Anchor link to header"></a></h5>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb27-2"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-2" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> LogisticRegression</span>
+<span id="cb27-3"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-3" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> accuracy_score</span>
+<span id="cb27-4"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-4" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-5" tabindex="-1"></a>X_train <span class="op">=</span> np.array([</span>
+<span id="cb27-6"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-6" tabindex="-1"></a>    [<span class="dv">420</span>],</span>
+<span id="cb27-7"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-7" tabindex="-1"></a>    [<span class="dv">460</span>],</span>
+<span id="cb27-8"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-8" tabindex="-1"></a>    [<span class="dv">500</span>],</span>
+<span id="cb27-9"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-9" tabindex="-1"></a>    [<span class="dv">540</span>],</span>
+<span id="cb27-10"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-10" tabindex="-1"></a>    [<span class="dv">600</span>],</span>
+<span id="cb27-11"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-11" tabindex="-1"></a>    [<span class="dv">650</span>],</span>
+<span id="cb27-12"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-12" tabindex="-1"></a>    [<span class="dv">720</span>]</span>
+<span id="cb27-13"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-13" tabindex="-1"></a>])</span>
+<span id="cb27-14"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-14" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-15" tabindex="-1"></a>y_train <span class="op">=</span> np.array([</span>
+<span id="cb27-16"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-16" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb27-17"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-17" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb27-18"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-18" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb27-19"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-19" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb27-20"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-20" tabindex="-1"></a>    <span class="dv">1</span>,</span>
+<span id="cb27-21"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-21" tabindex="-1"></a>    <span class="dv">1</span>,</span>
+<span id="cb27-22"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-22" tabindex="-1"></a>    <span class="dv">1</span></span>
+<span id="cb27-23"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-23" tabindex="-1"></a>])</span>
+<span id="cb27-24"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-24" tabindex="-1"></a></span>
+<span id="cb27-25"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-25" tabindex="-1"></a>X_test <span class="op">=</span> np.array([</span>
+<span id="cb27-26"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-26" tabindex="-1"></a>    [<span class="dv">480</span>],</span>
+<span id="cb27-27"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-27" tabindex="-1"></a>    [<span class="dv">580</span>],</span>
+<span id="cb27-28"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-28" tabindex="-1"></a>    [<span class="dv">680</span>]</span>
+<span id="cb27-29"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-29" tabindex="-1"></a>])</span>
+<span id="cb27-30"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-30" tabindex="-1"></a></span>
+<span id="cb27-31"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-31" tabindex="-1"></a>y_test <span class="op">=</span> np.array([</span>
+<span id="cb27-32"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-32" tabindex="-1"></a>    <span class="dv">0</span>,</span>
+<span id="cb27-33"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-33" tabindex="-1"></a>    <span class="dv">1</span>,</span>
+<span id="cb27-34"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-34" tabindex="-1"></a>    <span class="dv">1</span></span>
+<span id="cb27-35"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-35" tabindex="-1"></a>])</span>
+<span id="cb27-36"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-36" tabindex="-1"></a></span>
+<span id="cb27-37"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-37" tabindex="-1"></a>modelo <span class="op">=</span> LogisticRegression()</span>
+<span id="cb27-38"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-38" tabindex="-1"></a></span>
+<span id="cb27-39"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-39" tabindex="-1"></a>modelo.fit(X_train, y_train)</span>
+<span id="cb27-40"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-40" tabindex="-1"></a></span>
+<span id="cb27-41"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-41" tabindex="-1"></a>w <span class="op">=</span> modelo.coef_[<span class="dv">0</span>][<span class="dv">0</span>]</span>
+<span id="cb27-42"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-42" tabindex="-1"></a>b <span class="op">=</span> modelo.intercept_[<span class="dv">0</span>]</span>
+<span id="cb27-43"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-43" tabindex="-1"></a></span>
+<span id="cb27-44"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-44" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;w =&quot;</span>, w)</span>
+<span id="cb27-45"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-45" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;b =&quot;</span>, b)</span>
+<span id="cb27-46"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-46" tabindex="-1"></a></span>
+<span id="cb27-47"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-47" tabindex="-1"></a>probabilidades <span class="op">=</span> modelo.predict_proba(X_test)[:, <span class="dv">1</span>]</span>
+<span id="cb27-48"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-48" tabindex="-1"></a></span>
+<span id="cb27-49"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-49" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Probabilidades:&quot;</span>, probabilidades)</span>
+<span id="cb27-50"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-50" tabindex="-1"></a></span>
+<span id="cb27-51"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-51" tabindex="-1"></a>y_pred <span class="op">=</span> modelo.predict(X_test)</span>
+<span id="cb27-52"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-52" tabindex="-1"></a></span>
+<span id="cb27-53"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-53" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Classes previstas:&quot;</span>, y_pred)</span>
+<span id="cb27-54"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-54" tabindex="-1"></a></span>
+<span id="cb27-55"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-55" tabindex="-1"></a>acc <span class="op">=</span> accuracy_score(y_test, y_pred)</span>
+<span id="cb27-56"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-56" tabindex="-1"></a></span>
+<span id="cb27-57"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-57" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Acurácia teste =&quot;</span>, acc)</span>
+<span id="cb27-58"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-58" tabindex="-1"></a></span>
+<span id="cb27-59"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-59" tabindex="-1"></a>novo_cliente <span class="op">=</span> np.array([[<span class="dv">560</span>]])</span>
+<span id="cb27-60"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-60" tabindex="-1"></a></span>
+<span id="cb27-61"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-61" tabindex="-1"></a>prob <span class="op">=</span> modelo.predict_proba(novo_cliente)[<span class="dv">0</span>][<span class="dv">1</span>]</span>
+<span id="cb27-62"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-62" tabindex="-1"></a>classe <span class="op">=</span> modelo.predict(novo_cliente)[<span class="dv">0</span>]</span>
+<span id="cb27-63"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-63" tabindex="-1"></a></span>
+<span id="cb27-64"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-64" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Probabilidade de aprovação =&quot;</span>, prob)</span>
+<span id="cb27-65"><a href="análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação.html#cb27-65" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Classe prevista =&quot;</span>, classe)</span></code></pre></div>
 
+</div>
+</div>
+</div>
 </div>
 </div>
             </section>

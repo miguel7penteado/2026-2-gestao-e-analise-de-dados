@@ -38,6 +38,12 @@ questão-08---knn
 gabarito-1
 análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação
 exercícios---análise-de-dados-dilema-viés-variância-e-métricas-de-avaliação
+exercícios-de-treino-e-teste-de-modelos
+exercício-1-regressão-linear-tempo-de-entrega
+tarefas
+exercício-2-regressão-logística-aprovação-de-crédito
+tarefas-1
+estrutura-esperada-em-python
 relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão
 exercícios---relatórios-k.p.i.---avaliação-de-modelos-e-árvores-de-decisão
 business-intelligence-random-forest-e-ensemble-learning
