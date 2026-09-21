@@ -5,7 +5,44 @@ output:
     theme: cerulean
     df_print: kable
 ---
+
 # - Análise de Dados: Dilema Viés-Variância e Métricas de Avaliação
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide1.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide2.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide3.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide4.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide5.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide6.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide7.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide8.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide9.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide10.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide11.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide12.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide13.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide14.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide15.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide16.JPG)
+
+![Dilema Viés-Variança e Métricas de Avaliação](media/05-aula05/aula05_dilema_vies_varianca/Slide17.JPG)
+
+
 
 
 
