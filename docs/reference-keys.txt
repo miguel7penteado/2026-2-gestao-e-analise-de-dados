@@ -6,6 +6,7 @@ dezembro-de-2026
 dados-com-ativo-estratégico-introdução-ao-machine-learning
 exercícios---dados-com-atvo-estratégico-introdução-ao-machine-learning
 governança-de-dados-e-ciclo-de-vida-de-machine-learning
+ciclo-de-vida-dos-dados
 governança-de-dados-e-ciclo-de-vida-de-machine-learning-1
 coleta-de-dados-e-regressão-linear
 exercícios---coleta-de-dados-e-regressão-linear
