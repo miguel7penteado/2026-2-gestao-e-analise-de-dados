@@ -1,0 +1,101 @@
+pct_frescos,pct_industrializados,preco_medio_item,volume_total_itens,pct_promocao,perfil_cliente
+73.97,17.33,20.22,22,13.9,Cliente Saudável
+68.89,8.87,18.51,24,16.79,Cliente Saudável
+75.18,10.34,17.65,19,22.39,Cliente Saudável
+82.18,2.88,17.1,19,12.41,Cliente Saudável
+68.13,7.28,13.56,29,10.96,Cliente Saudável
+68.13,10.55,15.84,31,12.49,Cliente Saudável
+82.63,4.25,16.62,24,19.58,Cliente Saudável
+76.14,11.88,21.17,30,16.64,Cliente Saudável
+66.24,7.0,19.03,26,12.35,Cliente Saudável
+74.34,8.54,12.71,21,17.57,Cliente Saudável
+66.29,6.99,18.97,26,15.49,Cliente Saudável
+66.27,19.26,16.84,32,19.84,Cliente Saudável
+71.94,9.93,15.97,24,11.49,Cliente Saudável
+54.69,4.71,19.84,32,13.36,Cliente Saudável
+56.2,14.11,21.09,11,13.04,Cliente Saudável
+65.5,3.9,20.79,29,7.68,Cliente Saudável
+61.9,11.04,15.48,25,16.48,Cliente Saudável
+72.51,0.2,17.07,23,16.31,Cliente Saudável
+62.74,3.36,18.99,25,15.03,Cliente Saudável
+58.7,10.98,20.93,15,13.83,Cliente Saudável
+18.68,51.33,12.45,73,46.26,Família Grande
+26.63,37.72,14.61,94,31.43,Família Grande
+27.26,56.22,8.79,98,29.29,Família Grande
+23.58,33.79,12.37,75,44.82,Família Grande
+28.71,49.69,12.52,96,37.77,Família Grande
+33.23,62.52,13.56,89,47.14,Família Grande
+45.09,37.08,9.53,94,44.73,Família Grande
+31.4,40.47,9.36,107,39.27,Família Grande
+32.06,45.8,13.04,82,31.53,Família Grande
+29.4,40.97,12.59,75,24.85,Família Grande
+14.65,32.59,12.5,74,35.53,Família Grande
+29.79,45.55,12.69,75,48.56,Família Grande
+30.48,36.5,10.64,84,42.14,Família Grande
+49.71,48.79,12.46,89,27.54,Família Grande
+28.46,37.64,12.59,88,41.73,Família Grande
+32.41,57.4,10.57,94,43.85,Família Grande
+29.72,38.73,15.73,85,31.16,Família Grande
+20.65,42.42,12.95,102,41.54,Família Grande
+39.14,51.51,9.62,81,40.58,Família Grande
+36.02,35.15,13.31,117,28.57,Família Grande
+47.5,26.57,31.04,16,10.45,Casal Jovem Gourmet
+48.93,5.66,34.43,19,12.65,Casal Jovem Gourmet
+52.58,18.43,37.52,7,16.34,Casal Jovem Gourmet
+52.38,6.94,39.33,15,5.05,Casal Jovem Gourmet
+35.36,12.64,29.0,18,18.53,Casal Jovem Gourmet
+38.44,20.44,33.33,15,2.19,Casal Jovem Gourmet
+48.61,15.32,32.63,26,9.39,Casal Jovem Gourmet
+48.6,9.61,31.73,14,12.35,Casal Jovem Gourmet
+48.61,11.42,43.83,18,11.12,Casal Jovem Gourmet
+71.97,18.4,37.02,20,7.51,Casal Jovem Gourmet
+49.0,11.35,28.7,25,9.17,Casal Jovem Gourmet
+52.95,16.08,39.59,14,8.03,Casal Jovem Gourmet
+51.68,15.23,45.61,24,7.64,Casal Jovem Gourmet
+49.56,11.74,40.16,20,13.4,Casal Jovem Gourmet
+42.79,25.72,27.4,16,11.43,Casal Jovem Gourmet
+50.31,18.17,32.58,21,7.23,Casal Jovem Gourmet
+39.59,4.87,41.33,20,13.6,Casal Jovem Gourmet
+43.34,15.93,31.46,17,11.23,Casal Jovem Gourmet
+41.6,11.69,37.22,20,13.25,Casal Jovem Gourmet
+45.57,19.26,38.87,18,12.52,Casal Jovem Gourmet
+6.68,70.78,12.53,13,15.8,Solteiro Prático
+7.76,74.76,15.73,16,17.0,Solteiro Prático
+12.99,63.45,15.73,11,9.38,Solteiro Prático
+12.44,86.74,13.48,13,17.37,Solteiro Prático
+9.92,61.95,13.59,14,16.2,Solteiro Prático
+10.47,60.29,15.7,10,20.75,Solteiro Prático
+15.11,79.26,10.66,12,21.71,Solteiro Prático
+7.63,76.33,10.78,12,29.38,Solteiro Prático
+12.19,74.99,12.84,12,24.75,Solteiro Prático
+9.19,75.03,14.36,9,17.12,Solteiro Prático
+9.13,69.9,15.93,12,15.51,Solteiro Prático
+14.4,62.82,19.43,13,22.46,Solteiro Prático
+13.3,70.61,17.57,16,13.4,Solteiro Prático
+13.25,64.58,14.52,14,29.16,Solteiro Prático
+15.22,77.8,14.94,18,25.9,Solteiro Prático
+10.08,68.82,11.99,9,17.65,Solteiro Prático
+12.73,63.4,14.94,14,11.43,Solteiro Prático
+8.76,67.43,14.13,12,26.77,Solteiro Prático
+11.3,73.3,15.97,18,19.43,Solteiro Prático
+9.48,65.49,12.52,9,26.19,Solteiro Prático
+15.43,51.49,8.77,50,78.98,Caçador de Ofertas
+21.4,49.04,7.93,35,72.36,Caçador de Ofertas
+25.03,33.01,3.87,29,67.15,Caçador de Ofertas
+25.28,42.77,7.82,36,81.63,Caçador de Ofertas
+22.3,40.16,5.39,34,73.95,Caçador de Ofertas
+28.74,45.95,9.34,33,68.62,Caçador de Ofertas
+18.59,27.28,8.73,39,74.83,Caçador de Ofertas
+24.15,40.49,6.12,41,71.35,Caçador de Ofertas
+25.72,43.47,6.97,30,93.5,Caçador de Ofertas
+28.09,20.93,5.88,30,87.05,Caçador de Ofertas
+29.27,25.53,7.87,32,79.94,Caçador de Ofertas
+18.25,18.69,9.91,16,91.84,Caçador de Ofertas
+15.8,32.84,6.03,22,80.62,Caçador de Ofertas
+32.67,40.74,9.01,45,73.11,Caçador de Ofertas
+26.99,47.02,6.94,48,92.18,Caçador de Ofertas
+20.51,35.59,6.41,33,84.31,Caçador de Ofertas
+34.31,48.03,7.79,39,71.7,Caçador de Ofertas
+25.69,23.96,5.93,37,78.48,Caçador de Ofertas
+32.08,21.37,6.89,59,73.0,Caçador de Ofertas
+25.41,34.56,5.6,43,68.94,Caçador de Ofertas

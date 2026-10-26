@@ -1,0 +1,3707 @@
+<iframe srcdoc='
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="utf-8">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 15px;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+h3 {
+    text-align: center;
+    margin: 0 0 6px 0;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 14px;
+}
+
+.controls {
+    background: #f0f4f8;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.checkbox-green {
+    color: #16813d;
+}
+
+.checkbox-red {
+    color: #c62828;
+}
+
+.inputs-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+.inputs-group input[type="number"] {
+    width: 58px;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.sliders {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.slider-group {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+
+.slider-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.slider-group input {
+    width: 100%;
+}
+
+button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-add {
+    background: #28a745;
+    color: white;
+}
+
+.btn-noise {
+    background: #ff9800;
+    color: white;
+}
+
+.btn-remove {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-reset {
+    background: #dc3545;
+    color: white;
+}
+
+
+/* =========================================================
+   GRÁFICOS
+   ========================================================= */
+
+.chart-section {
+    margin-top: 14px;
+    margin-bottom: 18px;
+}
+
+.chart-label {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 8px auto;
+    padding: 7px 16px;
+    border-radius: 6px;
+    background: #e9f2ff;
+    border-left: 5px solid #1565c0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #123a67;
+}
+
+.chart-description {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   TABELAS DOS PONTOS
+   ========================================================= */
+
+.data-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin: 8px 0 12px 0;
+}
+
+.data-table {
+    border-collapse: collapse;
+    margin: 0 auto;
+    font-size: 13px;
+    background: #fff;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #ccc;
+    padding: 6px 9px;
+    text-align: center;
+    min-width: 42px;
+}
+
+.data-table .row-label {
+    background: #e9f2ff;
+    font-weight: bold;
+    color: #123a67;
+    min-width: 35px;
+}
+
+
+/* =========================================================
+   PAINÉIS
+   ========================================================= */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.info-card {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: #fafafa;
+}
+
+.info-card.green {
+    border-left: 6px solid #1f8f4e;
+}
+
+.info-card.red {
+    border-left: 6px solid #d93025;
+}
+
+.info-card h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+}
+
+.green h4 {
+    color: #1f8f4e;
+}
+
+.red h4 {
+    color: #d93025;
+}
+
+.equation {
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    background: #fff;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #e0e0e0;
+    margin: 8px 0;
+    min-height: 44px;
+    word-break: break-word;
+}
+
+.metrics {
+    font-size: 14px;
+    line-height: 1.55;
+    margin-top: 8px;
+}
+
+.metric-group {
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    padding: 8px;
+    margin-top: 8px;
+}
+
+.metric-title {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.small-note {
+    font-size: 13px;
+    color: #444;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+.legend-box {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eef5ff;
+    border: 1px solid #c7daf7;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.test-box {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #fff8e6;
+    border: 1px solid #f0d98c;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+@media (max-width: 800px) {
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<h3>
+Visualizador de SuperAjustamento (Overfitting)
+</h3>
+
+<div class="subtitle">
+Horas de estudo × Nota da prova
+</div>
+
+
+<div class="controls">
+
+
+<div class="line">
+
+
+<label style="font-weight:bold; cursor:pointer;">
+
+<input type="checkbox" id="autoLinear" checked>
+
+Auto-calcular modelo simples (linear)
+
+</label>
+
+
+
+<label class="checkbox-green" style="font-weight:bold; cursor:pointer;">
+
+<input type="checkbox" id="showLinearModel" unchecked>
+
+Mostrar modelo adequado
+
+</label>
+
+
+<label class="checkbox-red" style="font-weight:bold; cursor:pointer;">
+
+<input type="checkbox" id="showOverfitModel" unchecked>
+
+Mostrar modelo com sobreajustamento (overfitting)
+
+</label>
+
+
+<label style="font-weight:bold; cursor:pointer;">
+
+<input type="checkbox" id="showLabels" unchecked>
+
+Mostrar rótulos
+
+</label>
+
+
+<label style="font-weight:bold; cursor:pointer;">
+
+<input
+type="checkbox"
+id="showResiduals">
+
+Mostrar resíduos
+
+</label>
+
+
+</div>
+
+
+
+<div class="inputs-group">
+
+
+<label style="font-size:12px; font-weight:bold;">
+Horas X:
+</label>
+
+
+<input
+type="number"
+id="inputX"
+min="0"
+max="10"
+step="0.1"
+value="5.5">
+
+
+<label style="font-size:12px; font-weight:bold;">
+Nota Y:
+</label>
+
+
+<input
+type="number"
+id="inputY"
+min="0"
+max="100"
+step="1"
+value="65">
+
+
+<button
+class="btn-add"
+id="addPointBtn">
+
++ Add Point
+
+</button>
+
+
+<button
+class="btn-noise"
+id="addNoiseBtn">
+
++ Ruído
+
+</button>
+
+
+<button
+class="btn-remove"
+id="removeLastBtn">
+
+Remover último
+
+</button>
+
+
+<button
+class="btn-reset"
+id="resetBtn">
+
+Reset
+
+</button>
+
+
+</div>
+
+
+
+<div class="sliders">
+
+
+<div class="slider-group">
+
+<label>
+
+β₁ — inclinação do modelo verde:
+
+<span id="beta1Val">
+7.00
+</span>
+
+</label>
+
+
+<input
+type="range"
+id="beta1Slider"
+min="0"
+max="12"
+step="0.1"
+value="7"
+disabled>
+
+</div>
+
+
+
+<div class="slider-group">
+
+<label>
+
+β₀ — intercepto do modelo verde:
+
+<span id="beta0Val">
+18.00
+</span>
+
+</label>
+
+
+<input
+type="range"
+id="beta0Slider"
+min="-10"
+max="40"
+step="0.5"
+value="18"
+disabled>
+
+</div>
+
+
+
+<div class="slider-group">
+
+<label>
+
+Grau do modelo vermelho:
+
+<span id="degreeVal">
+7
+</span>
+
+</label>
+
+
+<input
+type="range"
+id="degreeSlider"
+min="2"
+max="10"
+step="1"
+value="7">
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<!-- =========================================================
+     DADOS DE TREINO
+     ========================================================= -->
+
+<div class="chart-section">
+
+    <div class="chart-label">
+        Dados de Treino
+    </div>
+
+    <div class="chart-description">
+        Os modelos são ajustados usando estes pontos.<br>
+        Clique com o botão esquerdo para adicionar um ponto e com o botão direito sobre um ponto para removê-lo.
+    </div>
+
+
+    <div class="data-table-wrapper">
+
+        <table
+            class="data-table"
+            id="trainDataTable">
+        </table>
+
+    </div>
+
+
+    <canvas
+        id="chartTrain"
+        width="954"
+        height="435"
+        style="
+            display: block;
+            box-sizing: border-box;
+            height: 435.5px;
+            width: 954px;
+        ">
+    </canvas>
+
+</div>
+
+
+<!-- =========================================================
+     DADOS DE TESTE
+     ========================================================= -->
+
+<div class="chart-section">
+
+    <div class="chart-label">
+        Dados de Teste
+    </div>
+
+    <div class="chart-description">
+        Os pontos de teste não participam do treinamento.
+        Os modelos apenas realizam previsões sobre eles.
+    </div>
+
+
+    <div class="data-table-wrapper">
+
+        <table
+            class="data-table"
+            id="testDataTable">
+        </table>
+
+    </div>
+
+
+    <canvas
+        id="chartTest"
+        width="954"
+        height="435"
+        style="
+            display: block;
+            box-sizing: border-box;
+            height: 435.5px;
+            width: 954px;
+        ">
+    </canvas>
+
+</div>
+
+
+<!-- =========================================================
+     PAINÉIS
+     ========================================================= -->
+
+<div class="info-grid">
+
+
+<div
+class="info-card green"
+id="greenCard">
+
+
+<h4>
+Modelo adequado
+</h4>
+
+
+<div>
+
+<strong>Tipo:</strong>
+
+Regressão Linear
+
+</div>
+
+
+<div
+class="equation"
+id="greenEquation">
+</div>
+
+
+<div
+class="metrics"
+id="greenMetrics">
+</div>
+
+
+<div class="small-note">
+
+O modelo verde procura capturar a
+
+<strong>
+tendência geral
+</strong>
+
+dos dados.
+
+Por possuir menor complexidade,
+ele tende a ser menos sensível às pequenas
+variações da amostra de treinamento.
+
+</div>
+
+
+</div>
+
+
+
+<div
+class="info-card red"
+id="redCard">
+
+
+<h4>
+Modelo com overfitting
+</h4>
+
+
+<div>
+
+<strong>Tipo:</strong>
+
+Regressão Polinomial
+
+</div>
+
+
+<div
+class="equation"
+id="redEquation">
+</div>
+
+
+<div
+class="metrics"
+id="redMetrics">
+</div>
+
+
+<div
+class="small-note"
+id="redExplanation">
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="test-box">
+
+<strong>
+Acurácia utilizada neste exemplo:
+</strong>
+
+<br><br>
+
+Como estamos trabalhando com regressão,
+uma previsão é considerada correta quando a diferença
+entre a nota real e a nota estimada é de no máximo
+
+<strong>
+±5 pontos
+</strong>.
+
+<br><br>
+
+<strong>
+Acurácia = previsões com |y − ŷ| ≤ 5 / número total de observações.
+</strong>
+
+</div>
+
+
+
+<div class="test-box">
+
+<strong>
+Variância apresentada:
+</strong>
+
+<br><br>
+
+A variância corresponde à
+<strong>variância amostral dos valores observados de Y</strong>,
+ou seja, das notas.
+
+Ela descreve a dispersão dos dados e não o desempenho do modelo.
+
+</div>
+
+
+
+<div class="legend-box">
+
+<strong>
+Experimento:
+</strong>
+
+<br><br>
+
+Aumente gradualmente o grau do modelo vermelho.
+
+Compare:
+
+<br><br>
+
+<strong>
+MSE de treino × MSE de teste
+</strong>
+
+<br>
+
+<strong>
+Acurácia de treino × Acurácia de teste
+</strong>
+
+<br>
+
+<strong>
+Variância dos dados de treino × variância dos dados de teste
+</strong>
+
+<br><br>
+
+O modelo mais complexo pode melhorar bastante seu ajuste aos dados
+de treinamento sem apresentar a mesma melhora nos dados de teste.
+
+Esse comportamento ajuda a visualizar o
+<strong>overfitting</strong>.
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+// ============================================================
+// DADOS DE TREINO
+// ============================================================
+
+var initialTrainPoints = [
+
+    {x: 0.4, y: 18},
+    {x: 1.0, y: 24},
+    {x: 1.5, y: 32},
+    {x: 2.0, y: 28},
+    {x: 2.6, y: 45},
+    {x: 3.2, y: 38},
+    {x: 4.0, y: 60},
+    {x: 4.5, y: 52},
+    {x: 5.1, y: 69},
+    {x: 6.1, y: 63},
+    {x: 6.7, y: 75},
+    {x: 7.6, y: 69},
+    {x: 8.2, y: 86},
+    {x: 9.1, y: 79},
+    {x: 9.9, y: 92}
+
+];
+
+
+var trainPoints =
+JSON.parse(
+    JSON.stringify(initialTrainPoints)
+);
+
+
+
+// ============================================================
+// DADOS DE TESTE
+// ============================================================
+
+var testPoints = [
+
+    {x: 0.7, y: 23},
+    {x: 1.8, y: 31},
+    {x: 2.9, y: 40},
+    {x: 3.7, y: 47},
+    {x: 4.8, y: 55},
+    {x: 5.7, y: 61},
+    {x: 7.1, y: 70},
+    {x: 8.7, y: 80},
+    {x: 9.5, y: 87}
+
+];
+
+
+
+// ============================================================
+// MODELOS
+// ============================================================
+
+var currentLinear = {
+
+    beta0: 18,
+
+    beta1: 7
+
+};
+
+
+var currentPolyCoeffs = [];
+
+
+var accuracyTolerance = 5;
+
+
+
+// ============================================================
+// ELEMENTOS HTML
+// ============================================================
+
+var autoLinear =
+document.getElementById("autoLinear");
+
+
+var showLinearModel =
+document.getElementById("showLinearModel");
+
+
+var showOverfitModel =
+document.getElementById("showOverfitModel");
+
+
+var showLabels =
+document.getElementById("showLabels");
+
+
+var showResiduals =
+document.getElementById("showResiduals");
+
+
+var beta0Slider =
+document.getElementById("beta0Slider");
+
+
+var beta1Slider =
+document.getElementById("beta1Slider");
+
+
+var degreeSlider =
+document.getElementById("degreeSlider");
+
+
+var beta0Val =
+document.getElementById("beta0Val");
+
+
+var beta1Val =
+document.getElementById("beta1Val");
+
+
+var degreeVal =
+document.getElementById("degreeVal");
+
+
+var inputX =
+document.getElementById("inputX");
+
+
+var inputY =
+document.getElementById("inputY");
+
+
+var greenEquation =
+document.getElementById("greenEquation");
+
+
+var redEquation =
+document.getElementById("redEquation");
+
+
+var greenMetrics =
+document.getElementById("greenMetrics");
+
+
+var redMetrics =
+document.getElementById("redMetrics");
+
+
+var redExplanation =
+document.getElementById("redExplanation");
+
+
+var greenCard =
+document.getElementById("greenCard");
+
+
+var redCard =
+document.getElementById("redCard");
+
+
+
+// ============================================================
+// TABELA DINÂMICA DOS PONTOS
+//
+// PRIMEIRA LINHA = Y
+// SEGUNDA LINHA = X
+// ============================================================
+
+function atualizarTabela(tableId, dataPoints) {
+
+
+    var table =
+    document.getElementById(tableId);
+
+
+    var html =
+    "";
+
+
+    // ========================================================
+    // LINHA Y
+    // ========================================================
+
+    html +=
+    "<tr>";
+
+
+    html +=
+    "<td class=\"row-label\">Y</td>";
+
+
+    for (
+        var i = 0;
+        i < dataPoints.length;
+        i++
+    ) {
+
+
+        html +=
+        "<td>"
+        +
+        dataPoints[i].y
+        +
+        "</td>";
+
+    }
+
+
+    html +=
+    "</tr>";
+
+
+
+    // ========================================================
+    // LINHA X
+    // ========================================================
+
+    html +=
+    "<tr>";
+
+
+    html +=
+    "<td class=\"row-label\">X</td>";
+
+
+    for (
+        var j = 0;
+        j < dataPoints.length;
+        j++
+    ) {
+
+
+        html +=
+        "<td>"
+        +
+        dataPoints[j].x
+        +
+        "</td>";
+
+    }
+
+
+    html +=
+    "</tr>";
+
+
+
+    table.innerHTML =
+    html;
+
+}
+
+
+
+// ============================================================
+// REGRESSÃO LINEAR
+// ============================================================
+
+function calcLinearOLS(data) {
+
+    var n = data.length;
+
+    if (n < 2) {
+
+        return {
+            beta0: 0,
+            beta1: 0
+        };
+
+    }
+
+
+    var sx = 0;
+    var sy = 0;
+    var sxy = 0;
+    var sx2 = 0;
+
+
+    for (var i = 0; i < n; i++) {
+
+        sx += data[i].x;
+
+        sy += data[i].y;
+
+        sxy +=
+        data[i].x *
+        data[i].y;
+
+        sx2 +=
+        data[i].x *
+        data[i].x;
+
+    }
+
+
+    var denom =
+    n * sx2 -
+    sx * sx;
+
+
+    var beta1 =
+    denom !== 0
+    ?
+    (
+        n * sxy -
+        sx * sy
+    )
+    /
+    denom
+    :
+    0;
+
+
+    var beta0 =
+    (
+        sy -
+        beta1 * sx
+    )
+    /
+    n;
+
+
+    return {
+        beta0: beta0,
+        beta1: beta1
+    };
+
+}
+
+
+
+// ============================================================
+// ELIMINAÇÃO DE GAUSS
+// ============================================================
+
+function gaussianSolve(A, b) {
+
+    var n = b.length;
+
+
+    A =
+    A.map(
+        function(row) {
+
+            return row.slice();
+
+        }
+    );
+
+
+    b =
+    b.slice();
+
+
+    for (var i = 0; i < n; i++) {
+
+
+        var maxRow = i;
+
+
+        for (var k = i + 1; k < n; k++) {
+
+            if (
+                Math.abs(A[k][i])
+                >
+                Math.abs(A[maxRow][i])
+            ) {
+
+                maxRow = k;
+
+            }
+
+        }
+
+
+        var tempRow =
+        A[i];
+
+        A[i] =
+        A[maxRow];
+
+        A[maxRow] =
+        tempRow;
+
+
+        var tempB =
+        b[i];
+
+        b[i] =
+        b[maxRow];
+
+        b[maxRow] =
+        tempB;
+
+
+        var pivot =
+        A[i][i];
+
+
+        if (
+            Math.abs(pivot)
+            <
+            1e-12
+        ) {
+
+            return new Array(n).fill(0);
+
+        }
+
+
+        for (var j = i; j < n; j++) {
+
+            A[i][j] /=
+            pivot;
+
+        }
+
+
+        b[i] /=
+        pivot;
+
+
+        for (var kk = 0; kk < n; kk++) {
+
+
+            if (kk === i) {
+
+                continue;
+
+            }
+
+
+            var factor =
+            A[kk][i];
+
+
+            for (var jj = i; jj < n; jj++) {
+
+                A[kk][jj]
+                -=
+                factor *
+                A[i][jj];
+
+            }
+
+
+            b[kk]
+            -=
+            factor *
+            b[i];
+
+        }
+
+    }
+
+
+    return b;
+
+}
+
+
+
+// ============================================================
+// REGRESSÃO POLINOMIAL
+// ============================================================
+
+function calcPolynomialFit(data, degree) {
+
+
+    degree =
+    Math.max(
+        1,
+        Math.min(
+            degree,
+            data.length - 1,
+            10
+        )
+    );
+
+
+    var m =
+    degree + 1;
+
+
+    var A = [];
+
+
+    for (var i = 0; i < m; i++) {
+
+        A.push(
+            new Array(m).fill(0)
+        );
+
+    }
+
+
+    var B =
+    new Array(m).fill(0);
+
+
+    for (var row = 0; row < m; row++) {
+
+
+        for (var col = 0; col < m; col++) {
+
+
+            var sum = 0;
+
+
+            for (var p = 0; p < data.length; p++) {
+
+                sum +=
+                Math.pow(
+                    data[p].x,
+                    row + col
+                );
+
+            }
+
+
+            A[row][col] =
+            sum;
+
+        }
+
+
+        var sumB = 0;
+
+
+        for (var q = 0; q < data.length; q++) {
+
+            sumB +=
+            data[q].y
+            *
+            Math.pow(
+                data[q].x,
+                row
+            );
+
+        }
+
+
+        B[row] =
+        sumB;
+
+    }
+
+
+    return gaussianSolve(
+        A,
+        B
+    );
+
+}
+
+
+
+// ============================================================
+// AVALIAR POLINÔMIO
+// ============================================================
+
+function evalPoly(coeffs, x) {
+
+    var y = 0;
+
+
+    for (var i = 0; i < coeffs.length; i++) {
+
+        y +=
+        coeffs[i]
+        *
+        Math.pow(
+            x,
+            i
+        );
+
+    }
+
+
+    return y;
+
+}
+
+
+
+// ============================================================
+// GERAR CURVA
+// ============================================================
+
+function buildCurveData(fn, xmin, xmax, step) {
+
+
+    var arr = [];
+
+
+    for (
+        var x = xmin;
+        x <= xmax + 0.000000001;
+        x += step
+    ) {
+
+
+        var y =
+        fn(x);
+
+
+        if (
+            Number.isFinite(y)
+        ) {
+
+
+            arr.push({
+
+                x:
+                Number(
+                    x.toFixed(2)
+                ),
+
+                y:
+                y
+
+            });
+
+        }
+
+    }
+
+
+    return arr;
+
+}
+
+
+
+// ============================================================
+// MSE
+// ============================================================
+
+function calcMSE(data, fn) {
+
+
+    if (
+        data.length === 0
+    ) {
+
+        return 0;
+
+    }
+
+
+    var sse = 0;
+
+
+    for (var i = 0; i < data.length; i++) {
+
+
+        var prediction =
+        fn(
+            data[i].x
+        );
+
+
+        var error =
+        data[i].y -
+        prediction;
+
+
+        sse +=
+        error *
+        error;
+
+    }
+
+
+    return sse / data.length;
+
+}
+
+
+
+// ============================================================
+// ACURÁCIA PARA REGRESSÃO
+// ============================================================
+
+function calcAccuracy(data, fn, tolerance) {
+
+
+    if (
+        data.length === 0
+    ) {
+
+        return 0;
+
+    }
+
+
+    var correct = 0;
+
+
+    for (var i = 0; i < data.length; i++) {
+
+
+        var prediction =
+        fn(
+            data[i].x
+        );
+
+
+        var absoluteError =
+        Math.abs(
+            data[i].y -
+            prediction
+        );
+
+
+        if (
+            absoluteError <= tolerance
+        ) {
+
+            correct++;
+
+        }
+
+    }
+
+
+    return (correct / data.length) * 100;
+
+}
+
+
+
+// ============================================================
+// VARIÂNCIA AMOSTRAL DOS VALORES Y
+// ============================================================
+
+function calcVariance(data) {
+
+
+    if (
+        data.length < 2
+    ) {
+
+        return 0;
+
+    }
+
+
+    var mean = 0;
+
+
+    for (
+        var i = 0;
+        i < data.length;
+        i++
+    ) {
+
+        mean +=
+        data[i].y;
+
+    }
+
+
+    mean =
+    mean /
+    data.length;
+
+
+    var sumSquared =
+    0;
+
+
+    for (
+        var j = 0;
+        j < data.length;
+        j++
+    ) {
+
+
+        var diff =
+        data[j].y -
+        mean;
+
+
+        sumSquared +=
+        diff *
+        diff;
+
+    }
+
+
+    return sumSquared / (data.length - 1);
+
+}
+
+
+
+// ============================================================
+// EQUAÇÃO LINEAR
+// ============================================================
+
+function formatLinearEquation(beta0, beta1) {
+
+
+    var signal =
+    beta1 >= 0
+    ?
+    "+"
+    :
+    "-";
+
+
+    return "ŷ = " +
+           beta0.toFixed(2) +
+           " " +
+           signal +
+           " " +
+           Math.abs(beta1).toFixed(2) +
+           "x";
+
+}
+
+
+
+// ============================================================
+// EQUAÇÃO POLINOMIAL
+// ============================================================
+
+function formatPolynomialEquation(coeffs) {
+
+
+    if (
+        !coeffs ||
+        coeffs.length === 0
+    ) {
+
+        return "ŷ = 0";
+
+    }
+
+
+    var terms = [];
+
+
+    for (
+        var i = 0;
+        i < coeffs.length;
+        i++
+    ) {
+
+
+        var c =
+        coeffs[i];
+
+
+        if (
+            Math.abs(c)
+            <
+            0.00001
+        ) {
+
+            continue;
+
+        }
+
+
+        var term =
+        "";
+
+
+        if (
+            i === 0
+        ) {
+
+            term =
+            c.toFixed(2);
+
+        }
+
+
+        else if (
+            i === 1
+        ) {
+
+            term =
+            (
+                c >= 0
+                ?
+                "+ "
+                :
+                "- "
+            )
+            +
+            Math.abs(c).toFixed(2)
+            +
+            "x";
+
+        }
+
+
+        else {
+
+            term =
+            (
+                c >= 0
+                ?
+                "+ "
+                :
+                "- "
+            )
+            +
+            Math.abs(c).toFixed(2)
+            +
+            "x<sup>"
+            +
+            i
+            +
+            "</sup>";
+
+        }
+
+
+        terms.push(
+            term
+        );
+
+    }
+
+
+    if (
+        terms.length === 0
+    ) {
+
+        return "ŷ = 0";
+
+    }
+
+
+    return "ŷ = " + terms.join(" ");
+
+}
+
+
+
+// ============================================================
+// PLUGIN
+// ============================================================
+
+var customPlugin = {
+
+
+    id:
+    "customPlugin",
+
+
+    beforeDatasetsDraw:
+    function(chart) {
+
+
+        if (
+            !showResiduals.checked
+        ) {
+
+            return;
+
+        }
+
+
+        var dataPoints =
+        chart.canvas.id === "chartTrain"
+        ?
+        trainPoints
+        :
+        testPoints;
+
+
+        var ctx =
+        chart.ctx;
+
+
+        var xAxis =
+        chart.scales.x;
+
+
+        var yAxis =
+        chart.scales.y;
+
+
+        ctx.save();
+
+
+
+        if (
+            chart.isDatasetVisible(1)
+        ) {
+
+
+            ctx.strokeStyle =
+            "rgba(31,143,78,0.45)";
+
+
+            ctx.lineWidth =
+            1.2;
+
+
+            ctx.setLineDash(
+                [4,3]
+            );
+
+
+            for (
+                var i = 0;
+                i < dataPoints.length;
+                i++
+            ) {
+
+
+                var p =
+                dataPoints[i];
+
+
+                var yHat =
+                currentLinear.beta0
+                +
+                currentLinear.beta1 *
+                p.x;
+
+
+                ctx.beginPath();
+
+
+                ctx.moveTo(
+
+                    xAxis.getPixelForValue(
+                        p.x
+                    ),
+
+                    yAxis.getPixelForValue(
+                        p.y
+                    )
+
+                );
+
+
+                ctx.lineTo(
+
+                    xAxis.getPixelForValue(
+                        p.x
+                    ),
+
+                    yAxis.getPixelForValue(
+                        yHat
+                    )
+
+                );
+
+
+                ctx.stroke();
+
+            }
+
+        }
+
+
+
+        if (
+            chart.isDatasetVisible(2)
+        ) {
+
+
+            ctx.strokeStyle =
+            "rgba(217,48,37,0.35)";
+
+
+            ctx.lineWidth =
+            1.2;
+
+
+            ctx.setLineDash(
+                [2,2]
+            );
+
+
+            for (
+                var j = 0;
+                j < dataPoints.length;
+                j++
+            ) {
+
+
+                var pp =
+                dataPoints[j];
+
+
+                var yHatRed =
+                evalPoly(
+                    currentPolyCoeffs,
+                    pp.x
+                );
+
+
+                ctx.beginPath();
+
+
+                ctx.moveTo(
+
+                    xAxis.getPixelForValue(
+                        pp.x
+                    ),
+
+                    yAxis.getPixelForValue(
+                        pp.y
+                    )
+
+                );
+
+
+                ctx.lineTo(
+
+                    xAxis.getPixelForValue(
+                        pp.x
+                    ),
+
+                    yAxis.getPixelForValue(
+                        yHatRed
+                    )
+
+                );
+
+
+                ctx.stroke();
+
+            }
+
+        }
+
+
+        ctx.restore();
+
+    },
+
+
+    afterDraw:
+    function(chart) {
+
+
+        if (
+            !showLabels.checked
+        ) {
+
+            return;
+
+        }
+
+
+        var dataPoints =
+        chart.canvas.id === "chartTrain"
+        ?
+        trainPoints
+        :
+        testPoints;
+
+
+        var ctx =
+        chart.ctx;
+
+
+        var meta =
+        chart.getDatasetMeta(0);
+
+
+        ctx.save();
+
+
+        ctx.font =
+        "bold 10px Arial";
+
+
+        ctx.fillStyle =
+        "#000";
+
+
+        ctx.textAlign =
+        "center";
+
+
+        meta.data.forEach(
+
+            function(el, idx) {
+
+
+                var p =
+                dataPoints[idx];
+
+
+                if (p) {
+
+
+                    ctx.fillText(
+
+                        "("
+                        +
+                        p.x
+                        +
+                        ", "
+                        +
+                        p.y
+                        +
+                        ")",
+
+                        el.x,
+
+                        el.y - 10
+
+                    );
+
+                }
+
+            }
+
+        );
+
+
+        ctx.restore();
+
+    }
+
+};
+
+
+
+// ============================================================
+// CRIAÇÃO DOS GRÁFICOS
+// ============================================================
+
+function createChart(
+    canvasId,
+    dataPoints,
+    pointColor,
+    pointLabel
+) {
+
+
+    var ctx =
+    document
+    .getElementById(canvasId)
+    .getContext("2d");
+
+
+    return new Chart(
+
+        ctx,
+
+        {
+
+            type:
+            "scatter",
+
+
+            data: {
+
+                datasets: [
+
+
+                    {
+
+                        label:
+                        pointLabel,
+
+                        data:
+                        dataPoints,
+
+                        backgroundColor:
+                        pointColor,
+
+                        borderColor:
+                        pointColor,
+
+                        pointRadius:
+                        5,
+
+                        pointHoverRadius:
+                        7,
+
+                        pointHitRadius:
+                        10
+
+                    },
+
+
+                    {
+
+                        label:
+                        "Modelo adequado — linear",
+
+                        data:
+                        [],
+
+                        type:
+                        "line",
+
+                        borderColor:
+                        "#1f8f4e",
+
+                        backgroundColor:
+                        "#1f8f4e",
+
+                        borderWidth:
+                        3,
+
+                        fill:
+                        false,
+
+                        pointRadius:
+                        0,
+
+                        tension:
+                        0
+
+                    },
+
+
+                    {
+
+                        label:
+                        "Modelo com overfitting — não linear",
+
+                        data:
+                        [],
+
+                        type:
+                        "line",
+
+                        borderColor:
+                        "#d93025",
+
+                        backgroundColor:
+                        "#d93025",
+
+                        borderWidth:
+                        3,
+
+                        fill:
+                        false,
+
+                        pointRadius:
+                        0,
+
+                        tension:
+                        0.15
+
+                    }
+
+                ]
+
+            },
+
+
+            options: {
+
+
+                responsive:
+                true,
+
+
+                animation:
+                false,
+
+
+                interaction: {
+
+                    mode:
+                    "nearest",
+
+                    intersect:
+                    false
+
+                },
+
+
+                plugins: {
+
+
+                    legend: {
+
+                        display:
+                        true,
+
+                        position:
+                        "top"
+
+                    }
+
+                },
+
+
+                scales: {
+
+
+                    x: {
+
+                        type:
+                        "linear",
+
+                        min:
+                        0,
+
+                        max:
+                        10,
+
+
+                        title: {
+
+                            display:
+                            true,
+
+                            text:
+                            "Horas de estudo",
+
+                            font: {
+
+                                size:
+                                14,
+
+                                weight:
+                                "bold"
+
+                            }
+
+                        }
+
+                    },
+
+
+                    y: {
+
+                        min:
+                        0,
+
+                        max:
+                        100,
+
+
+                        title: {
+
+                            display:
+                            true,
+
+                            text:
+                            "Nota na prova",
+
+                            font: {
+
+                                size:
+                                14,
+
+                                weight:
+                                "bold"
+
+                            }
+
+                        }
+
+                    }
+
+                }
+
+            },
+
+
+            plugins: [
+
+                customPlugin
+
+            ]
+
+        }
+
+    );
+
+}
+
+
+
+// ============================================================
+// INSTANCIA OS GRÁFICOS
+// ============================================================
+
+var chartTrain =
+createChart(
+    "chartTrain",
+    trainPoints,
+    "#1565c0",
+    "Dados de treino"
+);
+
+
+var chartTest =
+createChart(
+    "chartTest",
+    testPoints,
+    "#7b1fa2",
+    "Dados de teste"
+);
+
+
+
+// ============================================================
+// ATUALIZA MODELOS
+// ============================================================
+
+function atualizarModelos() {
+
+
+    // ========================================================
+    // ATUALIZA AS TABELAS
+    // ========================================================
+
+    atualizarTabela(
+        "trainDataTable",
+        trainPoints
+    );
+
+
+    atualizarTabela(
+        "testDataTable",
+        testPoints
+    );
+
+
+
+    // ========================================================
+    // MODELO LINEAR
+    // ========================================================
+
+    if (
+        autoLinear.checked
+    ) {
+
+
+        currentLinear =
+        calcLinearOLS(
+            trainPoints
+        );
+
+
+        beta0Slider.disabled =
+        true;
+
+
+        beta1Slider.disabled =
+        true;
+
+
+        beta0Slider.value =
+        currentLinear.beta0;
+
+
+        beta1Slider.value =
+        currentLinear.beta1;
+
+    }
+
+
+    else {
+
+
+        beta0Slider.disabled =
+        false;
+
+
+        beta1Slider.disabled =
+        false;
+
+
+        currentLinear.beta0 =
+        parseFloat(
+            beta0Slider.value
+        );
+
+
+        currentLinear.beta1 =
+        parseFloat(
+            beta1Slider.value
+        );
+
+    }
+
+
+
+    // ========================================================
+    // MODELO POLINOMIAL
+    // ========================================================
+
+    var degree =
+    parseInt(
+        degreeSlider.value
+    );
+
+
+    currentPolyCoeffs =
+    calcPolynomialFit(
+        trainPoints,
+        degree
+    );
+
+
+
+    // ========================================================
+    // CONTROLES
+    // ========================================================
+
+    beta0Val.innerText =
+    currentLinear.beta0.toFixed(2);
+
+
+    beta1Val.innerText =
+    currentLinear.beta1.toFixed(2);
+
+
+    degreeVal.innerText =
+    degree;
+
+
+
+    // ========================================================
+    // CURVA VERDE
+    // ========================================================
+
+    var greenCurve =
+    buildCurveData(
+
+        function(x) {
+
+            return currentLinear.beta0 + currentLinear.beta1 * x;
+
+        },
+
+        0,
+
+        10,
+
+        0.05
+
+    );
+
+
+
+    // ========================================================
+    // CURVA VERMELHA
+    // ========================================================
+
+    var redCurve =
+    buildCurveData(
+
+        function(x) {
+
+            return evalPoly(currentPolyCoeffs, x);
+
+        },
+
+        0,
+
+        10,
+
+        0.05
+
+    );
+
+
+
+    // ========================================================
+    // DADOS DOS GRÁFICOS
+    // ========================================================
+
+    chartTrain.data.datasets[0].data =
+    trainPoints;
+
+
+    chartTrain.data.datasets[1].data =
+    greenCurve;
+
+
+    chartTrain.data.datasets[2].data =
+    redCurve;
+
+
+
+    chartTest.data.datasets[0].data =
+    testPoints;
+
+
+    chartTest.data.datasets[1].data =
+    greenCurve;
+
+
+    chartTest.data.datasets[2].data =
+    redCurve;
+
+
+
+    // ========================================================
+    // MSE
+    // ========================================================
+
+    var mseGreenTrain =
+    calcMSE(
+
+        trainPoints,
+
+        function(x) {
+
+            return currentLinear.beta0 + currentLinear.beta1 * x;
+
+        }
+
+    );
+
+
+    var mseGreenTest =
+    calcMSE(
+
+        testPoints,
+
+        function(x) {
+
+            return currentLinear.beta0 + currentLinear.beta1 * x;
+
+        }
+
+    );
+
+
+    var mseRedTrain =
+    calcMSE(
+
+        trainPoints,
+
+        function(x) {
+
+            return evalPoly(currentPolyCoeffs, x);
+
+        }
+
+    );
+
+
+    var mseRedTest =
+    calcMSE(
+
+        testPoints,
+
+        function(x) {
+
+            return evalPoly(currentPolyCoeffs, x);
+
+        }
+
+    );
+
+
+
+    // ========================================================
+    // ACURÁCIA
+    // ========================================================
+
+    var accGreenTrain =
+    calcAccuracy(
+
+        trainPoints,
+
+        function(x) {
+
+            return currentLinear.beta0 + currentLinear.beta1 * x;
+
+        },
+
+        accuracyTolerance
+
+    );
+
+
+    var accGreenTest =
+    calcAccuracy(
+
+        testPoints,
+
+        function(x) {
+
+            return currentLinear.beta0 + currentLinear.beta1 * x;
+
+        },
+
+        accuracyTolerance
+
+    );
+
+
+    var accRedTrain =
+    calcAccuracy(
+
+        trainPoints,
+
+        function(x) {
+
+            return evalPoly(currentPolyCoeffs, x);
+
+        },
+
+        accuracyTolerance
+
+    );
+
+
+    var accRedTest =
+    calcAccuracy(
+
+        testPoints,
+
+        function(x) {
+
+            return evalPoly(currentPolyCoeffs, x);
+
+        },
+
+        accuracyTolerance
+
+    );
+
+
+
+    // ========================================================
+    // VARIÂNCIA
+    // ========================================================
+
+    var varianceTrain =
+    calcVariance(
+        trainPoints
+    );
+
+
+    var varianceTest =
+    calcVariance(
+        testPoints
+    );
+
+
+
+    // ========================================================
+    // EQUAÇÕES
+    // ========================================================
+
+    greenEquation.innerHTML =
+    formatLinearEquation(
+        currentLinear.beta0,
+        currentLinear.beta1
+    );
+
+
+    redEquation.innerHTML =
+    formatPolynomialEquation(
+        currentPolyCoeffs
+    );
+
+
+
+    // ========================================================
+    // PAINEL VERDE
+    // ========================================================
+
+    greenMetrics.innerHTML =
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<div class=\"metric-title\">Dados de Treino</div>"
+
+    +
+
+    "<strong>MSE:</strong> "
+
+    +
+
+    mseGreenTrain.toFixed(2)
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Acurácia (±"
+
+    +
+
+    accuracyTolerance
+
+    +
+
+    " pontos):</strong> "
+
+    +
+
+    accGreenTrain.toFixed(2)
+
+    +
+
+    "%"
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Variância dos dados:</strong> "
+
+    +
+
+    varianceTrain.toFixed(2)
+
+    +
+
+    "</div>"
+
+    +
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<div class=\"metric-title\">Dados de Teste</div>"
+
+    +
+
+    "<strong>MSE:</strong> "
+
+    +
+
+    mseGreenTest.toFixed(2)
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Acurácia (±"
+
+    +
+
+    accuracyTolerance
+
+    +
+
+    " pontos):</strong> "
+
+    +
+
+    accGreenTest.toFixed(2)
+
+    +
+
+    "%"
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Variância dos dados:</strong> "
+
+    +
+
+    varianceTest.toFixed(2)
+
+    +
+
+    "</div>"
+
+    +
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<strong>Complexidade:</strong> baixa"
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Objetivo:</strong> capturar a tendência geral."
+
+    +
+
+    "</div>";
+
+
+
+    // ========================================================
+    // PAINEL VERMELHO
+    // ========================================================
+
+    redMetrics.innerHTML =
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<strong>Grau do polinômio:</strong> "
+
+    +
+
+    degree
+
+    +
+
+    "</div>"
+
+    +
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<div class=\"metric-title\">Dados de Treino</div>"
+
+    +
+
+    "<strong>MSE:</strong> "
+
+    +
+
+    mseRedTrain.toFixed(2)
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Acurácia (±"
+
+    +
+
+    accuracyTolerance
+
+    +
+
+    " pontos):</strong> "
+
+    +
+
+    accRedTrain.toFixed(2)
+
+    +
+
+    "%"
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Variância dos dados:</strong> "
+
+    +
+
+    varianceTrain.toFixed(2)
+
+    +
+
+    "</div>"
+
+    +
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<div class=\"metric-title\">Dados de Teste</div>"
+
+    +
+
+    "<strong>MSE:</strong> "
+
+    +
+
+    mseRedTest.toFixed(2)
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Acurácia (±"
+
+    +
+
+    accuracyTolerance
+
+    +
+
+    " pontos):</strong> "
+
+    +
+
+    accRedTest.toFixed(2)
+
+    +
+
+    "%"
+
+    +
+
+    "<br>"
+
+    +
+
+    "<strong>Variância dos dados:</strong> "
+
+    +
+
+    varianceTest.toFixed(2)
+
+    +
+
+    "</div>"
+
+    +
+
+    "<div class=\"metric-group\">"
+
+    +
+
+    "<strong>Complexidade:</strong> "
+
+    +
+
+    (
+        degree <= 3
+        ?
+        "baixa"
+        :
+        degree <= 6
+        ?
+        "média"
+        :
+        "alta"
+    )
+
+    +
+
+    "</div>";
+
+
+
+    // ========================================================
+    // EXPLICAÇÃO
+    // ========================================================
+
+    if (
+        degree <= 3
+    ) {
+
+
+        redExplanation.innerHTML =
+
+        "Com grau <strong>"
+
+        +
+
+        degree
+
+        +
+
+        "</strong>, a curva ainda apresenta baixa flexibilidade. "
+
+        +
+
+        "Compare o desempenho nos conjuntos de treino e teste.";
+
+    }
+
+
+    else if (
+        degree <= 6
+    ) {
+
+
+        redExplanation.innerHTML =
+
+        "Com grau <strong>"
+
+        +
+
+        degree
+
+        +
+
+        "</strong>, a curva começa a acompanhar mais de perto os dados de treinamento. "
+
+        +
+
+        "Observe se a melhora de treino também ocorre no conjunto de teste.";
+
+    }
+
+
+    else {
+
+
+        redExplanation.innerHTML =
+
+        "Com grau <strong>"
+
+        +
+
+        degree
+
+        +
+
+        "</strong>, o modelo possui alta flexibilidade. "
+
+        +
+
+        "Ele pode apresentar desempenho muito bom no treino sem apresentar a mesma capacidade de generalização no teste. "
+
+        +
+
+        "Esse comportamento é característico de <strong>overfitting</strong>.";
+
+    }
+
+
+
+    chartTrain.update("none");
+
+    chartTest.update("none");
+
+}
+
+
+
+// ============================================================
+// VISIBILIDADE
+// ============================================================
+
+function atualizarVisibilidadeModelos() {
+
+
+    var mostrarVerde =
+    showLinearModel.checked;
+
+
+    var mostrarVermelho =
+    showOverfitModel.checked;
+
+
+
+    chartTrain.setDatasetVisibility(
+        1,
+        mostrarVerde
+    );
+
+
+    chartTrain.setDatasetVisibility(
+        2,
+        mostrarVermelho
+    );
+
+
+    chartTest.setDatasetVisibility(
+        1,
+        mostrarVerde
+    );
+
+
+    chartTest.setDatasetVisibility(
+        2,
+        mostrarVermelho
+    );
+
+
+    greenCard.style.display =
+    mostrarVerde
+    ?
+    "block"
+    :
+    "none";
+
+
+    redCard.style.display =
+    mostrarVermelho
+    ?
+    "block"
+    :
+    "none";
+
+
+    chartTrain.update("none");
+
+    chartTest.update("none");
+
+}
+
+
+
+// ============================================================
+// EVENTOS
+// ============================================================
+
+showLinearModel.addEventListener(
+
+"change",
+
+function() {
+
+    atualizarVisibilidadeModelos();
+
+}
+
+);
+
+
+showOverfitModel.addEventListener(
+
+"change",
+
+function() {
+
+    atualizarVisibilidadeModelos();
+
+}
+
+);
+
+
+autoLinear.addEventListener(
+
+"change",
+
+function() {
+
+    atualizarModelos();
+
+}
+
+);
+
+
+showLabels.addEventListener(
+
+"change",
+
+function() {
+
+    chartTrain.update("none");
+
+    chartTest.update("none");
+
+}
+
+);
+
+
+showResiduals.addEventListener(
+
+"change",
+
+function() {
+
+    chartTrain.update("none");
+
+    chartTest.update("none");
+
+}
+
+);
+
+
+beta0Slider.addEventListener(
+
+"input",
+
+function() {
+
+    atualizarModelos();
+
+}
+
+);
+
+
+beta1Slider.addEventListener(
+
+"input",
+
+function() {
+
+    atualizarModelos();
+
+}
+
+);
+
+
+degreeSlider.addEventListener(
+
+"input",
+
+function() {
+
+    atualizarModelos();
+
+}
+
+);
+
+
+
+// ============================================================
+// ADICIONAR PONTO
+// ============================================================
+
+document
+.getElementById("addPointBtn")
+.addEventListener(
+
+"click",
+
+function() {
+
+
+    var xVal =
+    parseFloat(
+        inputX.value
+    );
+
+
+    var yVal =
+    parseFloat(
+        inputY.value
+    );
+
+
+    if (
+
+        !isNaN(xVal)
+
+        &&
+
+        !isNaN(yVal)
+
+        &&
+
+        xVal >= 0
+
+        &&
+
+        xVal <= 10
+
+        &&
+
+        yVal >= 0
+
+        &&
+
+        yVal <= 100
+
+    ) {
+
+
+        trainPoints.push({
+
+            x:
+            Number(
+                xVal.toFixed(1)
+            ),
+
+            y:
+            Math.round(
+                yVal
+            )
+
+        });
+
+
+        atualizarModelos();
+
+        atualizarVisibilidadeModelos();
+
+    }
+
+}
+
+);
+
+
+
+// ============================================================
+// ADICIONAR RUÍDO
+// ============================================================
+
+document
+.getElementById("addNoiseBtn")
+.addEventListener(
+
+"click",
+
+function() {
+
+
+    var xVal =
+    Number(
+        (
+            Math.random() *
+            10
+        )
+        .toFixed(1)
+    );
+
+
+    var base =
+    18 +
+    7 *
+    xVal;
+
+
+    var noise =
+    Math.random() *
+    36 -
+    18;
+
+
+    var yVal =
+    Math.round(
+        base +
+        noise
+    );
+
+
+    yVal =
+    Math.max(
+        0,
+        Math.min(
+            100,
+            yVal
+        )
+    );
+
+
+    trainPoints.push({
+
+        x:
+        xVal,
+
+        y:
+        yVal
+
+    });
+
+
+    atualizarModelos();
+
+    atualizarVisibilidadeModelos();
+
+}
+
+);
+
+
+
+// ============================================================
+// REMOVER ÚLTIMO
+// ============================================================
+
+document
+.getElementById("removeLastBtn")
+.addEventListener(
+
+"click",
+
+function() {
+
+
+    if (
+        trainPoints.length > 2
+    ) {
+
+
+        trainPoints.pop();
+
+
+        atualizarModelos();
+
+        atualizarVisibilidadeModelos();
+
+    }
+
+}
+
+);
+
+
+
+// ============================================================
+// RESET
+// ============================================================
+
+document
+.getElementById("resetBtn")
+.addEventListener(
+
+"click",
+
+function() {
+
+
+    trainPoints =
+    JSON.parse(
+        JSON.stringify(
+            initialTrainPoints
+        )
+    );
+
+
+    autoLinear.checked =
+    true;
+
+
+    showLinearModel.checked =
+    true;
+
+
+    showOverfitModel.checked =
+    true;
+
+
+    showLabels.checked =
+    true;
+
+
+    showResiduals.checked =
+    false;
+
+
+    degreeSlider.value =
+    7;
+
+
+    atualizarModelos();
+
+    atualizarVisibilidadeModelos();
+
+}
+
+);
+
+
+
+// ============================================================
+// ADICIONAR PONTO CLICANDO NO GRÁFICO DE TREINO
+// ============================================================
+
+document
+.getElementById("chartTrain")
+.addEventListener(
+
+"click",
+
+function(evt) {
+
+
+    var rect =
+    evt.target
+    .getBoundingClientRect();
+
+
+    var xPixel =
+    evt.clientX -
+    rect.left;
+
+
+    var yPixel =
+    evt.clientY -
+    rect.top;
+
+
+    var xVal =
+    chartTrain.scales.x
+    .getValueForPixel(
+        xPixel
+    );
+
+
+    var yVal =
+    chartTrain.scales.y
+    .getValueForPixel(
+        yPixel
+    );
+
+
+    if (
+
+        xVal >= 0
+
+        &&
+
+        xVal <= 10
+
+        &&
+
+        yVal >= 0
+
+        &&
+
+        yVal <= 100
+
+    ) {
+
+
+        var px =
+        Number(
+            xVal.toFixed(1)
+        );
+
+
+        var py =
+        Math.round(
+            yVal
+        );
+
+
+        inputX.value =
+        px;
+
+
+        inputY.value =
+        py;
+
+
+        trainPoints.push({
+
+            x:
+            px,
+
+            y:
+            py
+
+        });
+
+
+        atualizarModelos();
+
+        atualizarVisibilidadeModelos();
+
+    }
+
+}
+
+);
+
+
+
+// ============================================================
+// REMOVER PONTO COM BOTÃO DIREITO NO GRÁFICO DE TREINO
+// ============================================================
+
+document
+.getElementById("chartTrain")
+.addEventListener(
+
+    "contextmenu",
+
+    function(evt) {
+
+        // Impede o menu de contexto padrão do navegador
+        evt.preventDefault();
+
+
+        // ========================================================
+        // PROCURA O PONTO QUE ESTÁ SOB O CURSOR
+        // ========================================================
+
+        var pontosEncontrados =
+        chartTrain.getElementsAtEventForMode(
+
+            evt,
+
+            "nearest",
+
+            {
+                intersect: true
+            },
+
+            false
+
+        );
+
+
+        // ========================================================
+        // SE NÃO HOUVER PONTO SOB O CURSOR, NÃO FAZ NADA
+        // ========================================================
+
+        if (pontosEncontrados.length === 0) {
+
+            return;
+
+        }
+
+
+        // ========================================================
+        // PEGA O PRIMEIRO ELEMENTO ENCONTRADO
+        // ========================================================
+
+        var ponto =
+        pontosEncontrados[0];
+
+
+        // ========================================================
+        // SOMENTE O DATASET 0 CONTÉM OS PONTOS DE TREINO
+        // dataset 0 = pontos
+        // dataset 1 = modelo linear
+        // dataset 2 = modelo polinomial
+        // ========================================================
+
+        if (ponto.datasetIndex !== 0) {
+
+            return;
+
+        }
+
+
+        // ========================================================
+        // MANTÉM PELO MENOS DOIS PONTOS NO CONJUNTO DE TREINO
+        // ========================================================
+
+        if (trainPoints.length <= 2) {
+
+            return;
+
+        }
+
+
+        // ========================================================
+        // REMOVE O PONTO CORRESPONDENTE
+        // ========================================================
+
+        var indice =
+        ponto.index;
+
+
+        trainPoints.splice(
+            indice,
+            1
+        );
+
+
+        // ========================================================
+        // RECALCULA MODELOS, TABELA, MÉTRICAS E GRÁFICOS
+        // ========================================================
+
+        atualizarModelos();
+
+        atualizarVisibilidadeModelos();
+
+    }
+
+);
+
+
+
+// ============================================================
+// INICIALIZAÇÃO
+// ============================================================
+
+atualizarModelos();
+
+atualizarVisibilidadeModelos();
+
+
+</script>
+
+</body>
+
+</html>
+'
+
+style="
+width: 100%;
+height: 2000px;
+border: none;
+overflow: hidden;
+">
+
+</iframe>

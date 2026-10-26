@@ -5,7 +5,60 @@ output:
     theme: cerulean
     df_print: kable
 ---
+
 # - Relatórios K.P.I. - Avaliação de Modelos e Árvores de Decisão
+
+![Slide 01](media/06-aula06/aula06_arvores_de_decisao/Slide1.JPG)
+
+![Slide 02](media/06-aula06/aula06_arvores_de_decisao/Slide2.JPG)
+
+![Slide 03](media/06-aula06/aula06_arvores_de_decisao/Slide3.JPG)
+
+![Slide 04](media/06-aula06/aula06_arvores_de_decisao/Slide4.JPG)
+
+![Slide 05](media/06-aula06/aula06_arvores_de_decisao/Slide5.JPG)
+
+![Slide 06](media/06-aula06/aula06_arvores_de_decisao/Slide6.JPG)
+
+![Slide 07](media/06-aula06/aula06_arvores_de_decisao/Slide7.JPG)
+
+![Slide 08](media/06-aula06/aula06_arvores_de_decisao/Slide8.JPG)
+
+![Slide 09](media/06-aula06/aula06_arvores_de_decisao/Slide9.JPG)
+
+![Slide 10](media/06-aula06/aula06_arvores_de_decisao/Slide10.JPG)
+
+![Slide 11](media/06-aula06/aula06_arvores_de_decisao/Slide11.JPG)
+
+![Slide 12](media/06-aula06/aula06_arvores_de_decisao/Slide12.JPG)
+
+![Slide 13](media/06-aula06/aula06_arvores_de_decisao/Slide13.JPG)
+
+![Slide 14](media/06-aula06/aula06_arvores_de_decisao/Slide14.JPG)
+
+![Slide 15](media/06-aula06/aula06_arvores_de_decisao/Slide15.JPG)
+
+![Slide 16](media/06-aula06/aula06_arvores_de_decisao/Slide16.JPG)
+
+![Slide 17](media/06-aula06/aula06_arvores_de_decisao/Slide17.JPG)
+
+![Slide 18](media/06-aula06/aula06_arvores_de_decisao/Slide18.JPG)
+
+![Slide 19](media/06-aula06/aula06_arvores_de_decisao/Slide19.JPG)
+
+![Slide 20](media/06-aula06/aula06_arvores_de_decisao/Slide20.JPG)
+
+![Slide 21](media/06-aula06/aula06_arvores_de_decisao/Slide21.JPG)
+
+![Slide 22](media/06-aula06/aula06_arvores_de_decisao/Slide22.JPG)
+
+![Slide 23](media/06-aula06/aula06_arvores_de_decisao/Slide23.JPG)
+
+![Slide 24](media/06-aula06/aula06_arvores_de_decisao/Slide24.JPG)
+
+![Slide 25](media/06-aula06/aula06_arvores_de_decisao/Slide25.JPG)
+
+![Slide 26](media/06-aula06/aula06_arvores_de_decisao/Slide26.JPG)
 
 ```{r 06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao, eval=FALSE, include=FALSE}
 rmarkdown::render("06-2026-09-15-relatorios_kpis_avaliacao_de_modelos_e_arvores_de_decisao.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")

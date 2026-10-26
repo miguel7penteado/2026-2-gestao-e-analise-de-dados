@@ -6,7 +6,7 @@ site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib]
 url: your book url like https://bookdown.org/yihui/bookdown
-cover-image: images/cover.jpg
+#cover-image: images/cover.jpg
 description: |
   Este livreto reúne anotações, reflexões e conteúdos desenvolvidos ao longo das aulas da  disciplina Gestão de Dados, ministrada pelo Professor Miguél Suares. Elaborado com base em experiências práticas, referências acadêmicas e diretrizes atualizadas sobre o tema, o material busca fornecer uma visão crítica e aplicada sobre análise de dados nas organizações contemporâneas.
 link-citations: yes

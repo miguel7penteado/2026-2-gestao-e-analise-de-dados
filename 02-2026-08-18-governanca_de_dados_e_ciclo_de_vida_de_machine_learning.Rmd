@@ -5,7 +5,39 @@ output:
     theme: cerulean
     df_print: kable
 ---
+
 # - Governança de Dados e Ciclo de Vida de Machine Learning
+
+## - Ciclo de Vida dos Dados
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide1.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide2.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide3.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide4.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide5.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide6.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide7.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide8.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide9.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide10.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide11.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide12.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide13.JPG)
+
+![Ciência de Dados - Ciclo de Vida - KELLEHER](media/02-aula02/Aula_Ciclo_de_Vida_Ciencia_de_Dados_CRISP_DM_Tema_UNIP/Slide14.JPG)
+
 
 ```{r 02-2026-08-18-governanca_de_dados_e_ciclo_de_vida_de_machine_learning, eval=FALSE, include=FALSE}
 rmarkdown::render("02-2026-08-18-governanca_de_dados_e_ciclo_de_vida_de_machine_learning.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
