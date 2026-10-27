@@ -1,2 +1,11 @@
 h1:inteligência-artificial-análise-preditiva-e-seleção-de-características - Inteligência Artificial, Análise Preditiva e Seleção de Características
+h2:geração-de-modelos-locais---llm-com-lmstudio Geração de Modelos Locais - LLM com LmStudio
+h3:crie-uma-rede-neural-transformers-llm-gpt2 1 - Crie uma rede neural transformers LLM GPT2
+h3:veja-se-a-sua-arquitetura-foi-salva-no-diretorio-meu_mini_transformer 2 - Veja se a sua arquitetura foi salva no diretorio 
+h3:baixe-o-lamma.cpp-do-github 3 - Baixe o Lamma.cpp do github
+h3:entre-no-diretorio-e-instale-os-pacotes-python-da-ferramenta-para-que-ela-fique-usavel 4 - entre no diretorio e instale os pacotes python da ferramenta para que ela fique usavel
+h4:instalar-pacotes 4.1 - Instalar pacotes
+h3:saida-do-diretorio-e-volte-ao-diretorio-anterior 5 - Saida do diretorio e volte ao diretorio anterior
+h3:converta-sua-rede-neural-para-o-formato-gguff 6 - Converta sua rede neural para o formato gguff
+h3:carrege-sua-rede-em-formato-gguff-no-lmstudio 7 - carrege sua rede em formato gguff no lmstudio
 
