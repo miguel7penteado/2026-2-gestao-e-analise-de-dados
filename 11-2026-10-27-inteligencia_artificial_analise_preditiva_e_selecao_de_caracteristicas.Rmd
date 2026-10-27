@@ -7,6 +7,89 @@ output:
 ---
 # - Inteligência Artificial, Análise Preditiva e Seleção de Características
 
+
+## Geração de Modelos Locais - LLM com LmStudio
+
+### 1 - Crie uma rede neural transformers LLM GPT2
+
+```cmd
+python modelo-transformer-gpt2.py
+```
+
+```python
+import os
+from transformers import AutoConfig, AutoModelForCausalLM, AutoTokenizer
+
+# 1. Definir uma configuração ultraleve (para fins puramente didáticos e rápidos)
+# Usaremos a arquitetura GPT2 como base por ser simples e amplamente suportada
+config = AutoConfig.from_pretrained("gpt2")
+config.n_embd = 128  # Dimensão do embedding bem pequena
+config.n_layer = 2  # Apenas 2 camadas de Transformer
+config.n_head = 2  # 2 cabeças de atenção
+config.n_positions = 1024
+config.vocab_size = 50257
+
+print("Criando o modelo Transformer com a arquitetura customizada...")
+model = AutoModelForCausalLM.from_config(config)
+tokenizer = AutoTokenizer.from_pretrained("gpt2")
+
+# 2. Salvar no formato padrão do Hugging Face em uma pasta local
+output_dir = "./meu_mini_transformer"
+os.makedirs(output_dir, exist_ok=True)
+
+model.save_pretrained(output_dir)
+tokenizer.save_pretrained(output_dir)
+
+print(f"Modelo salvo com sucesso em '{output_dir}'!")
+```
+
+
+### 2 - Veja se a sua arquitetura foi salva no diretorio `meu_mini_transformer`
+
+```cmd
+dir C:\Users\unip\aula10\meu_mini_transformer\
+```
+
+
+### 3 - Baixe o Lamma.cpp do github
+
+```cmd
+git clone https://github.com/ggml-org/llama.cpp.git
+```
+
+### 4 - entre no diretorio e instale os pacotes python da ferramenta para que ela fique usavel
+
+```cmd
+cd llama.cpp
+```
+#### 4.1 - Instalar pacotes
+
+```cmd
+pip install -r requirements.txt
+```
+
+### 5 - Saida do diretorio e volte ao diretorio anterior
+
+```cmd
+cd ..
+```
+
+### 6 - Converta sua rede neural para o formato gguff
+
+```cmd
+python llama.cpp/convert_hf_to_gguf.py ./meu_mini_transformer --outfile meu_mini_transformer.gguf --outtype f32
+```
+
+### 7 - carrege sua rede em formato gguff no lmstudio
+
+```cmd
+lms import "C:\Users\unip\aula10\meu_mini_transformer.gguf" --user-repo "professor/meu-mini-transformer"
+```
+
+
+
+
+
 ```{r 11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas, eval=FALSE, include=FALSE}
 rmarkdown::render("11-2026-10-27-inteligencia_artificial_analise_preditiva_e_selecao_de_caracteristicas.rmd", output_dir="docs", output_file ="temporario.html" , output_format = "html_document") ; utils::browseURL("docs/temporario.html")
 ```

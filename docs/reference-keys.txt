@@ -56,6 +56,15 @@ exercícios---data-driven-decision-making-e-redução-de-dimensionalidade
 modelos-de-gestão-de-risco-e-técnicas-de-agrupamento
 exercícios---modelos-de-gestão-de-risco-e-técnicas-de-agrupamento
 inteligência-artificial-análise-preditiva-e-seleção-de-características
+geração-de-modelos-locais---llm-com-lmstudio
+crie-uma-rede-neural-transformers-llm-gpt2
+veja-se-a-sua-arquitetura-foi-salva-no-diretorio-meu_mini_transformer
+baixe-o-lamma.cpp-do-github
+entre-no-diretorio-e-instale-os-pacotes-python-da-ferramenta-para-que-ela-fique-usavel
+instalar-pacotes
+saida-do-diretorio-e-volte-ao-diretorio-anterior
+converta-sua-rede-neural-para-o-formato-gguff
+carrege-sua-rede-em-formato-gguff-no-lmstudio
 exercícios---inteligência-artificial-análise-preditiva-e-seleção-de-características
 monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning
 exercícios---monitoramento-contínuo-e-ciclo-de-vida-de-modelos-de-machine-learning
